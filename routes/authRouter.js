@@ -10,18 +10,18 @@ const jwt = require('jsonwebtoken')
 
 
 authRouter.post(`/signup`, (req, res, next) => {
-    // Check the database to see if the requested username already exist
+
     User.findOne({ username: req.body.username.toLowerCase()}, (err, user) => {
        if(err){
            res.status(500)
            return next(err)
         }
-        // if it does, send back an error
+       
         if(user){
             res.status(400)
             return next(new Error(`That username is already taken.`))
         }
-        // if it doesnt, create the user and the token, send them both back
+        
         const newUser = new User(req.body)
         newUser.save((err, savedUser) => {
             if(err){
