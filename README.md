@@ -1,4 +1,7 @@
+
 <h1 align="center">Welcome to Firehouse-App 👋</h1>
+<div style="text-align:center"><img width=200px src="https://i.pinimg.com/originals/aa/81/24/aa81244da33236344119f5fc8dae6701.png"></div>
+
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/a-sanderson/firehouse-app#readme" target="_blank">
