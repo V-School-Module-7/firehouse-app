@@ -10,36 +10,27 @@ protocolRouter
       if (err) {
         res.status(500);
         return next(err);
-      };
-      return res.status(200).send(protocols)
+      }
+      return res.status(200).send(protocols);
     });
   });
 
 protocolRouter
-  .route("/:categoryId")
+  .route("/:category")
   // get all protocols in category
-    .get((req, res, next) => {
-      Protocol.find({ category: req.params.categoryId }, (err, protocols) => {
-        if (err) {
-          res.status(500);
-          return next(err);
-        };
-        return res.status(200).send(protocols);
-      });
+  .get((req, res, next) => {
+    Protocol.find({ category: req.params.category }, (err, protocols) => {
+      if (err) {
+        res.status(500);
+        return next(err);
+      }
+      return res.status(200).send(protocols);
     });
-
-  // post new protocol
-  .post();
+  });
 
 protocolRouter
-  .route("/:categoryId/:_id")
+  .route("/:category/:_id")
   // get one protocol by id
-  .get()
-
-  // edit one protocol by id
-  .put()
-
-  // delete one protocol by id
-  .delete();
+  .get();
 
 module.exports = protocolRouter;
