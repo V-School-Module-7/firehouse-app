@@ -9,6 +9,20 @@ const expressJwt = require("express-jwt");
 app.use(morgan("dev"));
 app.use(express.json());
 
+// routes
+app.use("/protocol", require("./routes/protocolRouter"));
+app.use(`/auth`, require(`./routes/authRouter.js`));
+
+// error handling
+app.use((err, req, res, next) => {
+  console.error(err);
+  if (err.name === "UnauthorizedError") {
+    res.status(err.status);
+  }
+  return res.send({ message: err.message });
+});
+
+// db connect
 mongoose
   .connect(process.env.MONGODB_URI || "mongodb://localhost:27017/firehousedb", {
     useNewUrlParser: true,
@@ -19,15 +33,8 @@ mongoose
   .then(() => console.log("connected to the DB"))
   .catch(err => console.log(err));
 
-app.use(`/auth`, require(`./routes/authRouter.js`));
-
-app.use((err, req, res, next) => {
-  console.error(err);
-
-  if (err.name === "UnauthorizedError") {
-    res.status(err.status);
-  }
-  return res.send({ message: err.message });
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 app.listen(PORT, () => {
