@@ -13,10 +13,21 @@ protocolRouter
       }
       return res.status(200).send(protocols);
     });
+  })
+  // post new protocol to db
+  .post((req, res, next) => {
+    newProtocol = new Protocol(req.body);
+    newProtocol.save((err, protocol) => {
+      if (err) {
+        res.status(500);
+        return next(err);
+      }
+      return res.status(201).send(protocol);
+    });
   });
 
 protocolRouter
-  .route("/:category")
+  .route("/category/:category")
   // get all protocols in category
   .get((req, res, next) => {
     Protocol.find({ category: req.params.category }, (err, protocols) => {
@@ -29,8 +40,16 @@ protocolRouter
   });
 
 protocolRouter
-  .route("/:category/:_id")
+  .route("/:_id")
   // get one protocol by id
-  .get();
+  .get((req, res, next) => {
+    Protocol.findById(req.params._id, (err, protocol) => {
+      if (err) {
+        res.status(500);
+        return next(err);
+      }
+      return res.status(200).send(protocol);
+    });
+  });
 
 module.exports = protocolRouter;
