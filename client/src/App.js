@@ -1,12 +1,18 @@
-import React from "react"
-import ReactDOM from "react-dom"
-import App from "./App.js"
-import { BrowserRouter } from "react-router-dom"
+import React from "react";
+import styled from "styled-components";
 
+import GlobalStyle from "./theme/GlobalStyle";
+import Navbar from "./components/Navbar";
+import Homepage from "./pages/Homepage";
 
-ReactDOM.render(
-    <BrowserRouter>
-        <App/>
-    </BrowserRouter>,
-    document.getElementById("root")
-)
+const AppWrapper = styled.div``;
+
+export default function App(props) {
+  return (
+    <AppWrapper>
+      <GlobalStyle />
+      <Navbar />
+      <Homepage />
+    </AppWrapper>
+  );
+}
