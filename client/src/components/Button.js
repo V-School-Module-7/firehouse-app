@@ -1,28 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 
-const ButtonWrapper = styled.div`
+const ButtonWrapper = styled.button`
   justify-self: center;
-  background-image: repeating-linear-gradient(
-    45deg,
-    rgba(6, 40, 68, 1),
-    rgba(16, 60, 99, 1) 8px
-  );
+  background-color: rgb(176, 176, 176);
   border-radius: 5px;
-  max-width: 200px;
-  width: 100%;
+  width: 125px;
+  height: 125px;
 
   :hover {
     cursor: pointer;
   }
 `;
-const ButtonText = styled.h1`
-  color: rgb(239, 57, 65);
+const ButtonText = styled.h2`
+  color: #ffffff;
   text-align: center;
-
-  :hover {
-    cursor: pointer;
-  }
 `;
 
 export default function Button(props) {
