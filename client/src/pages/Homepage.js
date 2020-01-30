@@ -30,7 +30,9 @@ function Homepage(props) {
     "Hydraulics",
     "Feedback"
   ];
-  const displayButtons = buttonNames.map(name => <Button text={name} />);
+  const displayButtons = buttonNames.map(name => (
+    <Button type="square" text={name} />
+  ));
   return (
     <HomepageWrapper>
       <SearchBar />
