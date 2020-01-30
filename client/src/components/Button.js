@@ -38,7 +38,7 @@ const ButtonText = styled.h2`
 export default function Button(props) {
   return (
     <ButtonWrapper>
-      {props.type == "square" ? (
+      {props.type == "square" && props.icon ? (
         <ButtonIcon src={props.icon} alt={props.text + "."} />
       ) : null}
       <ButtonText>{props.text}</ButtonText>
