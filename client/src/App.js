@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch, Route, withRouter } from "react-router-dom";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import theme from "./theme/theme";
 
 import GlobalStyle from "./theme/GlobalStyle";
 import Navbar from "./components/Navbar";
@@ -11,14 +12,16 @@ const AppWrapper = styled.div``;
 
 function App(props) {
   return (
-    <AppWrapper>
-      <GlobalStyle />
-      <Navbar />
-      <Switch>
-        <Route exact path="/" component={Homepage} />
-        <Route path="/login" component={LoginPage} />
-      </Switch>
-    </AppWrapper>
+    <ThemeProvider theme={theme}>
+      <AppWrapper>
+        <GlobalStyle />
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Homepage} />
+          <Route path="/login" component={LoginPage} />
+        </Switch>
+      </AppWrapper>
+    </ThemeProvider>
   );
 }
 
