@@ -12,9 +12,20 @@
   </a>
 </p>
 
-> Application for firefighters and paramedics to easily search for information on drug administration while in certain counties.
+### 🏠 [Homepage](https://github.com/V-School-Module-7/firehouse-app#readme)
 
-### 🏠 [Homepage](https://github.com/a-sanderson/firehouse-app#readme)
+>   Application for firefighters and paramedics to easily search for information on drug and protocol administration while in certain counties.
+> Currently, they are relegated to dredging through numerous PDFs to find the information they need. This is not user-friendly or efficient 
+> for potentially life-saving measures. We aim to remedy this with our app.
+
+>   Firebase Storage is being used to store the PDFs that the app will use. Firebase essentially stores the files and provides a link to each file that includes a unique
+> access token. We use that link in our database to pull the files for the app.
+
+## npm packages used: 
+
+```sh
+
+```
 
 ## Install
 
@@ -46,7 +57,7 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 
 ## Show your support
 
-Give a ⭐️ if this project helped you!
+Give a ⭐️ if this project helped you! Or even if it didn't, we love fake internet points.
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
