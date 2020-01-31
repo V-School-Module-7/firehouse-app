@@ -3,31 +3,44 @@ import styled from "styled-components";
 
 const ButtonWrapper = styled.div`
   justify-self: center;
-  background-image: repeating-linear-gradient(
-    45deg,
-    rgba(6, 40, 68, 1),
-    rgba(16, 60, 99, 1) 8px
-  );
+  background-color: rgb(176, 176, 176);
   border-radius: 5px;
-  max-width: 200px;
-  width: 100%;
+  ${props =>
+      props.type === "square"
+        ? // button type 'square'
+          `
+          width: 125px;
+          height: 125px;
+        `
+        : props.type === "outline"
+        ? // button type outline
+          `
+          width: 125px;
+          height: 75px;
+        `
+        : // button type normal
+          `
+          width: 125px;
+          height: 75px;
 
-  :hover {
+        `}
+    :hover {
     cursor: pointer;
   }
 `;
-const ButtonText = styled.h1`
-  color: rgb(239, 57, 65);
-  text-align: center;
+const ButtonIcon = styled.img``;
 
-  :hover {
-    cursor: pointer;
-  }
+const ButtonText = styled.h2`
+  color: #ffffff;
+  text-align: center;
 `;
 
 export default function Button(props) {
   return (
     <ButtonWrapper>
+      {props.type == "square" && props.icon ? (
+        <ButtonIcon src={props.icon} alt={props.text + "."} />
+      ) : null}
       <ButtonText>{props.text}</ButtonText>
     </ButtonWrapper>
   );
