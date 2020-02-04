@@ -1,12 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import {
-  Input,
-  InputAlt,
-  Button,
-  ButtonAlt
-} from "../components/styledComponents";
+import { Button, ButtonAlt } from "../components/styledComponents";
 
 const LoginContainer = styled.div`
   display: grid;
