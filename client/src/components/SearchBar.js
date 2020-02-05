@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import searchIcon from "../assets/iconfinder_icon-111-search_314478.svg";
+import searchIcon from "../assets/search.svg";
 
 const SearchBarContainer = styled.div`
   width: 100vw;
