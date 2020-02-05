@@ -5,26 +5,10 @@ const ButtonWrapper = styled.div`
   justify-self: center;
   background-color: rgb(176, 176, 176);
   border-radius: 5px;
-  ${props =>
-      props.type === "square"
-        ? // button type 'square'
-          `
-          width: 125px;
-          height: 125px;
-        `
-        : props.type === "outline"
-        ? // button type outline
-          `
-          width: 125px;
-          height: 75px;
-        `
-        : // button type normal
-          `
-          width: 125px;
-          height: 75px;
+  width: 154px;
+  height: 154px;
 
-        `}
-    :hover {
+  :hover {
     cursor: pointer;
   }
 `;
@@ -38,9 +22,7 @@ const ButtonText = styled.h2`
 export default function Button(props) {
   return (
     <ButtonWrapper>
-      {props.type == "square" && props.icon ? (
-        <ButtonIcon src={props.icon} alt={props.text + "."} />
-      ) : null}
+      <ButtonIcon src={props.icon} />
       <ButtonText>{props.text}</ButtonText>
     </ButtonWrapper>
   );
