@@ -8,7 +8,11 @@ import hospitalIcon from "../assets/hospital.svg";
 import hydraulicsIcon from "../assets/hydraulics.svg";
 import medicalIcon from "../assets/medical.svg";
 import protocolsIcon from "../assets/protocols.svg";
+import { Link } from "react-router-dom";
 
+const ButtonLink = styled(Link)`
+  text-decoration: none;
+`;
 const ButtonWrapper = styled.div`
   justify-self: center;
   display: flex;
@@ -19,20 +23,30 @@ const ButtonWrapper = styled.div`
   border-radius: 5px;
   width: 154px;
   height: 154px;
+  position: relative;
 
   :hover {
     cursor: pointer;
   }
 `;
 const ButtonIcon = styled.img`
+  margin: auto;
+  margin-bottom: 0px;
   justify-self: center;
+  align-self: center;
   height: 80px
   width: auto;
 `;
 
-const ButtonText = styled.h2`
+const ButtonText = styled.div`
+  height: 32px;
+  width: 120px;
   color: #ffffff;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
   text-align: center;
+  margin: auto;
 `;
 
 export default function Button(props) {
@@ -55,9 +69,11 @@ export default function Button(props) {
     icon = feedbackIcon;
   }
   return (
-    <ButtonWrapper>
-      <ButtonIcon src={icon} />
-      <ButtonText>{props.text}</ButtonText>
-    </ButtonWrapper>
+    <ButtonLink to={props.path}>
+      <ButtonWrapper>
+        <ButtonIcon src={icon} />
+        <ButtonText>{props.text}</ButtonText>
+      </ButtonWrapper>
+    </ButtonLink>
   );
 }
