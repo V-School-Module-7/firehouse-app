@@ -1,13 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import apparatusIcon from "../assets/apparatus.svg";
-import drugsIcon from "../assets/drugs.svg";
-import feedbackIcon from "../assets/feedback.svg";
-import fireIcon from "../assets/fire.svg";
-import hospitalIcon from "../assets/hospital.svg";
-import hydraulicsIcon from "../assets/hydraulics.svg";
-import medicalIcon from "../assets/medical.svg";
-import protocolsIcon from "../assets/protocols.svg";
 import { Link } from "react-router-dom";
 
 const ButtonLink = styled(Link)`
@@ -50,28 +42,10 @@ const ButtonText = styled.div`
 `;
 
 export default function Button(props) {
-  let icon;
-  if (props.text === "Protocols") {
-    icon = protocolsIcon;
-  } else if (props.text === "Fire") {
-    icon = fireIcon;
-  } else if (props.text === "Drugs") {
-    icon = drugsIcon;
-  } else if (props.text === "Medical") {
-    icon = medicalIcon;
-  } else if (props.text === "Hospital") {
-    icon = hospitalIcon;
-  } else if (props.text === "Apparatus") {
-    icon = apparatusIcon;
-  } else if (props.text === "Hydraulics") {
-    icon = hydraulicsIcon;
-  } else if (props.text === "Feedback") {
-    icon = feedbackIcon;
-  }
   return (
     <ButtonLink to={props.path}>
       <ButtonWrapper>
-        <ButtonIcon src={icon} />
+        <ButtonIcon src={props.icon} />
         <ButtonText>{props.text}</ButtonText>
       </ButtonWrapper>
     </ButtonLink>
