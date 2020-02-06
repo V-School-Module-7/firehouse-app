@@ -12,14 +12,6 @@ const SignUpContainer = styled.div`
   width: 100vw;
 `;
 
-const WillLaterBeAnImage = styled.div`
-  background-color: rgb(176, 176, 176);
-  width: 200px;
-  height: 200px;
-  grid-column: 2 / 6;
-  margin: auto;
-`;
-
 const SignUpMessage = styled.h1`
   grid-column: 2 / 6;
   margin: auto;
@@ -60,7 +52,6 @@ const SignUpBtn = styled(Button)`
 export default function SignUp(props) {
   return (
     <SignUpContainer>
-      <WillLaterBeAnImage />
       <SignUpMessage>Enter your information to get started</SignUpMessage>
       <FirstNameInput type="text" placeholder="First Name" />
       <LastNameInput type="text" placeholder="Last Name" />
