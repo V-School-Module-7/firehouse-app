@@ -16,12 +16,13 @@ const SearchInput = styled.input`
   background-repeat: no-repeat;
   background-size: auto 25px;
   background-position: 11px 11px;
+  background-color: #ffffff;
   max-width: 95vw;
   width: 100%;
   margin: auto;
   height: 50px;
-  border-radius: 5px;
-  border: 1px solid rbg(176, 176, 176);
+  border-radius: 6px;
+  border: 2px solid #979797;
   font-size: 16pt;
 `;
 
