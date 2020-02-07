@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Input, InputAlt, Button, ButtonAlt } from "./styledComponents";
+import { Input, InputAlt, Button } from "./styledComponents";
 
 const LoginFormWrapper = styled.form`
   display: grid;

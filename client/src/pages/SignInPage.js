@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import { InputAlt, Button } from "../components/styledComponents";
 import LoginForm from "../components/LoginForm";
 
 const SignInContainer = styled.div`
