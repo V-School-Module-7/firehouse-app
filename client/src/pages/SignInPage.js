@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { InputAlt, Button } from "../components/styledComponents";
+import LoginForm from "../components/LoginForm";
 
 const SignInContainer = styled.div`
   display: grid;
@@ -20,24 +21,12 @@ const WillLaterBeAnImage = styled.div`
   margin: auto;
 `;
 
-const EmailInput = styled(InputAlt)`
-  grid-column: 2 / 6;
-  margin: auto;
-  text-align: center;
-`;
-const PasswordInput = styled(InputAlt)`
-  grid-column: 2 / 6;
-  margin: auto;
-  text-align: center;
-`;
-
 const SignInMessage = styled.h1`
   grid-column: 2 / 6;
   margin: auto;
   text-align: center;
 `;
-
-const SignInBtn = styled(Button)`
+const LoginFormStyled = styled(LoginForm)`
   grid-column: 2 / 6;
   margin: auto;
 `;
@@ -47,9 +36,7 @@ export default function SignIn(props) {
     <SignInContainer>
       <WillLaterBeAnImage />
       <SignInMessage>Enter you information to get started</SignInMessage>
-      <EmailInput type="text" placeholder="Email" />
-      <PasswordInput type="password" placeholder="Password" />
-      <SignInBtn>Sign In</SignInBtn>
+      <LoginFormStyled type="SignIn" />
     </SignInContainer>
   );
 }
