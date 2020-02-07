@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Button, ButtonAlt } from "../components/styledComponents";
+import LoginForm from "../components/LoginForm";
 
-const LoginContainer = styled.div`
+const SignInContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-auto-rows: auto;
@@ -20,29 +20,22 @@ const WillLaterBeAnImage = styled.div`
   margin: auto;
 `;
 
-const WelcomeMessage = styled.h1`
+const SignInMessage = styled.h1`
   grid-column: 2 / 6;
   margin: auto;
   text-align: center;
 `;
-
-const SignUpBtn = styled(ButtonAlt)`
+const LoginFormStyled = styled(LoginForm)`
   grid-column: 2 / 6;
   margin: auto;
 `;
 
-const SignInBtn = styled(Button)`
-  grid-column: 2 / 6;
-  margin: auto;
-`;
-
-export default function Login(props) {
+export default function SignIn(props) {
   return (
-    <LoginContainer>
+    <SignInContainer>
       <WillLaterBeAnImage />
-      <WelcomeMessage>Welcome to Firehouse App</WelcomeMessage>
-      <SignUpBtn>Sign Up</SignUpBtn>
-      <SignInBtn>Sign In</SignInBtn>
-    </LoginContainer>
+      <SignInMessage>Enter you information to get started</SignInMessage>
+      <LoginFormStyled type="SignIn" />
+    </SignInContainer>
   );
 }

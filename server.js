@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 require("dotenv").config();
+const path = require("path");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
 const PORT = process.env.PORT || 7000;
@@ -11,7 +12,9 @@ app.use(express.json());
 
 // routes
 app.use("/protocol", require("./routes/protocolRouter"));
-app.use(`/auth`, require(`./routes/authRouter.js`));
+app.use(`/auth`, require(`./routes/authRouter`));
+
+app.use(express.static(path.join(__dirname, "client", "build")));
 
 // error handling
 app.use((err, req, res, next) => {
