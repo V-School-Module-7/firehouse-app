@@ -57,7 +57,7 @@ export default function SignUp(props) {
       <LastNameInput type="text" placeholder="Last Name" />
       <EmailInput type="text" placeholder="Email" />
       <PasswordInput type="password" placeholder="Password" />
-      <ConfirmInput type="password" placehoder="Confirm Password" />
+      <ConfirmInput type="password" placeholder="Confirm Password" />
       <SignUpBtn>Sign Up</SignUpBtn>
     </SignUpContainer>
   );
