@@ -28,6 +28,7 @@ const SignInMessage = styled.h1`
 const LoginFormStyled = styled(LoginForm)`
   grid-column: 2 / 6;
   margin: auto;
+  width: 245px;
 `;
 
 export default function SignIn(props) {

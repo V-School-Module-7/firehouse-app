@@ -4,56 +4,47 @@ import styled from "styled-components";
 import { Input, InputAlt, Button } from "./styledComponents";
 
 const LoginFormWrapper = styled.form`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-auto-rows: auto;
-  grid-gap: 9px;
-  padding: 15px;
-  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 `;
 const SignInEmailInput = styled(InputAlt)`
-  grid-column: 2 / 6;
-  margin: auto;
-  text-align: center;
+  margin: 8px auto;
+  width: 100%;
 `;
 const SignInPasswordInput = styled(InputAlt)`
-  grid-column: 2 / 6;
-  margin: auto;
-  text-align: center;
+  margin: 8px auto;
+  width: 100%;
 `;
 const SignInBtn = styled(Button)`
-  grid-column: 2 / 6;
-  margin: auto;
+  margin: 8px auto;
+  width: 100%;
 `;
 const FirstNameInput = styled(Input)`
-  grid-column: 2 / 6;
-  margin: auto;
-  text-align: center;
+  margin: 8px auto;
+  width: 100%;
 `;
 const LastNameInput = styled(Input)`
-  grid-column: 2 / 6;
-  margin: auto;
-  text-align: center;
+  margin: 8px auto;
+  width: 100%;
 `;
 const EmailInput = styled(Input)`
-  grid-column: 2 / 6;
-  margin: auto;
-  text-align: center;
+  margin: 8px auto;
+  width: 100%;
 `;
 const PasswordInput = styled(Input)`
-  grid-column: 2 / 6;
-  margin: auto;
-  text-align: center;
+  margin: 8px auto;
+  width: 100%;
 `;
 const ConfirmInput = styled(Input)`
-  grid-column: 2 / 6;
-  margin: auto;
-  text-align: center;
+  margin: 8px auto;
+  width: 100%;
 `;
-
 const SignUpBtn = styled(Button)`
-  grid-column: 2 / 6;
-  margin: auto;
+  margin: 8px auto;
+  width: 100%;
 `;
 
 function LoginForm(props) {
