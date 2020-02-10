@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { Button, ButtonAlt } from "../components/styledComponents";
+import { Link } from "react-router-dom";
 
 const LoginContainer = styled.div`
   display: grid;
@@ -26,12 +27,10 @@ const WelcomeMessage = styled.h1`
   text-align: center;
 `;
 
-const SignUpBtn = styled(ButtonAlt)`
-  grid-column: 2 / 6;
-  margin: auto;
-`;
+const SignUpBtn = styled(ButtonAlt)``;
 
-const SignInBtn = styled(Button)`
+const SignInBtn = styled(Button)``;
+const ButtonLink = styled(Link)`
   grid-column: 2 / 6;
   margin: auto;
 `;
@@ -41,8 +40,12 @@ export default function Login(props) {
     <LoginContainer>
       <WillLaterBeAnImage />
       <WelcomeMessage>Welcome to Firehouse App</WelcomeMessage>
-      <SignUpBtn>Sign Up</SignUpBtn>
-      <SignInBtn>Sign In</SignInBtn>
+      <ButtonLink to="/login/signup">
+        <SignUpBtn>Sign Up</SignUpBtn>
+      </ButtonLink>
+      <ButtonLink to="/login/signin">
+        <SignInBtn>Sign In</SignInBtn>
+      </ButtonLink>
     </LoginContainer>
   );
 }
