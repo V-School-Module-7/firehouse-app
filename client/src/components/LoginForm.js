@@ -4,10 +4,6 @@ import styled from "styled-components";
 import { Input, InputAlt, Button } from "./styledComponents";
 
 const LoginFormWrapper = styled.form`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: auto;
 `;
 const SignInEmailInput = styled(InputAlt)`

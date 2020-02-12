@@ -5,34 +5,35 @@ import { Button, ButtonAlt } from "../components/styledComponents";
 import { Link } from "react-router-dom";
 
 const LoginContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-auto-rows: auto;
-  grid-gap: 9px;
-  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
 `;
 
 const WillLaterBeAnImage = styled.div`
   background-color: rgb(176, 176, 176);
-  width: 200px;
-  height: 200px;
-  grid-column: 2 / 6;
-  margin: auto;
+  width: 245px;
+  height: 245px;
+  margin: 80px auto 0 auto;
 `;
 
 const WelcomeMessage = styled.h1`
-  grid-column: 2 / 6;
-  margin: auto;
-  text-align: center;
+  width: 245px;
+  margin: 30px auto 70px auto;
 `;
 
 const SignUpBtn = styled(ButtonAlt)``;
-
+const ButtonContainer = styled.div`
+  margin: auto;
+  margin-bottom: 100px;
+`;
 const SignInBtn = styled(Button)``;
 const ButtonLink = styled(Link)`
-  grid-column: 2 / 6;
-  margin: auto;
+  margin: 8px auto 8px auto;
+  text-decoration: none;
+  width: 100%;
 `;
 
 export default function Login(props) {
@@ -40,12 +41,14 @@ export default function Login(props) {
     <LoginContainer>
       <WillLaterBeAnImage />
       <WelcomeMessage>Welcome to Firehouse App</WelcomeMessage>
-      <ButtonLink to="/login/signup">
-        <SignUpBtn>Sign Up</SignUpBtn>
-      </ButtonLink>
-      <ButtonLink to="/login/signin">
-        <SignInBtn>Sign In</SignInBtn>
-      </ButtonLink>
+      <ButtonContainer>
+        <ButtonLink to="/login/signup">
+          <SignUpBtn>Sign Up</SignUpBtn>
+        </ButtonLink>
+        <ButtonLink to="/login/signin">
+          <SignInBtn>Sign In</SignInBtn>
+        </ButtonLink>
+      </ButtonContainer>
     </LoginContainer>
   );
 }
