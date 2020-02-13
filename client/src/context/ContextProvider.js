@@ -15,9 +15,10 @@ export default function ContextProvider(props) {
     JSON.parse(localStorage.getItem("user")) || {}
   );
   const [token, setToken] = useState(localStorage.getItem("token") || "");
+  const [protocols, setProtocols] = useState([]);
 
   function login(username, password) {
-    const credentials = { username: username, password: password };
+    const credentials = { username, password };
     return authAxios
       .post("/auth/login", credentials)
       .then(res => {
@@ -34,6 +35,15 @@ export default function ContextProvider(props) {
     localStorage.removeItem("token");
     setUser("");
     setToken("");
+  }
+
+  function getProtocolsByCategory(category) {
+    axios
+      .get(`/category/${category}`)
+      .then(res => {
+        setProtocols([...res.data]);
+      })
+      .catch(err => console.error(err));
   }
 
   return (
