@@ -11,19 +11,21 @@ authAxios.interceptors.request.use(config => {
 });
 
 export default function ContextProvider(props) {
-  const [user, setUser] = useState("");
-  const [token, setToken] = useState("");
+  const [user, setUser] = useState(
+    JSON.parse(localStorage.getItem("user")) || {}
+  );
+  const [token, setToken] = useState(localStorage.getItem("token") || "");
 
-  function login(user, password) {
-    const credentials = { username: user, password: password };
+  function login(username, password) {
+    const credentials = { username: username, password: password };
     return authAxios
-      .post("/auth/login")
+      .post("/auth/login", credentials)
       .then(res => {
-        const { token, user } = res.data;
-        localStorage.setItem("token", token);
-        localStorage.setItem("user", JSON.stringify(user));
-        setUser(user);
-        setToken(token);
+        console.log("user/token", res.data.user, res.data.token);
+        localStorage.setItem("token", res.data.token);
+        localStorage.setItem("user", JSON.stringify(res.data.user));
+        setUser(res.data.user);
+        setToken(res.data.token);
       })
       .catch(err => console.error(err));
   }
@@ -38,9 +40,7 @@ export default function ContextProvider(props) {
     <Context.Provider
       value={{
         user,
-        setUser,
         token,
-        setToken,
         login,
         logout
       }}
