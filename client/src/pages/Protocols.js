@@ -14,8 +14,12 @@ function Protocols(props) {
     { name: "Medical", path: "/protocols/medical", icon: null },
     { name: "Trauma", path: "/protocols/trauma", icon: null }
   ];
-  const displayButtons = buttonInfo.map(buttonInfo => (
-    <Button text={buttonInfo.name} path={buttonInfo.path} />
+  const displayButtons = buttonInfo.map((buttonInfo, index) => (
+    <Button
+      key={buttonInfo + index}
+      text={buttonInfo.name}
+      path={buttonInfo.path}
+    />
   ));
   return (
     <ProtocolsWrapper>
