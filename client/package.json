@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.19.2",
     "dotenv": "^8.2.0",
     "firebase": "^7.7.0",
     "react": "^16.11.0",
