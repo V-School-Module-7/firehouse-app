@@ -19,7 +19,7 @@ function App(props) {
     <ThemeProvider theme={theme}>
       <AppWrapper>
         <GlobalStyle />
-        <Navbar />
+        {/*<Navbar />*/}
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route exact path="/login" component={LoginPage} />
