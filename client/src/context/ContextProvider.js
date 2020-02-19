@@ -23,7 +23,6 @@ export default function ContextProvider(props) {
     return authAxios
       .post("/auth/login", credentials)
       .then(res => {
-        console.log("user/token", res.data.user, res.data.token);
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("user", JSON.stringify(res.data.user));
         setUser(res.data.user);
@@ -39,13 +38,10 @@ export default function ContextProvider(props) {
   }
 
   function getProtocolsByCategory(category) {
-    console.log("category in axios", category);
     axios
       .get(`/protocol/category/${category}`)
       .then(res => {
-        console.log("axios response", res);
         setProtocolsToDisplay([...res.data]);
-        console.log("protocols in context", protocolsToDisplay);
       })
       .catch(err => console.error(err));
   }

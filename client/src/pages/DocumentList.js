@@ -15,16 +15,11 @@ export default function DocumentList(props) {
 
   let currentCategory = props.match.params.category;
 
-  console.log("currentCategory", currentCategory);
-  console.log("protocolsToDisplay", protocolsToDisplay);
-
   useEffect(() => getProtocolsByCategory(currentCategory), []);
 
   const displayProtocols = protocolsToDisplay.map((protocol, index) => (
     <DocumentCard key={index} documentInfo={protocol} />
   ));
-
-  console.log("protocolsToDisplay", protocolsToDisplay);
 
   return <DocumentListWrapper>{displayProtocols}</DocumentListWrapper>;
 }
