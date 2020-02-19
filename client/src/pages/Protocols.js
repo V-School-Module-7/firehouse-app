@@ -5,7 +5,15 @@ import Button from "../components/Button";
 
 const ProtocolsWrapper = styled.div``;
 const SearchBarProtocols = styled(SearchBar)``;
-const ButtonsContainer = styled.div``;
+const ButtonsContainer = styled.div`
+  display: grid;
+  grid-template-columns: 154px 154px;
+  grid-auto-rows: auto;
+  grid-gap: 20px;
+  width: 100vw;
+  margin: 16px auto 0px auto;
+  justify-content: center;
+`;
 
 function Protocols(props) {
   const buttonInfo = [
