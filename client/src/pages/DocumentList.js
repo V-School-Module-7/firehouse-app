@@ -9,12 +9,22 @@ const documents = [
   { link: "imalink", title: "title1" },
   { link: "imalink2", title: "title2" }
 ];
+
 export default function DocumentList(props) {
-  const { protocols } = useContext(Context);
-  const displayDocuments = documents.map((document, index) => (
-    <DocumentCard key={index} documentInfo={document} />
+  const { protocolsToDisplay, getProtocolsByCategory } = useContext(Context);
+
+  let currentCategory = props.match.params.category;
+
+  console.log("currentCategory", currentCategory);
+  console.log("protocolsToDisplay", protocolsToDisplay);
+
+  useEffect(() => getProtocolsByCategory(currentCategory), []);
+
+  const displayProtocols = protocolsToDisplay.map((protocol, index) => (
+    <DocumentCard key={index} documentInfo={protocol} />
   ));
 
-  console.log("youve reached the document list page");
-  return <DocumentListWrapper>{displayDocuments}</DocumentListWrapper>;
+  console.log("protocolsToDisplay", protocolsToDisplay);
+
+  return <DocumentListWrapper>{displayProtocols}</DocumentListWrapper>;
 }
