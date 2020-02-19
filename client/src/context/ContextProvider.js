@@ -16,6 +16,7 @@ export default function ContextProvider(props) {
   );
   const [token, setToken] = useState(localStorage.getItem("token") || "");
   const [protocols, setProtocols] = useState([]);
+  const [protocolsToDisplay, setProtocolsToDisplay] = useState([]);
 
   function login(username, password) {
     const credentials = { username, password };
@@ -38,10 +39,13 @@ export default function ContextProvider(props) {
   }
 
   function getProtocolsByCategory(category) {
+    console.log("category in axios", category);
     axios
-      .get(`/category/${category}`)
+      .get(`/protocol/category/${category}`)
       .then(res => {
-        setProtocols([...res.data]);
+        console.log("axios response", res);
+        setProtocolsToDisplay([...res.data]);
+        console.log("protocols in context", protocolsToDisplay);
       })
       .catch(err => console.error(err));
   }
@@ -52,7 +56,10 @@ export default function ContextProvider(props) {
         user,
         token,
         login,
-        logout
+        logout,
+        protocols,
+        protocolsToDisplay,
+        getProtocolsByCategory
       }}
     >
       {props.children}
