@@ -15,7 +15,6 @@ export default function ContextProvider(props) {
     JSON.parse(localStorage.getItem("user")) || {}
   );
   const [token, setToken] = useState(localStorage.getItem("token") || "");
-  const [protocols, setProtocols] = useState([]);
   const [protocolsToDisplay, setProtocolsToDisplay] = useState([]);
 
   function login(username, password) {
@@ -53,7 +52,6 @@ export default function ContextProvider(props) {
         token,
         login,
         logout,
-        protocols,
         protocolsToDisplay,
         getProtocolsByCategory
       }}

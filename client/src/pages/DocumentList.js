@@ -5,11 +5,6 @@ import { Context } from "../context/ContextProvider";
 
 const DocumentListWrapper = styled.div``;
 
-const documents = [
-  { link: "imalink", title: "title1" },
-  { link: "imalink2", title: "title2" }
-];
-
 export default function DocumentList(props) {
   const { protocolsToDisplay, getProtocolsByCategory } = useContext(Context);
 
