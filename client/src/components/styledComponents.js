@@ -1,24 +1,52 @@
 import styled from "styled-components";
 
 // Button normal
-export const Button = styled.button`
-  background: rgb(176, 176, 176);
+export const Button = styled.div`
+  background: #b0b0b0;
   color: #ffffff;
   height: 35px;
-  width: 125px;
+  width: 100%;
+  min-width: 227px;
+  min-height: 50px;
   border-radius: 5px;
-  margin: 8px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.96px;
+  line-height: 26px;
+  padding: 13px;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 // button outlined
-export const ButtonAlt = styled.button`
+export const ButtonAlt = styled.div`
   background: #ffffff;
-  color: rgb(176, 176, 176);
-  border: 1px solid rgb(176, 176, 176);
+  color: #b0b0b0;
+  border: 2px solid #b0b0b0;
   height: 35px;
-  width: 125px;
+  width: 100%;
+  min-width: 227px;
+  min-height: 50px;
   border-radius: 5px;
-  margin: 8px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.96px;
+  line-height: 26px;
+  padding: 13px;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 // text input normal
@@ -26,6 +54,11 @@ export const Input = styled.input`
   border-radius: 5px;
   padding: 8px;
   margin: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #b0b0b0;
+  letter-spacing: 0.77px;
+  line-height: 21px;
 `;
 
 // text input only underline
@@ -37,4 +70,9 @@ export const InputAlt = styled.input`
   border-top: none;
   border-left: none;
   border-radius: 0;
+  color: #b0b0b0;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.77px;
+  line-height: 21px;
 `;

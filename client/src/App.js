@@ -10,6 +10,7 @@ import LoginPage from "./pages/LoginPage";
 import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
 import ProtocolsPage from "./pages/Protocols";
+import DocumentList from "./pages/DocumentList";
 
 const AppWrapper = styled.div``;
 
@@ -18,14 +19,14 @@ function App(props) {
     <ThemeProvider theme={theme}>
       <AppWrapper>
         <GlobalStyle />
-        <Navbar />
+        {/*<Navbar />*/}
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route exact path="/login" component={LoginPage} />
           <Route path="/login/signin" component={SignInPage} />
           <Route path="/login/signup" component={SignUpPage} />
           <Route exact path="/protocols" component={ProtocolsPage} />
-          {/*<Route path="/protocols/:category" component={} />*/}
+          <Route path="/protocols/:category" component={DocumentList} />
         </Switch>
       </AppWrapper>
     </ThemeProvider>

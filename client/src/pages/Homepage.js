@@ -42,8 +42,9 @@ function Homepage(props) {
     { name: "Hydraulics", path: "/hydraulics", icon: hydraulicsIcon },
     { name: "Feedback", path: "/feedback", icon: feedbackIcon }
   ];
-  const displayButtons = buttonInfo.map(buttonInfo => (
+  const displayButtons = buttonInfo.map((buttonInfo, index) => (
     <Button
+      key={buttonInfo.name + index}
       text={buttonInfo.name}
       path={buttonInfo.path}
       icon={buttonInfo.icon}

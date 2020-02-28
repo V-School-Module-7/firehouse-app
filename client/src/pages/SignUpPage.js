@@ -4,23 +4,23 @@ import styled from "styled-components";
 import LoginForm from "../components/LoginForm";
 
 const SignUpContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-auto-rows: auto;
-  grid-gap: 9px;
-  padding: 15px;
-  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
 `;
 
 const SignUpMessage = styled.h1`
-  grid-column: 2 / 6;
+  width: 245px;
   margin: auto;
-  text-align: center;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: bold;
 `;
 
 const LoginFormStyled = styled(LoginForm)`
-  grid-column: 2 / 6;
   margin: auto;
+  width: 245px;
 `;
 
 export default function SignUp(props) {
