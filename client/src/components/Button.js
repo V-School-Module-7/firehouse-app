@@ -26,7 +26,7 @@ const ButtonIcon = styled.img`
   margin-bottom: 0px;
   justify-self: center;
   align-self: center;
-  height: 80px
+  height: 80px;
   width: auto;
 `;
 
