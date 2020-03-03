@@ -17,6 +17,20 @@ export default function ContextProvider(props) {
   const [token, setToken] = useState(localStorage.getItem("token") || "");
   const [protocolsToDisplay, setProtocolsToDisplay] = useState([]);
 
+  //add signup feature
+
+  // function signup(user){
+  //   axios
+  //   .post("/auth/signup", user)
+  //   .then(res => {
+  //     const {user, token} = res.data
+  //     localStorage.setItem("user", JSON.stringify(user))
+  //     localStorage.setItem("token", token)
+  //     this.setState({ user: token })
+  //   })
+  //   .catch(err => console.error(err))
+  // }
+
   function login(username, password) {
     const credentials = { username, password };
     return authAxios
@@ -45,6 +59,7 @@ export default function ContextProvider(props) {
       .catch(err => console.error(err));
   }
 
+{/* add signup, */}
   return (
     <Context.Provider
       value={{

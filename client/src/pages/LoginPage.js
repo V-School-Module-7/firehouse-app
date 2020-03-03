@@ -20,6 +20,7 @@ const WillLaterBeAnImage = styled.div`
 `;
 
 const WelcomeMessage = styled.h1`
+  text-indent: 32px;
   width: 245px;
   margin: 30px auto 70px auto;
 `;
@@ -29,7 +30,9 @@ const ButtonContainer = styled.div`
   margin: auto;
   margin-bottom: 100px;
 `;
-const SignInBtn = styled(Button)``;
+const SignInBtn = styled(Button)`
+  margin-top: 24px;
+`;
 const ButtonLink = styled(Link)`
   margin: 8px auto 8px auto;
   text-decoration: none;
@@ -40,7 +43,7 @@ export default function Login(props) {
   return (
     <LoginContainer>
       <WillLaterBeAnImage />
-      <WelcomeMessage>Welcome to Firehouse App</WelcomeMessage>
+      <WelcomeMessage>Welcome to Fire-house App</WelcomeMessage>
       <ButtonContainer>
         <ButtonLink to="/login/signup">
           <SignUpBtn>Sign Up</SignUpBtn>
