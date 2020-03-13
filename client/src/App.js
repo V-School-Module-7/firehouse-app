@@ -5,12 +5,14 @@ import theme from "./theme/theme";
 
 import GlobalStyle from "./theme/GlobalStyle";
 import Navbar from "./components/Navbar";
+import Registration from "./pages/Registration";
 import Homepage from "./pages/Homepage";
 import LoginPage from "./pages/LoginPage";
 import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
 import ProtocolsPage from "./pages/Protocols";
 import DocumentList from "./pages/DocumentList";
+
 
 const AppWrapper = styled.div``;
 
@@ -22,6 +24,7 @@ function App(props) {
         {/*<Navbar />*/}
         <Switch>
           <Route exact path="/" component={Homepage} />
+          <Route exact path="/registration" component={Registration} />
           <Route exact path="/login" component={LoginPage} />
           <Route path="/login/signin" component={SignInPage} />
           <Route path="/login/signup" component={SignUpPage} />
