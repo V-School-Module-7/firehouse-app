@@ -1,18 +1,9 @@
-import React from "react";
+import React, {useContext} from "react";
 import styled from "styled-components";
-import withFirebaseAuth from "react-with-firebase-auth";
-import * as firebase from "firebase/app";
-import "firebase/auth";
-import firebaseConfig from "../firebaseConfig";
 import { Button, ButtonAlt } from "../components/styledComponents";
 import { Link } from "react-router-dom";
+import { UserContext } from "../context/UserProvider";
 
-const firebaseApp = firebase.initializeApp(firebaseConfig);
-
-const firebaseAppAuth = firebaseApp.auth();
-const providers = {
-    googleProvider: new firebase.auth.GoogleAuthProvider()
-};
 
 const LoginContainer = styled.div`
   display: flex;
@@ -50,11 +41,8 @@ const ButtonLink = styled(Link)`
 `;
 
 function Registration(props) {
-  const firebaseUser = firebaseAppAuth.currentUser;
-  // console.log(firebaseUser)
-
-  const { user, signOut, signInWithGoogle } = props;
-
+ const { user, signOut, signInWithGoogle } = useContext(UserContext)
+ 
   return (
     <LoginContainer>
       <WillLaterBeAnImage />
@@ -78,4 +66,4 @@ function Registration(props) {
   );
 }
 
-export default withFirebaseAuth({ providers, firebaseAppAuth })(Registration)
+export default Registration

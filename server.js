@@ -12,7 +12,6 @@ app.use(express.json());
 
 // routes
 app.use("/protocol", require("./routes/protocolRouter"));
-app.use(`/auth`, require(`./routes/authRouter`));
 
 app.use(express.static(path.join(__dirname, "client", "build")));
 
