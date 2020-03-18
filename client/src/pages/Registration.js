@@ -42,11 +42,11 @@ const ButtonLink = styled(Link)`
 
 function Registration(props) {
  const { user, signOut, signInWithGoogle } = useContext(UserContext)
- 
+
   return (
     <LoginContainer>
       <WillLaterBeAnImage />
-      <WelcomeMessage>Welcome to Fire-house App{user ? <p>{user.displayName}</p> : <p>Sign up/in </p>}
+      <WelcomeMessage>Welcome to HotZone App{user ? <p>{user.displayName}</p> : <p>Sign up/in </p>}
       </WelcomeMessage>
       {
        user
