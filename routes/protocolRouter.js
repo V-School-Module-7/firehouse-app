@@ -30,7 +30,9 @@ protocolRouter
   .route("/category/:category")
   // get all protocols in category
   .get((req, res, next) => {
+   
     Protocol.find({ category: req.params.category }, (err, protocols) => {
+      console.log(protocols)
       if (err) {
         res.status(500);
         return next(err);
