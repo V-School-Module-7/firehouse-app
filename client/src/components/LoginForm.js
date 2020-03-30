@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import styled from "styled-components";
-import { Context } from "../context/ContextProvider";
+import { Context } from "./context/ContextProvider";
 import { Input, InputAlt, Button } from "./styledComponents";
 
 const LoginFormWrapper = styled.form`

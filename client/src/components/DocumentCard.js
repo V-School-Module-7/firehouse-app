@@ -8,7 +8,8 @@ export default function DocumentCard(props) {
   return (
     <DocumentCardWrapper>
       <div>
-        <DocumentLink href={props.documentInfo.fileUrl}>
+        <DocumentLink href={props.documentInfo.fileUrl}
+        target="__blank" rel="no opener">
           {props.documentInfo.title}
         </DocumentLink>
       </div>
