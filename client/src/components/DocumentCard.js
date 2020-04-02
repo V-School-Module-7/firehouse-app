@@ -1,7 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-const DocumentCardWrapper = styled.div``;
+const DocumentCardWrapper = styled.div`
+  padding: 16px;
+  padding-left: 12px;
+  margin: 20px;
+  border-radius: 6px;
+  border: 2px solid #979797;
+  `;
 const DocumentLink = styled.a``;
 
 export default function DocumentCard(props) {
