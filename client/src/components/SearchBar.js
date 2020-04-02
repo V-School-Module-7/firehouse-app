@@ -10,7 +10,7 @@ const SearchBarContainer = styled.div`
   padding: 8px;
 `;
 const SearchInput = styled.input`
-  padding 5px;
+  padding: 5px;
   padding-left: 45px;
   background-image: url(${searchIcon});
   background-repeat: no-repeat;
