@@ -1,4 +1,5 @@
 import React, {useContext} from "react";
+import { withRouter } from "react-router-dom";
 import styled from "styled-components";
 import { UserContext } from "../context/UserProvider";
 
@@ -33,7 +34,11 @@ function Navbar(props) {
 
   return (
     <NavbarWrapper>
-      <Title>Lehi Fire</Title>
+    <Button
+      onClick={()=> props.history.push("/")}
+      >Back
+      </Button>
+      <Title onClick={()=> props.history.push("/")}>Lehi Fire</Title>
       <Button
       onClick={signOut}
       >Sign Out
@@ -42,4 +47,4 @@ function Navbar(props) {
   );
 }
 
-export default Navbar;
+export default withRouter(Navbar);
