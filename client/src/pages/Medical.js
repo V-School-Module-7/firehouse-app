@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import styled from 'styled-components'
 
 const MedicalWrapper = styled.div``;
@@ -16,4 +16,4 @@ const ButtonsContainer = styled.div`
 
 function Medical(props){
     
-}
+}*/
