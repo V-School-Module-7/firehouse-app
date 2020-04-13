@@ -35,7 +35,7 @@ function Navbar(props) {
   return (
     <NavbarWrapper>
     <Button
-      onClick={()=> props.history.push("/")}
+      /* onClick={()=> props.history.push("/")} */
       >Back
       </Button>
       <Title onClick={()=> props.history.push("/")}>Lehi Fire</Title>
