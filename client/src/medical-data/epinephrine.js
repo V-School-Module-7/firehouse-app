@@ -45,7 +45,7 @@ export const epinepherine = {
             ]
         },
         {
-            type: "1:10,000 cardia arrest Drug Concentration 1mg in 10 mL",
+            type: "1:10,000 Cardiac Arrest - Drug Concentration 1mg in 10 mL",
             weights: [
                 {
                     amounts: "Adult",
