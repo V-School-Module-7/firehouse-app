@@ -2,11 +2,11 @@ export const normalSaline = {
     type: "Normal Saline",
     conditions: [
         {
-            type:"cardiac arrest",
+            type: "cardiac arrest",
             weights: [
                 {
                     amount:"adult",
-                    dosage: "1000 cc IV"
+                    dosage: "1000cc IV"
                 },
                 {
                     amount:"pediatric",
@@ -19,7 +19,7 @@ export const normalSaline = {
             weights: [
                 {
                     amount: "adult",
-                    dosage: "500mL IV over 15min to increase preload if patient is hypotensive" //
+                    dosage: "500mL IV over 15min to increase preload if patient is hypotensive"
                 },
                 {
                     amount: "pediatric",
@@ -31,8 +31,8 @@ export const normalSaline = {
             type: "congestive heart failure/pulmonary edema",
             weights: [
                 {
-                    amount: "Limit fluid bolus 250-500mL",
-                    dosage: ""
+                    amount: "adult",
+                    dosage: "Limit fluid bolus 250-500mL"
                 },
                 {
                     amount: "pediatric",
@@ -97,18 +97,13 @@ export const normalSaline = {
         },
         {
             /* NOTE: Under Burns:
-            Parkland Formula: 4 mL per kg per % burn during the first 24 hours.
-            Give half of this amount during the first 8 hours from time of injury and the remainder over the next 16 hours
-                Example of parkland formula:
-            -	4 mL x 100 kg x 20% burn = 8000 mL = total fluid replacement
             -	Electrical burns/lightning strikes:
-            If diagnosed with rhabdomyolysis prior to transport, increase fluid replacement
             */
             type: "burns",
             weights: [
                 {
                     amount:"adult",
-                    dosage: "500 cc/hour (no bolus)",
+                    dosage: "500cc/hour (no bolus)",
                     notes: "If BSA for 2nd or 3rd degree burns is >10% begin NS at 500 cc/hour (no bolus). If time from burn is >30 min, begin fluids using parkland formula"
                 },
                 {
@@ -122,6 +117,9 @@ export const normalSaline = {
                 {
                     amount:">13 years",
                     dosage: "500cc/hour"
+                },
+                {
+                    notes: "Parkland Formula: 4 mL per kg per % burn during the first 24 hours.Give half of this amount during the first 8 hours from time of injury and the remainder over the next 16 hours. Parkland Formula Example: 4 mL x 100 kg x 20% burn = 8000 mL = total fluid replacement. If diagnosed with rhabdomyolysis prior to transport, increase fluid replacement"
                 }
             ]
         },
@@ -140,7 +138,6 @@ export const normalSaline = {
         },
         {
             type: "kidney failure/dialysis patients",
-            //NOTE: Contact OLMC if shock has not been reversed
             weights: [
                 {
                     amount:"adult",
@@ -149,6 +146,9 @@ export const normalSaline = {
                 {
                     amount:"pediatric",
                     dosage: "10mL/kg fluid bolus up to a max of 20mL and reassess for reversal of the signs of shock"
+                },
+                {
+                    notes: "Contact OLMC if shock has not been reversed"
                 }
         ]
         },
@@ -175,8 +175,10 @@ export const normalSaline = {
                 {
                     amount:"pediatric",
                     dosage: "Provide 20mL/kg boluses up to a max of 60 mL/kg. Reassess for reversal of the signs of shock"
+                },
+                {
+                    notes: "If patient remains hypotensive after administering 60mL/kg, call OLMC."
                 }
-                //NOTE: If patient remains hypotensive after administering 60mL/kg, call OLMC.
         ]
         }
 
