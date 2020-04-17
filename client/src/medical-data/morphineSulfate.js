@@ -15,12 +15,17 @@ export const morphineSulfate = {
             weights: [
                 {
                     amounts: "Adult",
-                    dosage: "IV/IO/IM: 4-10 mg every 10 min"
+                    dosage: "IV/IO/IM: 4-10 mg every 10 min",
+                    notes: [
+                        
+                    ]
                 },
                 {
                     amounts: "Pediatric",
                     dosage: "IV/IO/IM: 0.1 mg/kg eery 10 min titrated to effect",
-                    notes: "Max Dose 4 mg per dose"
+                    notes: [
+                        "Max Dose 4 mg per dose"
+                    ]
                 }
             ]
         }

@@ -6,11 +6,17 @@ export const normalSaline = {
             weights: [
                 {
                     amount:"adult",
-                    dosage: "1000 cc IV"
+                    dosage: "1000 cc IV",
+                    notes: [
+
+                    ]
                 },
                 {
                     amount:"pediatric",
-                    dosage: "20mL/kg reassess & repeat if needed"
+                    dosage: "20mL/kg reassess & repeat if needed",
+                    notes: [
+
+                    ]
                 }
         ]
         },
@@ -19,11 +25,17 @@ export const normalSaline = {
             weights: [
                 {
                     amount: "adult",
-                    dosage: "500mL IV over 15min to increase preload if patient is hypotensive" //
+                    dosage: "500mL IV over 15min to increase preload if patient is hypotensive",
+                    notes: [
+
+                    ]
                 },
                 {
                     amount: "pediatric",
-                    dosage: "not recommended"
+                    dosage: "not recommended",
+                    notes: [
+
+                    ]
                 }
             ]
         },
@@ -32,11 +44,17 @@ export const normalSaline = {
             weights: [
                 {
                     amount: "Limit fluid bolus 250-500mL",
-                    dosage: ""
+                    dosage: "",
+                    notes: [
+
+                    ]
                 },
                 {
                     amount: "pediatric",
-                    dosage: "not recommended"
+                    dosage: "not recommended",
+                    notes: [
+
+                    ]
                 }
             ]
         },
@@ -45,7 +63,10 @@ export const normalSaline = {
             weights: [
                 {
                     amount: "newborn",
-                    dosage: "NS(IV or IO) 10mL/kg syringe bolus over 5-10min"
+                    dosage: "NS(IV or IO) 10mL/kg syringe bolus over 5-10min",
+                    notes: [
+
+                    ]
                 }
             ]
         },
@@ -54,11 +75,17 @@ export const normalSaline = {
             weights: [
                 {
                     amount:"adult",
-                    dosage: "1000 mL IV/IO over 30-60 min (Blood sugar > 300mg/dL"
+                    dosage: "1000 mL IV/IO over 30-60 min (Blood sugar > 300mg/dL",
+                    notes: [
+
+                    ]
                 },
                 {
                     amount:"pediatric",
-                    dosage: "20mL/kg IV/IO over 30-60 min (Blood sugar > 300mg/dL"
+                    dosage: "20mL/kg IV/IO over 30-60 min (Blood sugar > 300mg/dL",
+                    notes: [
+
+                    ]
                 }
             ]
         },
@@ -67,15 +94,18 @@ export const normalSaline = {
             weights: [
                 {
                     amount:"adult",
-                    dosage: "500-1000 mL bolus"
+                    dosage: "500-1000 mL bolus",
+                    notes: [
+                        "Cool fluid therapy"
+                    ]
                 },
                 {
                     amount:"pediatric",
-                    dosage: "20mL/kg bolus"
+                    dosage: "20mL/kg bolus",
+                    notes: [
+
+                    ]
                 },
-                {
-                    notes:" Cool fluid therapy"
-                }
             ]
 
         },
@@ -84,15 +114,18 @@ export const normalSaline = {
             weights: [
                 {
                     amount:"adult",
-                    dosage: "500-1000 mL bolus"
+                    dosage: "500-1000 mL bolus",
+                    notes: [
+                        "Warm fluid therapy"
+                    ]
                 },
                 {
                     amount:"pediatric",
-                    dosage: "20mL/kg bolus"
+                    dosage: "20mL/kg bolus",
+                    notes: [
+                        "Warm fluid therapy"
+                    ]
                 },
-                {
-                    notes:" Warm fluid therapy"
-                }
             ]
         },
         {
