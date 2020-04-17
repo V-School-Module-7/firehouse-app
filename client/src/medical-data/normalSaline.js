@@ -6,17 +6,11 @@ export const normalSaline = {
             weights: [
                 {
                     amount:"adult",
-                    dosage: "1000 cc IV",
-                    notes: [
-
-                    ]
+                    dosage: "1000 cc IV"
                 },
                 {
                     amount:"pediatric",
-                    dosage: "20mL/kg reassess & repeat if needed",
-                    notes: [
-
-                    ]
+                    dosage: "20mL/kg reassess & repeat if needed"
                 }
         ]
         },
@@ -25,17 +19,11 @@ export const normalSaline = {
             weights: [
                 {
                     amount: "adult",
-                    dosage: "500mL IV over 15min to increase preload if patient is hypotensive",
-                    notes: [
-
-                    ]
+                    dosage: "500mL IV over 15min to increase preload if patient is hypotensive" //
                 },
                 {
                     amount: "pediatric",
-                    dosage: "not recommended",
-                    notes: [
-
-                    ]
+                    dosage: "not recommended"
                 }
             ]
         },
@@ -44,17 +32,11 @@ export const normalSaline = {
             weights: [
                 {
                     amount: "Limit fluid bolus 250-500mL",
-                    dosage: "",
-                    notes: [
-
-                    ]
+                    dosage: ""
                 },
                 {
                     amount: "pediatric",
-                    dosage: "not recommended",
-                    notes: [
-
-                    ]
+                    dosage: "not recommended"
                 }
             ]
         },
@@ -63,10 +45,7 @@ export const normalSaline = {
             weights: [
                 {
                     amount: "newborn",
-                    dosage: "NS(IV or IO) 10mL/kg syringe bolus over 5-10min",
-                    notes: [
-
-                    ]
+                    dosage: "NS(IV or IO) 10mL/kg syringe bolus over 5-10min"
                 }
             ]
         },
@@ -75,17 +54,11 @@ export const normalSaline = {
             weights: [
                 {
                     amount:"adult",
-                    dosage: "1000 mL IV/IO over 30-60 min (Blood sugar > 300mg/dL",
-                    notes: [
-
-                    ]
+                    dosage: "1000 mL IV/IO over 30-60 min (Blood sugar > 300mg/dL"
                 },
                 {
                     amount:"pediatric",
-                    dosage: "20mL/kg IV/IO over 30-60 min (Blood sugar > 300mg/dL",
-                    notes: [
-
-                    ]
+                    dosage: "20mL/kg IV/IO over 30-60 min (Blood sugar > 300mg/dL"
                 }
             ]
         },
@@ -94,18 +67,15 @@ export const normalSaline = {
             weights: [
                 {
                     amount:"adult",
-                    dosage: "500-1000 mL bolus",
-                    notes: [
-                        "Cool fluid therapy"
-                    ]
+                    dosage: "500-1000 mL bolus"
                 },
                 {
                     amount:"pediatric",
-                    dosage: "20mL/kg bolus",
-                    notes: [
-
-                    ]
+                    dosage: "20mL/kg bolus"
                 },
+                {
+                    notes:" Cool fluid therapy"
+                }
             ]
 
         },
@@ -114,18 +84,15 @@ export const normalSaline = {
             weights: [
                 {
                     amount:"adult",
-                    dosage: "500-1000 mL bolus",
-                    notes: [
-                        "Warm fluid therapy"
-                    ]
+                    dosage: "500-1000 mL bolus"
                 },
                 {
                     amount:"pediatric",
-                    dosage: "20mL/kg bolus",
-                    notes: [
-                        "Warm fluid therapy"
-                    ]
+                    dosage: "20mL/kg bolus"
                 },
+                {
+                    notes:" Warm fluid therapy"
+                }
             ]
         },
         {
