@@ -11,7 +11,9 @@ export const fentanyl = {
                 {
                     amounts: "Pediatric",
                     dosage: "IV/IM/IO: 1 mcg/kg (max 50 mcg per dose) - IN: 2 mcg/kg (Max 100 mcg per dose)",
-                    notes: "May repeat 1x if needed after 10-15 min"
+                    notes: [
+                        "May repeat 1x if needed after 10-15 min"
+                    ]
                 }
             ]
         }
