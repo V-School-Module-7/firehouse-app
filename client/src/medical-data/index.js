@@ -7,7 +7,7 @@ import {atropine} from "./atropine"
 import {benadryl} from "./benadryl"
 import {calciumGluconate} from "./calciumGluconate"
 import {dextrose} from "./dextrose"
-import {ephinephrine} from "./epinephrine"
+import {ephinephrine, epinepherine} from "./epinephrine"
 import {fentanyl} from "./fentanyl"
 import {glucagon} from "./glucagon"
 import {haldol} from "./haldol"
@@ -32,4 +32,6 @@ import {tylenol} from "./tylenol"
 import {valium} from "./valium"
 import {zofran} from "./zofran"
 
-
+export const medications = {
+    data: [ adenosine, albuterol, amiodarone, aspirin, ativan, atropine, benadryl, calciumGluconate, dextrose, epinepherine, fentanyl, glucagon, haldol, ketamine, lidocaine, magnesiumSulfate, midazolam, morphineSulfate, motrin, naloxone, nitroglycerin, norepinephrine, normalSaline, oralDextrose, oxytocin, phenergan, procainamide, sodiumBicarbonate, synchronizedCardioversion, tcp, tylenol, valium, zofran ]
+}
