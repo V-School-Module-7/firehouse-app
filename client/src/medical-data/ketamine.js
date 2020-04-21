@@ -7,9 +7,10 @@ export const ketamine = {
                 {
                     amount: "adult",
                     dosage: "IV/IO: 1 mg/kg every 10 min to desired effect | IM: 4mg/kg ONCE",
-                    notes: ["IV/IO: Max total dose of 200mg", "IM: Max dose 300mg",
+                    notes: [
+                    "IV/IO: Max total dose of 200mg", "IM: Max dose 300mg",
                     "Dose is cut in half if patient has received narcotics or alcohol. Consider size of patient for dosing"
-                ]
+                    ]
                 },
                 {
                     amount:"pediatric",
