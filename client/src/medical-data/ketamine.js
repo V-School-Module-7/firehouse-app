@@ -6,17 +6,20 @@ export const ketamine = {
             weights: [
                 {
                     amount: "adult",
-                    dosage: "IV/IO: 1 mg/kg every 10 min to desired effect | IM: 4mg/kg ONCE",
-                    notes: ["IV/IO: Max total dose of 200mg", "IM: Max dose 300mg",
-                    "Dose is cut in half if patient has received narcotics or alcohol. Consider size of patient for dosing"
-                ]
+                    dosage: "IV/IO: 1mg/kg every 10min to desired effect | IM: 4mg/kg ONCE",
+                    notes: [
+                    "IV/IO: Max total dose of 200mg", "IM: Max dose 300mg",
+                    "Dose is cut in half if patient has received narcotics or alcohol",
+                    "Consider size of patient for dosing"
+                    ]
                 },
                 {
                     amount:"pediatric",
                     dosage: "IV/IO: 1mg/kg ONCE | IM: 3mg/kg ONCE",
                     notes:[
                     "IV: Max dose 200mg","IM: Max dose 300mg",
-                     "May repeat in 10min","Dose is cut in half if patient has received narcotics or alcohol. Consider size of patient for dosing"
+                     "Dose is cut in half if patient has received narcotics or alcohol",
+                     "Consider size of patient for dosing"
                     ]
                 }
             ]
@@ -26,9 +29,9 @@ export const ketamine = {
             weights: [
                 {
                     amount: "adult",
-                    dosage: "IV/IO: 10-20 mg every 5 min to the desired effect or total max |IN: 50mg x 1 dose",
+                    dosage: "IV/IO: 10-20mg every 5min to the desired effect or max dose |IN: 50mg x 1 dose",
                     notes: [
-                    "IV/IO: Total max dose of 40 mg","IM: 10mg ONCE",
+                    "IV/IO: Max dose of 40mg",
                     "Should only be used in patients who meet one or more of the following criteria:",
                     "Opiates are not tolerated well, patient request no opiates or they are on medications that block narcotics",
                     "Patient has marginal vitals that may worsen with additional opiates",
@@ -39,9 +42,9 @@ export const ketamine = {
                 },
                 {
                     amount:"pediatric",
-                    dosage: "IV/IO: 0.15-0.3 mg/kg every 5 min to the desired effect or max dose | IN: 0.7mg/kg x dose",
+                    dosage: "IV/IO: 0.15-0.3mg/kg every 5min to the desired effect or max dose | IN: 0.7mg/kg x 1 dose",
                     notes: [
-                    "Max dose of 0.6 mg/kg or 40 mg whichever is less",
+                    "IV/IO: Max dose of 0.6mg/kg or 40mg whichever is less",
                     "Should only be used in patients who meet one or more of the following criteria:",
                     "Opiates are not tolerated well, patient request no opiates or they are on medications that block narcotics",
                     "Patient has marginal vitals that may worsen with additional opiates",

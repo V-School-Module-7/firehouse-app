@@ -6,16 +6,18 @@ export const tcp = {
             weights: [
                 {
                     amount: "adult",
-                    dosage: "n/a",
-                    notes: "Initial rate of 80 beats per min, if patient does not response to medications"
+                    dosage: "see notes",
+                    notes: [
+                        "Initial rate of 80 beats per min, if patient does not response to medications",
+                        "Consider sedation for TCP as per pain and anxiety guideline in General COG"
+                    ]
                 },
                 {
                     amount:"pediatric",
-                    dosage: "n/a",
-                    notes: "Initial rate of 100 beats per min, if patient does not response to medications"
-                },
-                {
-                    notes: "Consider sedation for TCP as per pain and anxiety guideline in General COG"
+                    dosage: "see notes",
+                    notes: [
+                        "Initial rate of 100 beats per min, if patient does not response to medications"
+                    ]
                 }
             ]
         }

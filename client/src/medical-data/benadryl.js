@@ -6,12 +6,17 @@ export const benadryl = {
             weights: [
                 {
                     amount: "adult",
-                    dosage: "50mg IV/IO/IM"
+                    dosage: "50mg IV/IO/IM",
+                    notes: [
+                        ""
+                    ]
                 },
                 {
                     amount:"pediatric",
                     dosage: "1mg/kg",
-                    max: "50 mg single dose IV/IO/IM"
+                    notes: [
+                        "To max of 50mg single dose IV/IO/IM for moderate to severe allergic reaction"
+                    ]
                 }
             ]
         }

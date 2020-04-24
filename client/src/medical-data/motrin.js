@@ -6,13 +6,18 @@ export const motrin = {
             weights: [
                 {
                     amount: "adult",
-                    dosage: "1000mg by mouth"
+                    dosage: "800mg by mouth",
+                    notes: [
+                        ""
+                    ]
 
                 },
                 {
                     amount:"pediatric",
                     dosage: "10mg/kg by mouth",
-                    notes: "Contraindicated in children under 6 months"
+                    notes: [
+                        "Contraindicated in children under 6 months"
+                    ]
                 }
             ]
         }
