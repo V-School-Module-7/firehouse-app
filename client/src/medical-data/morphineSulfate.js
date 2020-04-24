@@ -11,7 +11,7 @@ export const morphineSulfate = {
             ]
         },
         {
-            type: "pain and axiety management",
+            type: "pain and anxiety management",
             weights: [
                 {
                     amounts: "Adult",
@@ -22,7 +22,7 @@ export const morphineSulfate = {
                 },
                 {
                     amounts: "Pediatric",
-                    dosage: "IV/IO/IM: 0.1 mg/kg eery 10 min titrated to effect",
+                    dosage: "IV/IO/IM: 0.1 mg/kg every 10 min titrated to effect",
                     notes: [
                         "Max Dose 4 mg per dose"
                     ]
