@@ -7,11 +7,16 @@ export const oralDextrose = {
                 {
                     amount: "adult",
                     dosage: "15g by mouth (if patient is able to swallow and protect airway)",
-                    notes: "Repeat dosage in 15 min as needed"
+                    notes: [
+                        "Repeat in 15min as needed"
+                    ]
                 },
                 {
                     amount:"pediatric",
-                    dosage: "7.5g by mouth"
+                    dosage: "7.5g by mouth",
+                    notes: [
+                        ""
+                    ]
                 }
             ]
         }

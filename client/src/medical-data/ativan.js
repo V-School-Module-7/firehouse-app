@@ -6,14 +6,19 @@ export const ativan = {
             weights: [
                 {
                     amount: "adult",
-                    dosage: "IV/IO/IM 1-2 mg every 5 min to desired effect",
-                    max: "Total max dose of 4mg"
+                    dosage: "IV/IO/IM: 1-2 mg every 5min to desired effect",
+                    notes: [
+                        "Total max dose of 4mg"
+                    ]
                 },
                 {
                     amount: "pediatric",
-                    dosage: "IV/IO/IM 0.1 mg/kg",
-                    max: "Max dose of 2mg",
-                    notes: "May repeat every 5 min, if needed. Max dose of 5 mg per dose, DO NOT exceed adult dosing of 4mg total max"
+                    dosage: "IV/IO/IM: 0.1 mg/kg",
+                    notes: [
+                        "Max dose of 2mg",
+                        "May repeat every 5min, if needed",
+                        "DO NOT exceed adult dosing of 4mg total max"
+                    ]
                 }
             ]
         },
@@ -22,16 +27,20 @@ export const ativan = {
             weights: [
                 {
                     amount: "adult",
-                    dosage: "2 mg IV",
-                    notes: "May repeat once, if needed"
+                    dosage: "2mg IV",
+                    notes: [
+                        "May repeat once, if needed",
+                        "Heat emergencies; benzodiazepines for shivering"
+                    ]
                 },
                 {
                     amount:"pediatric",
-                    dosage: "0.1 mg/kg IV/IM (max 2 mg)",
-                    notes: "May repeat once, if needed"
-                },
-                {
-                    notes: "Heat emergencies; benzodiazepines for shivering"
+                    dosage: "0.1 mg/kg IV/IM",
+                    notes: [
+                        "Max of 2mg",
+                        "May repeat once, if needed",
+                        "Heat emergencies; benzodiazepines for shivering"
+                    ]
                 }
             ]
         },
@@ -40,13 +49,20 @@ export const ativan = {
             weights: [
                 {
                     amount: "adult",
-                    dosage: "IV/IO: 5mg every 10 min to desired effect | IM: 10mg ONCE (IM is not preferred unless no other option)",
-                    max: "IV/IO: 4mg Max dose"
+                    dosage: "IV/IO: 1-2mg every 5min to desired effect | IM: 10mg ONCE",
+                    notes: [
+                        "IV/IO: 4mg Max dose",
+                        "IM is not preferred unless no other option"
+                    ]
                 },
                 {
                     amount:"pediatric",
-                    dosage: "IV/IO: 0.05 mg/kg | IM: 0.05mg/kg, max 4mg ONCE",
-                    notes: "May repeat once in 10min. DO NOT exceed adult dose of 4mg"
+                    dosage: "IV/IO: 0.05mg/kg | IM: 0.05mg/kg",
+                    notes: [
+                        "IV/IO: Max dose of 2mg, may repeat once in 10min.",
+                        "IV/IO: Do NOT exceed adult dose of 4mg",
+                        "IM: max 4mg ONCE"
+                    ]
                 }
             ]
         },
@@ -56,13 +72,18 @@ export const ativan = {
                 {
                     amount: "adult",
                     dosage: "IV/IO: 1-2mg every 5 min to desired effect | IM: 4mg ONCE",
-                    max: "IV/IO: 4mg Max dose"
+                    notes: [
+                        "IV/IO: 4mg Max dose"
+                    ]
                 },
                 {
                     amount:"pediatric",
-                    dosage: "IV/IO: 0.05 mg/kg | IM: 0.05mg/kg, max 4mg ONCE",
-                    max: "Max dose of 2mg",
-                    notes: "May repeat once in 10min. DO NOT exceed adult dose of 4mg"
+                    dosage: "IV/IO: 0.05mg/kg | IM: 0.05mg/kg",
+                    notes: [
+                        "IV/IO: Max dose of 2mg, may repeat once in 10min",
+                        "IV/IO: Do NOT exceed adult dose of 4mg",
+                        "IM: max 4mg ONCE"
+                    ]
                 }
 
             ]
