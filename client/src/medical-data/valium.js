@@ -6,20 +6,22 @@ export const valium = {
             weights: [
                 {
                     amount: "adult",
-                    dosage: "IV/IO: 5mg every 10 min to desired effect",
+                    dosage: "IV/IO: 5mg every 10min to desired effect | IM: 10mg ONCE",
                     notes: [
-                        "Max dose of 20mg"
+                        "IV/IO: Max dose of 20mg",
+                        "IM: May repeat once to a total max of 20mg",
+                        "IM is not preferred unless no other options"
                     ]
-                    //Multiple entries
                 },
                 {
-                    //Multiple entries
                     amount:"pediatric",
-                    dosage: "IV/IO 0.1 mg/kg may repeat once in 5 min",
+                    dosage: "IV/IO: 0.1mg/kg | IM: 0.2mg/kg once",
                     notes: [
-                        "Max dose of 5 mg per dose, DO NOT exceed adult dosing of 10 mg"
+                        "IV/IO: Max dose of 5mg",
+                        "IV/IO: May repeat in 10min. DO NOT exceed adult dosing of 10mg Total max",
+                        "IM: Max 10mg",
+                        "IM is not preferred unless no other option"
                     ]
-                    //IN/PO/IM Options
                 }
             ]
         },
@@ -28,14 +30,15 @@ export const valium = {
             weights: [
                 {
                     amount: "adult",
-                    dosage: "10 mg IV",
+                    dosage: "10mg IV",
                     notes: [
-                        "May repeat once, if needed"
+                        "May repeat once, if needed",
+                        "Heat emergencies; benzodiazepines for shivering"
                     ]
                 },
                 {
                     amount:"pediatric",
-                    dosage: "0.1 mg/kg IV/IM (max 10 mg)",
+                    dosage: "0.1mg/kg IV/IM (max 10mg)",
                     notes: [
                         "May repeat once, if needed",
                         "Heat emergencies; benzodiazepines for shivering"
@@ -48,38 +51,20 @@ export const valium = {
             weights: [
                 {
                     amount: "adult",
-                    dosage: "IV/IO: 5mg every 10 min to desired effect | IM: 10mg ONCE (IM is not preferred unless no other options)",
+                    dosage: "IV/IO: 5mg every 10min to desired effect | IM: 10mg ONCE",
                     notes: [
                         "Max dose of 20mg",
-                        "Adult: May be used as an alternative. Follow same safety measures as Midazolam"
-                    ]
-                },
-                {
-                    //Multiple Pediatric entries
-                    amount:"pediatric",
-                    dosage: "IV/IO: 0.1mg/kg max dose of 5mg",
-                    notes: [
-                        "May repeat in 10min"
-                    ]
-                }
-            ]
-        },
-        {
-            type: "anxiety management",
-            weights: [
-                {
-                    amount: "adult",
-                    dosage: "5 mg every 10 min to desired effect (IV/IO/IN/PO)",
-                    notes: [
-                        "Total max dose of 10mg",
-                        "IM: 10mg ONCE"
+                        "May be used as an alternative. Follow same safety measures as Midazolam",
+                        "IM is not preferred unless no other options"
                     ]
                 },
                 {
                     amount:"pediatric",
-                    dosage: "IV/IO: 0.1 mg/kg may repeat once in 5 min",
+                    dosage: "IV/IO: 0.1mg/kg max dose of 5mg | IM: 0.2 mg/kg once",
                     notes: [
-                        ""
+                        "IV/IO: May repeat in 10min",
+                        "IV/IO: DO NOT exceed adult dosing of 10mg Max",
+                        "IM: Max 10mg (IM is not preferred unless no other options)"
                     ]
                 }
             ]

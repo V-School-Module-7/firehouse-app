@@ -6,12 +6,17 @@ export const tylenol = {
             weights: [
                 {
                     amount: "adult",
-                    dosage: "1000mg by mouth"
-
+                    dosage: "1000mg by mouth",
+                    notes: [
+                        ""
+                    ]
                 },
                 {
                     amount:"pediatric",
-                    dosage: "15mg/kg by mouth or rectum"
+                    dosage: "15mg/kg by mouth or rectum",
+                    notes: [
+                        ""
+                    ]
                 }
             ]
         }

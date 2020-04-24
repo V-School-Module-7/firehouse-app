@@ -6,12 +6,17 @@ export const glucagon = {
             weights: [
                 {
                     amount: "adult",
-                    dosage: "1mg IM if no IV/IO access"
+                    dosage: "1mg IM if no IV/IO access",
+                    notes: [
+                        ""
+                    ]
                 },
                 {
                     amount:"pediatric",
-                    dosage: "0.1 mg/kg IM if no IV/IO access",
-                    notes: "Max dose of 1mg"
+                    dosage: "0.1mg/kg IM if no IV/IO access",
+                    notes:[
+                        "Max dose of 1mg"
+                    ]
                 }
             ]
         }
