@@ -15,12 +15,7 @@ const AppWrapper = styled.div``;
 function App(props) {
   const { user } = useContext(UserContext)
   console.log(user)
-  // const firebaseUser = firebaseAppAuth.currentUser;
-  // console.log(firebaseUser)
 
-  // useEffect(() => {
-  //   console.log(firebaseUser)
-  // },[firebaseUser])
 
 
   return (
