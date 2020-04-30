@@ -12,7 +12,7 @@ app.use(express.json());
 
 // routes
 app.use("/protocol", require("./routes/protocolRouter"));
-app.use("/medications", require("./routes/medDataRouter"));
+app.use("/medical", require("./routes/medDataRouter"));
 
 app.use(express.static(path.join(__dirname, "client", "build")));
 
