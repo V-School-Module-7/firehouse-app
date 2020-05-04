@@ -33,6 +33,7 @@ import {tylenol} from "./tylenol.js"
 import {valium} from "./valium.js"
 import {zofran} from "./zofran.js"
 
+
 export const medications = {
     data: [ adenosine, albuterol, amiodarone, aspirin, ativan, atropine, benadryl, bipapCpap, calciumGluconate, dextrose, epinepherine, fentanyl, glucagon, haldol, ketamine, lidocaine, magnesiumSulfate, midazolam, morphineSulfate, motrin, naloxone, nitroglycerin, norepinephrine, normalSaline, oralDextrose, oxytocin, phenergan, procainamide, sodiumBicarbonate, synchronizedCardioversion, tcp, tylenol, valium, zofran ]
 }

@@ -24,9 +24,9 @@ medDataRouter   //getAll medical data
       return res.status(201).send(medData);
     });
   });
-//get all medData by medication
+//getAll medData by medication
 medDataRouter
-  .route("/medications/:medications").get((req, res, next) => {
+  .route("/medical/:medications").get((req, res, next) => {
 
     Medical.find({ medications: req.params.medications }, (err, medicalData) => {
     console.log(medicalData);
