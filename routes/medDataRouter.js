@@ -2,8 +2,8 @@ const express = require("express");
 const medDataRouter = express.Router();
 const Medical = require("../models/medical.js");
 
-medDataRouter   //get all medical data
-  .get((req, res, next) => {
+medDataRouter   //getAll medical data
+  .get("/", (req, res, next) => {
     Medical.find((err, medicalData) => {
       if (err) {
         res.status(500);
@@ -14,7 +14,7 @@ medDataRouter   //get all medical data
   })
   //post new medical data to DB
   .post((req, res, next) => {
-    newMedical = new Medical(req.body);
+    const newMedical = new Medical(req.body);
 
     newMedical.save((err, medData) => {
       if (err) {
@@ -24,9 +24,9 @@ medDataRouter   //get all medical data
       return res.status(201).send(medData);
     });
   });
-//get all medData by medication
+//getAll medData by medication
 medDataRouter
-  .route("/medications/:medications").get((req, res, next) => {
+  .route("/medical/:medications").get((req, res, next) => {
 
     Medical.find({ medications: req.params.medications }, (err, medicalData) => {
     console.log(medicalData);

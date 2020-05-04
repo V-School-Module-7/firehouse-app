@@ -16,7 +16,7 @@ protocolRouter
   })
   // post new protocol to db
   .post((req, res, next) => {
-    newProtocol = new Protocol(req.body);
+    const newProtocol = new Protocol(req.body);
     newProtocol.save((err, protocol) => {
       if (err) {
         res.status(500);
@@ -30,7 +30,7 @@ protocolRouter
   .route("/category/:category")
   // get all protocols in category
   .get((req, res, next) => {
-   
+
     Protocol.find({ category: req.params.category }, (err, protocols) => {
       console.log(protocols)
       if (err) {
