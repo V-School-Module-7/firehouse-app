@@ -1,4 +1,4 @@
-export const benadryl = {
+module.exports = {
     type: "Diphenhydramine (Benadryl)",
     conditions: [
         {

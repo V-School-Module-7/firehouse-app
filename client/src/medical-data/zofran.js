@@ -1,4 +1,4 @@
-export const zofran = {
+module.exports = {
     type: "Ondansetron (Zofran)",
     conditions: [
         {

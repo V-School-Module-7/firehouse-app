@@ -1,4 +1,4 @@
-export const normalSaline = {
+module.exports = {
     type: "Normal Saline",
     conditions: [
         {

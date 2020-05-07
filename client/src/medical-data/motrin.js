@@ -1,4 +1,4 @@
-export const motrin = {
+module.exports = {
     type: "Ibuprofen (Motrin)",
     conditions: [
         {

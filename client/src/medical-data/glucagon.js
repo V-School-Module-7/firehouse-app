@@ -1,4 +1,4 @@
-export const glucagon = {
+module.exports = {
     type: "Glucagon",
     conditions: [
         {

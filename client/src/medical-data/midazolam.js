@@ -1,4 +1,4 @@
-export const midazolam = {
+module.exports = {
     type: "Midazolam (Versed)",
     conditions: [
         {

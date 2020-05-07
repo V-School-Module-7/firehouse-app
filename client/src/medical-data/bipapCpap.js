@@ -1,4 +1,4 @@
-export const bipapCpap = {
+module.exports = {
     type: "BIPAP/CPAP",
     conditions: [
         {

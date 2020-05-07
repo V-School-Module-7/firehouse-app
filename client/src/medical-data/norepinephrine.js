@@ -1,4 +1,4 @@
-export const norepinephrine = {
+module.exports = {
     type: "Norepinephrine",
     conditions: [
         {

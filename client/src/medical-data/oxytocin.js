@@ -1,4 +1,4 @@
-export const oxytocin = {
+module.exports = {
     type: "Oxytocin (Pitocin)",
     conditions: [
         {

@@ -1,4 +1,4 @@
-export const synchronizedCardioversion = {
+module.exports = {
     type: "Synchronized Cardioversion",
     conditions: [
         {

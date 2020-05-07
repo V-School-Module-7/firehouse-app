@@ -1,4 +1,4 @@
-export const valium = {
+module.exports = {
     type: "Diazepam (Valium)",
     conditions: [
         {

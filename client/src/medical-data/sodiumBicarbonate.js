@@ -1,4 +1,4 @@
-export const sodiumBicarbonate = {
+module.exports = {
     type: "Sodium Bicarbonate",
     conditions: [
         {

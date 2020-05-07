@@ -1,4 +1,4 @@
-export const adenosine = {
+module.exports = {
     type: "Adenosine",
     conditions : [
     {

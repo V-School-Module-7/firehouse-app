@@ -1,4 +1,4 @@
-export const ketamine = {
+module.exports = {
     type: "Ketamine (Ketalar)",
     conditions: [
         {

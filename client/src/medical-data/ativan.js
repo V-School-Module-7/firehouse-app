@@ -1,4 +1,4 @@
-export const ativan = {
+module.exports = {
     type: "Lorazepam (Ativan)",
     conditions: [
         {

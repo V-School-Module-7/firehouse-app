@@ -1,4 +1,4 @@
-export const aspirin = {
+module.exports = {
     type: "Aspirin",
     weights: [
         {
@@ -12,8 +12,8 @@ export const aspirin = {
             amounts: "Pediatric",
             dosage: "NOT RECOMMENDED",
             notes: [
-                        
-            ]  
+
+            ]
         }
     ]
 }

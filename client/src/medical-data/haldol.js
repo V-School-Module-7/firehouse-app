@@ -1,4 +1,4 @@
-export const haldol = {
+module.exports = {
     type: "Haloperidol (Haldol)",
     conditions: [
         {

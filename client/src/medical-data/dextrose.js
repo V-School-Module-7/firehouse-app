@@ -1,4 +1,4 @@
-export const dextrose = {
+module.exports = {
     type: "Dextrose",
     conditions: [
         {

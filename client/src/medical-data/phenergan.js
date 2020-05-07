@@ -1,4 +1,4 @@
-export const phenergan = {
+module.exports = {
     type: "Promethazine (Phenergan)",
     conditions: [
         {

@@ -1,4 +1,4 @@
-export const magnesiumSulfate = {
+module.exports = {
     type: "Magnesium Sulfate",
     condition: [
         {
@@ -53,7 +53,7 @@ export const magnesiumSulfate = {
                     amounts: "Pediatric",
                     dosage: "Contact OLMC!",
                     notes: [
-                        
+
                     ]
                 }
             ]
