@@ -1,4 +1,4 @@
-export const morphineSulfate = {
+module.exports = {
     type: "Morphine Sulfate",
     conditions: [
         {
@@ -17,7 +17,7 @@ export const morphineSulfate = {
                     amounts: "Adult",
                     dosage: "IV/IO/IM: 4-10 mg every 10 min",
                     notes: [
-                        
+
                     ]
                 },
                 {

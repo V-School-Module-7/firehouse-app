@@ -1,4 +1,4 @@
-export const lidocaine = {
+module.exports = {
     type: "Lidocaine",
     condition: [
         {
@@ -34,7 +34,7 @@ export const lidocaine = {
                     amounts: "Pediatric",
                     dosage: "Consult with OLMC for direction if blood pressure is less than pediatric lowest acceptable systolic blood pressure",
                     notes: [
-                        
+
                     ]
                 }
             ]
@@ -46,7 +46,7 @@ export const lidocaine = {
                     amounts: "Adult",
                     dosage: "Begin continuous ifusion 2-4 mg/min",
                     notes: [
-                        
+
                     ]
                 }
             ]
@@ -85,7 +85,7 @@ export const lidocaine = {
                     amounts: "8.2 kg",
                     dosage: "8.2mg / 0.41mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
@@ -220,7 +220,7 @@ export const lidocaine = {
                 },
                 {
                     amounts: "Pediatric",
-                    dosage: "0.5 mL/kg of 2% Lidocaine", 
+                    dosage: "0.5 mL/kg of 2% Lidocaine",
                     notes: [
                         "Given SLOWLY through IO before IO Bolus"
                     ]

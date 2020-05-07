@@ -1,4 +1,4 @@
-export const tylenol = {
+module.exports = {
     type: "Acetaminophen (Tylenol)",
     conditions: [
         {

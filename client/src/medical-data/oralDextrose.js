@@ -1,4 +1,4 @@
-export const oralDextrose = {
+module.exports = {
     type: "Oral Dextrose",
     conditions: [
         {

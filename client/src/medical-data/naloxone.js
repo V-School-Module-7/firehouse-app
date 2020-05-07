@@ -1,4 +1,4 @@
-export const naloxone = {
+module.exports = {
     type: "Naloxone",
     conditions: [
         {

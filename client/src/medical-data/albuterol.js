@@ -1,4 +1,4 @@
-export const albuterol = {
+module.exports = {
     type: "Albuterol",
     conditions: [
         {

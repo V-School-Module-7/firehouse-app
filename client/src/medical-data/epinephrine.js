@@ -1,4 +1,4 @@
-export const epinepherine = {
+module.exports = {
     type: "Epinephrine",
     conditions: [
         {
@@ -70,7 +70,7 @@ export const epinepherine = {
                     amounts: "Pediatric",
                     dosage: "0.01 mg/kg (0.1mL/kg IV/IO)",
                     notes: [
-                        
+
                     ]
                 },
                 {
@@ -84,126 +84,126 @@ export const epinepherine = {
                     amounts: "3.5 kg",
                     dosage: "0.035mg / 0.35 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "5 kg",
                     dosage: "0.05mg / 0.5 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "8.2 kg",
                     dosage: "0.08mg / 0.82 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "10.5 kg",
                     dosage: "0.11mg / 1.05 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "13 kg",
                     dosage: "0.13mg / 1.30 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "16 kg",
                     dosage: "0.16mg / 1.6 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "19 kg",
                     dosage: "0.19mg / 1.9 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "22 kg",
                     dosage: "0.22mg / 2.20 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "26 kg",
                     dosage: "0.26mg / 2.6 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "28 kg",
                     dosage: "0.28mg / 2.8 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "32 kg",
                     dosage: "0.32mg / 3.2 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "34 kg",
                     dosage: "0.34mg / 3.4 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "36 kg",
                     dosage: "0.36mg / 3.6 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "37 kg",
                     dosage: "0.37mg / 3.7 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "39 kg",
                     dosage: "0.39mg / 3.9 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "41 kg",
                     dosage: "0.41mg / 4.1 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "47 kg",
                     dosage: "0.47mg / 4.7 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "52 kg",
                     dosage: "0.52mg / 5.2 mL",
                     notes: [
-                        
+
                     ]
                 }
             ]
@@ -229,56 +229,56 @@ export const epinepherine = {
                     amounts: "3.5 kg",
                     dosage: "0.035mg / 0.35 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "5 kg",
                     dosage: "0.05mg / 0.5 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "8.2 kg",
                     dosage: "0.08mg / 0.82 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "10.5 kg",
                     dosage: "0.11mg / 1.05 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "13 kg",
                     dosage: "0.13mg / 1.30 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "16 kg",
                     dosage: "0.16mg / 1.6 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "19 kg",
                     dosage: "0.19mg / 1.9 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "22 kg",
                     dosage: "0.22mg / 2.20 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
@@ -289,63 +289,63 @@ export const epinepherine = {
                     amounts: "28 kg",
                     dosage: "0.28mg / 2.8 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "32 kg",
                     dosage: "0.32mg / 3.2 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "34 kg",
                     dosage: "0.34mg / 3.4 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "36 kg",
                     dosage: "0.36mg / 3.6 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "37 kg",
                     dosage: "0.37mg / 3.7 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "39 kg",
                     dosage: "0.39mg / 3.9 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "41 kg",
                     dosage: "0.41mg / 4.1 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "47 kg",
                     dosage: "0.47mg / 4.7 mL",
                     notes: [
-                        
+
                     ]
                 },
                 {
                     amounts: "52 kg",
                     dosage: "0.52mg / 5.2 mL",
                     notes: [
-                        
+
                     ]
                 }
             ]
@@ -357,7 +357,7 @@ export const epinepherine = {
                     amounts: "Adult",
                     dosage: "0.1 mg (1cc of 1:10,000) IV/IO push",
                     notes: [
-                        
+
                     ]
                 },
                 {

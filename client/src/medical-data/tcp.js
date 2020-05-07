@@ -1,4 +1,4 @@
-export const tcp = {
+module.exports = {
     type: "Transcutaneous Pacing (TCP)",
     conditions: [
         {
