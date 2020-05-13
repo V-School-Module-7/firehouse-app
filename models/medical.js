@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const  medicalSchema = new Schema ({
     medications: {
         type: String,
-        enum: [ adenosine, albuterol, amiodarone, aspirin, ativan, atropine, benadryl, bipapCpap, calciumGluconate, dextrose, epinepherine, fentanyl, glucagon, haldol, ketamine, lidocaine, magnesiumSulfate, midazolam, morphineSulfate, motrin, naloxone, nitroglycerin, norepinephrine, normalSaline, oralDextrose, oxytocin, phenergan, procainamide, sodiumBicarbonate, synchronizedCardioversion, tcp, tylenol, valium, zofran ],
+        enum: [ 'adenosine', 'albuterol', 'amiodarone', 'aspirin', 'ativan', 'atropine', 'benadryl', 'bipapCpap', 'calciumGluconate', 'dextrose', 'epinepherine', 'fentanyl', 'glucagon', 'haldol', 'ketamine', 'lidocaine', 'magnesiumSulfate', 'midazolam', 'morphineSulfate', 'motrin', 'naloxone', 'nitroglycerin', 'norepinephrine', 'normalSaline', 'oralDextrose', 'oxytocin', 'phenergan', 'procainamide', 'sodiumBicarbonate', 'synchronizedCardioversion', 'tcp', 'tylenol', 'valium', 'zofran' ],
         required: true
     },
     weights: {
