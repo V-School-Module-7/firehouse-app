@@ -12,7 +12,7 @@ module.exports = {
             amounts: "Pediatric",
             dosage: "NOT RECOMMENDED",
             notes: [
-
+                ""
             ]
         }
     ]

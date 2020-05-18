@@ -5,7 +5,7 @@ module.exports = {
             type: "1:1000 bradycardia/hypoperfusion/snake bites",
             weights: [
                 {
-                    amounts: "Adult",
+                    amount: "Adult",
                     dosage: "2-10 mcg/min IV/IO infusion for hypoperfusion",
                     notes: [
                         "ADULT: titrate to maintain a SBP>100 mmHg"

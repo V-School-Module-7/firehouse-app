@@ -5,7 +5,7 @@ module.exports = {
             type: "stable wide complex tachycardia",
             weights: [
                 {
-                    amounts: "Adult",
+                    amount: "Adult",
                     dosage: "Give 15 mg/kg to max 1000mg IV/IO over 60 min",
                     notes: [
                         "STOP ifusion for: Conversion of rhythm",
@@ -16,7 +16,7 @@ module.exports = {
                     ]
                 },
                 {
-                    amounts: "Pediatric",
+                    amount: "Pediatric",
                     dosage: "Give 15 mg/kg to max 1000 mg IV/IO over 30-60 min",
                     notes: [
                         "STOP ifusion for: Conversion of Rhythm",

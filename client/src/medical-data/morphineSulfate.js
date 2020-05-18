@@ -14,14 +14,14 @@ module.exports = {
             type: "pain and anxiety management",
             weights: [
                 {
-                    amounts: "Adult",
+                    amount: "Adult",
                     dosage: "IV/IO/IM: 4-10 mg every 10 min",
                     notes: [
-
+                        ""
                     ]
                 },
                 {
-                    amounts: "Pediatric",
+                    amount: "Pediatric",
                     dosage: "IV/IO/IM: 0.1 mg/kg every 10 min titrated to effect",
                     notes: [
                         "Max Dose 4 mg per dose"

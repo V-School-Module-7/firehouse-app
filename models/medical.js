@@ -11,7 +11,7 @@ const  medicalSchema = new Schema ({
         type: String,
         required: true
     },
-    amounts: {
+    amount: {
         type: String,
         required: true
     },
