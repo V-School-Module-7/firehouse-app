@@ -4,6 +4,7 @@ import SearchBar from '../components/SearchBar'
 import Button from '../components/Button'
 import {medications} from '../medical-data/index'
 
+
 const MedWrapper = styled.div``;
 const SearchBarMedical = styled(SearchBar);
 const ButtonsContainer = styled.div`
@@ -32,7 +33,7 @@ function Medical(props){
             <SearchBarMedical />
             <ButtonsContainer>{displayButtons}</ButtonsContainer>
         </MedWrapper>
-    )  
+    )
 }
 
 export default Medical

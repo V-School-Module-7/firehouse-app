@@ -2,7 +2,7 @@ module.exports = {
     type: "Nitrogylcerin",
     weights: [
         {
-            amounts: "Adult",
+            amount: "Adult",
             dosage: "0.4 mg SL - every 5 min max of 3 doses as long as symptoms persist and SBP >100 mmHg",
             notes: [
                 "Administer with Caution in patients with known inferior ST elevation MI",
@@ -12,10 +12,10 @@ module.exports = {
             ]
         },
         {
-            amounts: "Pediatric",
+            amount: "Pediatric",
             dosage: "NOT RECOMMENDED",
             notes: [
-
+                ""
             ]
         }
     ]
