@@ -13,30 +13,19 @@ medDataRouter   //getAll medical data
       return res.status(200).send(medications);
     });
   })
-  //post new medical data to DB
-  // medDataRouter.post("/", (req, res, next) => {
-  //   const newMedical = new Medical(req.body);
 
-  //   newMedical.save((err, newMedData) => {
-  //     if (err) {
-  //       res.status(500);
-  //       return next(err);
-  //     }
-  //     return res.status(201).send(newMedData);
-  //   });
-  // });
-// //getAll medData by medication
-// medDataRouter
-//   .route("/medical/:medications").get((req, res, next) => {
+//getAll medData by medication
+medDataRouter
+  .route("/medical/:conditions").get((req, res, next) => {
 
-//     Medical.find({ medications: req.params.medications }, (err, medicalData) => {
-//     console.log(medicalData);
-//     if (err) {
-//       res.status(500);
-//       return next(err);
-//     }
-//     return res.status(200).send(medicalData);
-//   });
-// });
+    Medical.find({ conditions: req.params.conditions }, (err, medicalData) => {
+    console.log(medicalData);
+    if (err) {
+      res.status(500);
+      return next(err);
+    }
+    return res.status(200).send(medicalData);
+  });
+});
 
 module.exports = medDataRouter;
