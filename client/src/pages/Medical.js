@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import SearchBar from '../components/SearchBar'
 import Button from '../components/Button'
-import {medications} from '../medical-data/index'
 
 
 const MedWrapper = styled.div``;
@@ -18,13 +17,15 @@ const ButtonsContainer = styled.div`
 `;
 
 function Medical(props){
+  const buttonInfo = [
+    {name: "Medication", path: "/medical", icon: null}
+  ]
 
-
-    const displayButtons = {medications}.map((buttonInfo, index) => (
+    const displayButtons = buttonInfo.map((buttonInfo, index) => (
         <Button
-          key={buttonInfo + index}
-          text={buttonInfo.data}
-          path={buttonInfo.data}
+          key={buttonInfo.name + index}
+          text={buttonInfo.name}
+          path={buttonInfo.path}
         />
       ));
 

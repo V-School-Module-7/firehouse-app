@@ -1,33 +1,44 @@
-// import React, { useState } from "react";
-// import axios from "axios";
+import React, { useState } from "react";
+import axios from "axios";
 
 
-// export const MedicalContext = React.createContext();
+export const MedicalContext = React.createContext();
 
 
-// export default function MedicalProvider(props) {
+export default function MedicalProvider(props) {
 
-//     const [medicalDataToDisplay, setMedicalDataToDisplay] = useState([]);
+    const [medicalDataToDisplay, setMedicalDataToDisplay] = useState([]);
 
-// function getMedicalDataByCondition(condition) {
-//     axios
-//     .get(`/medical/condition/${condition}`)
-//     .then(res => {
-//         console.log(res)
-//         setMedicalDataToDisplay([...res.data]);
-//     })
-//     .catch(err => console.error(err))
-// }
+    function getAllMedicalData(medications) {
+    axios
+    .get(`/medical`)
+    .then(res => {
+        console.log(res)
+        setMedicalDataToDisplay([...res.data]);
+    })
+    .catch(err => console.error(err))
+    }
+
+    function getMedicalDataByCondition(conditions){
+        axios
+        .get(`/medical/${conditions}`)
+        .then(res => {
+                console.log(res)
+                setMedicalDataToDisplay([...res.data]);
+        })
+        .catch(err => console.log(err))
+    }
 
 
-// return (
-//     <MedicalProvider.Provider
-//     value={{
-//         medicalDataToDisplay,
-//         getMedicalDataByCondition
-//     }}>
-//     {props.children}
-//     </MedicalProvider.Provider>
-// );
-
-// }
+return (
+    <MedicalContext.Provider
+        value={{
+            medicalDataToDisplay,
+            getAllMedicalData,
+            getMedicalDataByCondition
+        }}
+    >
+        {props.children}
+    </MedicalContext.Provider>
+    );
+}

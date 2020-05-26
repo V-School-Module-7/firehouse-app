@@ -1,5 +1,5 @@
 
-<h1 align="center">Welcome to Firehouse-App 👋</h1>
+<h1 align="center">Welcome to the HotZone-App 👋</h1>
 <div style="text-align:center"><img width=200px src="https://i.pinimg.com/originals/aa/81/24/aa81244da33236344119f5fc8dae6701.png"></div>
 
 <p>
@@ -15,13 +15,13 @@
 ### 🏠 [Homepage](https://github.com/V-School-Module-7/firehouse-app#readme)
 
 >   Application for firefighters and paramedics to easily search for information on drug and protocol administration while in certain counties.
-> Currently, they are relegated to dredging through numerous PDFs to find the information they need. This is not user-friendly or efficient 
+> Currently, they are relegated to dredging through numerous PDFs to find the information they need. This is not user-friendly or efficient
 > for potentially life-saving measures. We aim to remedy this with our app.
 
 >   Firebase Storage is being used to store the PDFs that the app will use. Firebase essentially stores the files and provides a link to each file that includes a unique
 > access token. We use that link in our database to pull the files for the app.
 
-## npm packages used: 
+## npm packages used:
 
 ```sh
 

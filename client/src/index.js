@@ -4,15 +4,15 @@ import App from "./App.js";
 import { BrowserRouter } from "react-router-dom";
 import ProtocolProvider from "./context/ProtocolProvider";
 import UserProvider from "./context/UserProvider";
-// import MedicalProvider from "./context/MedicalProvider";
+import MedicalProvider from "./context/MedicalProvider";
 
 ReactDOM.render(
   <BrowserRouter>
   <UserProvider>
     <ProtocolProvider>
-      {/* <MedicalProvider> */}
+      <MedicalProvider>
         <App />
-      {/* </MedicalProvider> */}
+      </MedicalProvider>
     </ProtocolProvider>
   </UserProvider>
   </BrowserRouter>,

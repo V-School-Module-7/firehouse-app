@@ -48,6 +48,18 @@ export const ButtonAlt = styled.div`
     cursor: pointer;
   }
 `;
+//accordion
+
+export const Details = styled.div`
+  border: 1px solid gray;
+  border-top: none;
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+
+  p {
+    margin: 0;
+  }
+`;
 
 // text input normal
 export const Input = styled.input`
