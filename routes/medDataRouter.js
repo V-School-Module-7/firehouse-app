@@ -14,17 +14,17 @@ medDataRouter   //getAll medical data
     });
   })
 
-//getAll medData by medication
+//getAll medical Conditions
 medDataRouter
   .route("/medical/:conditions").get((req, res, next) => {
 
-    Medical.find({ conditions: req.params.conditions }, (err, medicalData) => {
-    console.log(medicalData);
+    Medical.find({ conditions: req.params.conditions }, (err, medConditions) => {
+    console.log(medConditions);
     if (err) {
       res.status(500);
       return next(err);
     }
-    return res.status(200).send(medicalData);
+    return res.status(200).send(medConditions);
   });
 });
 
