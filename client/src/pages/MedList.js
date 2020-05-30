@@ -7,14 +7,14 @@ import { MedicalContext } from "../context/MedicalProvider";
 const MedListWrapper = styled.div``;
 
 export default function MedList(props) {
-    console.log(props)
-    const { medicalDataToDisplay, getAllMedicalData } = useContext(MedicalContext);
+    const { medicalDataToDisplay, getAllMedicalData, } = useContext(MedicalContext);
 
+    console.log(medicalDataToDisplay)
 
     useEffect(() => getAllMedicalData(), []);
     const displayMedicalData = medicalDataToDisplay.map((medications, index) => (
 
-        <MedCard key={index} medicalInfo={medications} />
+        <MedCard key={index} medicalInfo={medications} conditions={medications.conditions} />
     ));
 
     return <MedListWrapper> {displayMedicalData}</MedListWrapper>;

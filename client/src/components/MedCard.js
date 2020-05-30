@@ -10,9 +10,7 @@ const MedCardWrapper = styled.div`
   border: 2px solid #979797;
 `;
 
-// opacity: ${props => (props.open ? "1" : "0")}
-// max-height: ${props => (props.open ? "100%" : "0")};
-// padding: ${props => (props.open ? "15px" : "0 15px")};
+
 export const Details = styled.div`
   border: 1px solid gray;
   border-top: none;
@@ -26,21 +24,25 @@ export const Details = styled.div`
 
 
 export default function MedCard(props) {
+    console.log(props.conditions)
   return (
       <>
     <MedCardWrapper >
-    <Link
-    to={{
-        pathname:`/medical/${props.medicalInfo._id}`,
-        state: props.medicalInfo
-        }}>
-            {/* {props.medicalInfo.conditions} */}
             <div>
           {props.medicalInfo.type}{/* medication type */}
             </div>
-            </Link>
-    </MedCardWrapper>
 
+    { props.conditions && props.conditions.map (condition => <Link
+    to={{
+        pathname:`/medical/${condition.type}`,
+        state: condition
+        }}>
+            <p>
+        {condition.type}
+            </p>
+        </Link>
+    )}
+    </MedCardWrapper>
     </>
   );
 }
