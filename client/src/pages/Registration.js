@@ -22,8 +22,9 @@ const WillLaterBeAnImage = styled.div`
 
 const WelcomeMessage = styled.h1`
   text-indent: 32px;
-  width: 245px;
+  // width: 245px;
   margin: 30px auto 70px auto;
+  text-align: center;
 `;
 
 const SignUpBtn = styled(ButtonAlt)``;
@@ -33,6 +34,8 @@ const ButtonContainer = styled.div`
 `;
 const SignInBtn = styled(Button)`
   margin-top: 24px;
+  background-color: blue;
+  color: #EFFF19;
 `;
 const ButtonLink = styled(Link)`
   margin: 8px auto 8px auto;
@@ -46,7 +49,7 @@ function Registration(props) {
   return (
     <LoginContainer>
       <WillLaterBeAnImage />
-      <WelcomeMessage>Welcome to HotZone App{user ? <p>{user.displayName}</p> : <p>Sign up/in </p>}
+      <WelcomeMessage>Welcome to HotZone{user ? <p>{user.displayName}</p> : <p>Sign in</p>}
       </WelcomeMessage>
       {
        user

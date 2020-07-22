@@ -2,7 +2,7 @@ import React from 'react'
 import withFirebaseAuth from "react-with-firebase-auth";
 import * as firebase from "firebase/app";
 import "firebase/auth";
-import firebaseConfig from "../firebaseConfig";
+import firebaseConfig from "../firebaseConfig.js";
 
 
 export const UserContext = React.createContext();
@@ -36,3 +36,4 @@ function UserProvider(props) {
 
 
 export default withFirebaseAuth({ providers, firebaseAppAuth })(UserProvider)
+
