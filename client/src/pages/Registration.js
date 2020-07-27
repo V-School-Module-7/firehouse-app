@@ -4,6 +4,8 @@ import { Button, ButtonAlt } from "../components/styledComponents";
 import { Link } from "react-router-dom";
 import { UserContext } from "../context/UserProvider";
 
+import LogoSrc from "../assets/HotZoneLogo.png";
+
 
 const LoginContainer = styled.div`
   display: flex;
@@ -13,8 +15,8 @@ const LoginContainer = styled.div`
   width: 100vw;
 `;
 
-const WillLaterBeAnImage = styled.div`
-  background-color: rgb(176, 176, 176);
+const WillLaterBeAnImage = styled.img`
+  
   width: 245px;
   height: 245px;
   margin: 80px auto 0 auto;
@@ -48,7 +50,7 @@ function Registration(props) {
 
   return (
     <LoginContainer>
-      <WillLaterBeAnImage />
+      <WillLaterBeAnImage src={LogoSrc} />
       <WelcomeMessage>Welcome to HotZone{user ? <p>{user.displayName}</p> : <p>Sign in</p>}
       </WelcomeMessage>
       {
