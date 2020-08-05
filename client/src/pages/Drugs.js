@@ -69,12 +69,79 @@ function Drugs(props) {
     ];
     const dextroseButtons = dextroseInfo.map((dextroseInfo, index) => (
         <Button 
-            key={dextrose + index}
+            key={dextroseInfo + index}
             text={dextroseInfo.name}
-            path={dextrose.path}
+            path={dextroseInfo.path}
         />
     ));
-    
+    const diazepamInfo = [
+        { name: "Anxiety Management", path: "/", icon: null},
+        { name: "Hyperthermia", path: "/", icon: null },
+        { name: "Violent Patient", path: "/", icon: null},
+    ];
+    const diazepamButtons = diazepamInfo.map((diazepamInfo, index) => (
+        <Button 
+            key={diazepamInfo + index}
+            text={diazepamInfo.name}
+            path={diazepamInfo.path}
+        />
+    ));
+    const epinephrineInfo = [
+        { name: "Anaphylaxis", path: "/", icon: null},
+        { name: "Anaphylaxis/Stridor", path: "/", icon: null},
+        { name: "Bradycardia/Hypoperfusion/Snake Bite", path: "/", icon: null}
+    ];
+    const epineInfo = [
+        { name: "Anaphylactic Shock/Hypotension", path: "/", icon: null},
+        { name: "Beta Blocker Toxicity - Bradycardia", path: "/", icon: null},
+        { name: "Cardiac Arrest", path: "/", icon: null}
+    ];
+    const epineButtons = epineInfo.map((epineInfo, index) => (
+        <Button 
+            key={epineInfo + index}
+            text={epineInfo.name}
+            path={epineInfo.path}
+        />
+    ));
+    const ketamineInfo = [
+        { name: "Pain and Anxiety Management", path: "/", icon: null},
+        { name: "Violent Patient", path: "/", icon: null},
+    ];
+    const ketamineButtons = ketamineInfo.map((ketamineInfo, index) => (
+        <Button 
+            key={ketamineInfo + index}
+            text={ketamineInfo.name}
+            path={ketamineInfo.path}
+        />
+    ));
+    const lidocaineInfo = [
+        { name: "Cardiac Arrest", path: "/", icon: null},
+        { name: "IO Access In Conscious Patients", path: "/", icon: null },
+        { name: "Post Cardiac Arrest/Return of Spontaneous Circulation (ROSC)", path: "/", icon: null },
+        { name: "Post Cardiac Arrest/ROSC - After Lidocaine or Amiodarone Therapy", path: "/", icon: null },
+        { name: "Respiratory Distress", path: "/", icon: null },
+        { name: "Tachycardia With A Pulse", path: "/", icon: null}
+    ];
+    const lidocaineButtons = lidocaineInfo.map((lidocaineInfo, index) => (
+        <Button 
+            key={lidocaineInfo + index}
+            text={lidocaineInfo.name}
+            path={lidocaineInfo.path}
+        />
+    ));
+    const lorazepamInfo = [
+        { name: "Hyperthermia", path: "/", icon: null},
+        { name: "Pain and Anxiety Management", path: "/", icon: null },
+        { name: "Seizures", path: "/", icon: null },
+        { name: "Violent Patient", path: "/", icon: null }
+    ];
+    const lorazepamButtons = lorazepamInfo.map((lorazepamInfo, index) => (
+        <Button 
+            key={lorazepamInfo + index}
+            text={lorazepamInfo.name}
+            path={lorazepamInfo.path}
+        />
+    ));
 
     return(
         <DrugsWapper>
