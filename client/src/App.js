@@ -14,6 +14,12 @@ import WeightsList from "./pages/WeightsList";
 
 const AppWrapper = styled.div``;
 
+const page404 = () => {
+  return (
+    <h3>404 - Not found</h3>
+  );
+};
+
 function App(props) {
   const { user } = useContext(UserContext)
   console.log(user)
@@ -37,6 +43,8 @@ function App(props) {
 
           <Route path="/medical/:condition" render={(rProps)=> user ? <WeightsList {...rProps}/> : <Redirect to="/"/> }
           />
+
+          <Route path="*" component={page404} />
 
         </Switch>
       </AppWrapper>
