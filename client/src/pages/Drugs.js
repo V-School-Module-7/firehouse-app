@@ -142,6 +142,63 @@ function Drugs(props) {
             path={lorazepamInfo.path}
         />
     ));
+    const magnesiumInfo = [
+        { name: "Cardiac Arrest", path: "/", icon: null },
+        { name: "Respiratory Distress", path: "/", icon: null },
+        { name: "Seizures", path: "/", icon: null }
+    ];
+    const magnesiumButtons = magnesium.map((magnesiumInfo, index) => (
+        <Button 
+            key={magnesiumInfo + index}
+            text={magnesiumInfo.name}
+            path={magnesiumInfo.path}
+        />
+    ));
+    const midazolamInfo = [
+        { name: "Anxiety Management", path: "/", icon: null },
+        { name: "Hyperthermia", path: "/", icon: null },
+        { name: "Seizures", path: "/", icon: null },
+        { name: "Violent Patient", path: "/", icon: null }
+    ];
+    const midazolamButtons = midazolam.map((midazolamInfo, index) => (
+        <Button 
+            key={midazolamInfo + index}
+            text={midazolamInfo.name}
+            path={midazolamInfo.path}
+        />
+    ));
+    const morphineInfo = [
+        { name: "Congestive Heart Failure", path: "/", icon: null },
+        { name: "Pain and Anxiety Management", path: "/", icon: null }
+    ];
+    const morphineButtons = morphineInfo.map((morphineInfo, index) => (
+        <Button 
+            key={morphineInfo + index}
+            text={morphineInfo.name}
+            path={morphineInfo.path}
+        />
+    ));
+    const salineInfo = [
+        { name: "Burns", path: "/", icon: null },
+        { name: "Burns (Parkland Formula", path: "/", icon: null },
+        { name: "Cardiac Arrest", path: "/", icon: null },
+        { name: "Cardiac Chest Pain/Acute Coronary Syndrome", path: "/", icon: null },
+        { name: "Crush Injury", path: "/", icon: null },
+        { name: "Hyperglycemia", path: "/", icon: null },
+        { name: "Hyperthermia", path: "/", icon: null },
+        { name: "Hypothermia", path: "/", icon: null },
+        { name: "Kidney Failure/Dialysis patients", path: "/", icon: null },
+        { name: "Non-Traumatic Shock", path: "/", icon: null },
+        { name: "Pediatric Resuscitation", path: "/", icon: null },
+        { name: "Traumatic Shock", path: "/", icon: null }
+    ];
+    const salineButtons = salineInfo.map((salineInfo, index) => (
+        <Button 
+           key={salineInfo + index}
+           text={salineInfo.name}
+           path={salineInfo.path} 
+        />
+    ))
 
     return(
         <DrugsWapper>
