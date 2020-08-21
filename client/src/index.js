@@ -5,13 +5,16 @@ import { BrowserRouter } from "react-router-dom";
 import ProtocolProvider from "./context/ProtocolProvider";
 import UserProvider from "./context/UserProvider";
 import MedicalProvider from "./context/MedicalProvider";
+import FireProvider from './context/FireProvider';
 
 ReactDOM.render(
   <BrowserRouter>
   <UserProvider>
     <ProtocolProvider>
       <MedicalProvider>
+      <FireProvider>
         <App />
+        </FireProvider>
       </MedicalProvider>
     </ProtocolProvider>
   </UserProvider>

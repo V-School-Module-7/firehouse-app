@@ -37,6 +37,9 @@ function App(props) {
 
           <Route path="/medical/:condition" render={(rProps)=> user ? <WeightsList {...rProps}/> : <Redirect to="/"/> }
           />
+          <Route exact path='/fire' render={()=> user ? <FirePage/> : <Redirect to="/"/> } 
+          />
+          
 
         </Switch>
       </AppWrapper>
