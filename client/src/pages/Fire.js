@@ -4,7 +4,7 @@ import SearchBar from '../components/SearchBar';
 import Button from '../components/Button';
 
 const FireWrapper = styled.div``;
-const SearchFire = styled(SearchBar)``;
+const SearchBarFire = styled(SearchBar)``;
 const ButtonsContainer = styled.div`
     display: grid;
     grid-template-columns: 154px 154px;

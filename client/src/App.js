@@ -11,6 +11,7 @@ import ProtocolsPage from "./pages/Protocols";
 import MedList from "./pages/MedList";
 import DocumentList from "./pages/DocumentList";
 import WeightsList from "./pages/WeightsList";
+import FirePage from './pages/Fire';
 
 const AppWrapper = styled.div``;
 
@@ -39,7 +40,6 @@ function App(props) {
           />
           <Route exact path='/fire' render={()=> user ? <FirePage/> : <Redirect to="/"/> } 
           />
-          
 
         </Switch>
       </AppWrapper>

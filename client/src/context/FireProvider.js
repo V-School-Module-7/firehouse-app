@@ -20,8 +20,9 @@ export default function FireProvider(props) {
     return (
         <FireContext.Provider 
             value={{
-                firesToDisplay,
-                getFiresByCategory
+                fireDataToDisplay,
+                getFiresByCategory,
+                setFireDataToDisplay
             }}
             >
                 {props.children}
