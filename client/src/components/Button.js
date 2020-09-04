@@ -11,7 +11,7 @@ const ButtonWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  background-color: rgb(176, 176, 176);
+  background-color: blue;
   border-radius: 5px;
   width: 154px;
   height: 154px;
@@ -28,6 +28,7 @@ const ButtonIcon = styled.img`
   align-self: center;
   height: 80px;
   width: auto;
+  color: #EFFF19;
 `;
 
 const ButtonText = styled.div`
@@ -39,6 +40,7 @@ const ButtonText = styled.div`
   line-height: 32px;
   text-align: center;
   margin: auto;
+  color: #EFFF19;
 `;
 
 export default function Button(props) {
