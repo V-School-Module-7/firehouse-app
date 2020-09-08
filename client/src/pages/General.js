@@ -38,10 +38,10 @@ function General(props) {
     />
   ));
   return (
-    <GeneralWrapper>
+    <div className='General'>
       <SearchBarGeneral />
       <ButtonsContainer>{displayButtons}</ButtonsContainer>
-    </GeneralWrapper>
+    </div>
   );
 }
 

@@ -11,6 +11,10 @@ import ProtocolsPage from "./pages/Protocols";
 import MedList from "./pages/MedList";
 import DocumentList from "./pages/DocumentList";
 import WeightsList from "./pages/WeightsList";
+import General from './pages/General'
+import Cardiac from './pages/Cardiac'
+import Medical from './pages/proMed'
+import Trauma from './pages/Trauma'
 
 const AppWrapper = styled.div``;
 
@@ -36,13 +40,22 @@ function App(props) {
           />
           <Route exact path="/protocols" render={()=> user ? <ProtocolsPage/> : <Redirect to="/"/> }
           />
+          <Route path="/protocols/general" component={General} />
+          <Route path="/protocols/cardiac" render={()=> user ? <Cardiac /> : <Redirect to="/"/> }
+          />
+          <Route path="/protocols/medical" render={()=> user ? <Medical /> : <Redirect to="/"/> }
+          />
+          <Route path="/protocols/trauma" render={()=> user ? <Trauma /> : <Redirect to="/"/> }
+          />
           <Route path="/protocols/:category" render={(rProps)=> user ? <DocumentList {...rProps}/> : <Redirect to="/"/> }
           />
           <Route exact path="/medical" render={()=> user ? <MedList/> : <Redirect to="/"/> }
           />
-
           <Route path="/medical/:condition" render={(rProps)=> user ? <WeightsList {...rProps}/> : <Redirect to="/"/> }
           />
+          
+          
+          
 
           <Route path="*" component={page404} />
 

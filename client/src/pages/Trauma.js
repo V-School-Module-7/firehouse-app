@@ -30,7 +30,7 @@ display: grid;
           { name: '11. Snake Bites', path: '/protocols/trauma', icon: null}
       ];
 
-      const displayButtons = ButtonInfo.map((ButtonInfo, index) => {
+      const displayButtons = ButtonInfo.map((buttonInfo, index) => {
          return <Button
           key={buttonInfo + index}
           text={buttonInfo.name}
