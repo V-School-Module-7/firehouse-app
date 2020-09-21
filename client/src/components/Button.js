@@ -32,8 +32,8 @@ const ButtonIcon = styled.img`
 `;
 
 const ButtonText = styled.div`
-  height: 32px;
-  width: 120px;
+  height: auto;
+  width: auto;
   color: #ffffff;
   font-weight: bold;
   font-size: 24px;
