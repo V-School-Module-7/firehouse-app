@@ -37,7 +37,7 @@ display: grid;
           { name: '18. Violent Patient/Chemical Sedation', path: '/protocols/medical', icon: null }
       ];
 
-      const displayButtons = ButtonInfo.map((ButtonInfo, index) => {
+      const displayButtons = ButtonInfo.map((buttonInfo, index) => {
          return <Button
           key={buttonInfo + index}
           text={buttonInfo.name}
