@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import {Anchor} from './Anchor';
 
 const ButtonLink = styled(Link)`
   text-decoration: none;
@@ -32,8 +33,8 @@ const ButtonIcon = styled.img`
 `;
 
 const ButtonText = styled.div`
-  height: 32px;
-  width: 120px;
+  height: auto;
+  width: auto;
   color: #ffffff;
   font-weight: bold;
   font-size: 24px;
@@ -42,6 +43,7 @@ const ButtonText = styled.div`
   margin: auto;
   color: #EFFF19;
 `;
+export const AnchorButton = styled(Anchor)``
 
 export default function Button(props) {
   return (
