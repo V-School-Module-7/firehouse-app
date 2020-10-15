@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import {Anchor} from './Anchor';
 
 const ButtonLink = styled(Link)`
   text-decoration: none;
@@ -42,6 +43,7 @@ const ButtonText = styled.div`
   margin: auto;
   color: #EFFF19;
 `;
+export const AnchorButton = styled(Anchor)``
 
 export default function Button(props) {
   return (

@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { Anchor } from './Anchor';
+import React from 'react';
+import styled from 'styled-components';
+import {Anchor} from './Anchor';
 
-const ButtonLink = styled(Link)`
-  text-decoration: none;
-`;
+const AnchorLink = styled(Anchor)`
+ text-decoration: none;
+`
+
 const ButtonWrapper = styled.div`
   justify-self: center;
   display: flex;
@@ -34,12 +34,12 @@ const ButtonText = styled.div`
   color: #EFFF19;
 `;
 
-export default function ButtonCardiac(props) {
+export default function AnchorButton(props) {
   return (
-    <ButtonLink to={props.path}>
+    <AnchorLink>
       <ButtonWrapper>
         <ButtonText>{props.text}</ButtonText>
       </ButtonWrapper>
-    </ButtonLink>
+    </AnchorLink>
   );
 }
