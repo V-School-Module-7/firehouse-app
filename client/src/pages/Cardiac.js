@@ -11,7 +11,6 @@ import newbornResuscitationPDF from '../assets/pdf/newborn-resuscitation.pdf';
 import tachycardiaPDF from '../assets/pdf/tachycardia.pdf';
 import Anchor from '../components/Anchor';
 
-
 const CardiacWrapper = styled.div ``;
 const SearchBarCardiac = styled(SearchBar)``;
 const ButtonsContainer = styled.div`

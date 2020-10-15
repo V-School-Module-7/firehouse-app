@@ -16,6 +16,7 @@ import Anchor from '../components/Anchor';
 const TraumaWrapper = styled.div ``;
 const SearchBarTrauma = styled(SearchBar)``;
 const ButtonsContainer = styled.div`
+
 display: flex;
 flex-direction: column;
 grid-gap: 20px;
@@ -51,7 +52,6 @@ grid-gap: 20px;
         //   path={buttonInfo.path} />
 
         return <Anchor href={buttonInfo.href} target='__blank'>{buttonInfo.label}</Anchor>
-
           
       });
 
