@@ -43,7 +43,7 @@ function App(props) {
           <Route path="/protocols/general" component={General} />
           <Route path="/protocols/cardiac" render={()=> user ? <Cardiac /> : <Redirect to="/"/> }
           />
-          <Route path="/protocols/medical" render={()=> user ? <Medical /> : <Redirect to="/"/> }
+          <Route exact path="/protocols/medical" render={()=> user ? <Medical /> : <Redirect to="/"/> }
           />
           <Route path="/protocols/trauma" render={()=> user ? <Trauma /> : <Redirect to="/"/> }
           />

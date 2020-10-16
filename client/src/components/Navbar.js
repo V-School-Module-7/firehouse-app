@@ -20,6 +20,10 @@ const Title = styled.h1`
   text-align: center;
   color: #EFFF19;
   font-size: 34px;
+
+  :hover{
+    cursor: pointer;
+  }
 `;
 
 const Button = styled.div`
@@ -29,6 +33,10 @@ const Button = styled.div`
   padding: 0.5em 1em 1em 1em;
   border-radius: 5px;
   border: 2px solid yellow;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 function Navbar(props) {
@@ -36,7 +44,7 @@ function Navbar(props) {
 
   return (
     <NavbarWrapper>
-    <Button
+    <Button onClick={()=> props.history.go(0)}
       /* onClick={()=> props.history.push("/")} */
       >Back
       </Button>

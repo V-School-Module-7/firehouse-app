@@ -13,7 +13,7 @@ const ButtonWrapper = styled.div`
   align-content: center;
   background-color: blue;
   border-radius: 5px;
-  width: 1200px;
+  width: 1400px;
   height: 154px;
   position: relative;
 
