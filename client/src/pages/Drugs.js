@@ -226,18 +226,18 @@ function Drugs(props) {
             <ButtonsContainer>
                 <DrugButtonsContainer>
                     <Title>Acetaminophen/Tylenol</Title>
-                    <Button text={"Dosages"} />
+                    <Button text={"Dosages"} path={"/"} />
                 </DrugButtonsContainer>
 
                 <DrugButtonsContainer>
                     <Title>Adenosine</Title>
-                    <Button text={"Narrow or Wide Complex Tachycardia"}/>
-                    <Button text={"Synchronized Cardioversion"}/>
+                    <Button text={"Narrow or Wide Complex Tachycardia"} path={"/"}/>
+                    <Button text={"Synchronized Cardioversion"} path={"/"}/>
                 </DrugButtonsContainer>
 
                 <DrugButtonsContainer>
                     <Title>Albuterol</Title>
-                    <Button text={"Wheezing/Asthma/Anaphylaxis"}/>
+                    <Button text={"Wheezing/Asthma/Anaphylaxis"} path={"/"}/>
                 </DrugButtonsContainer>
 
                 <DrugButtonsContainer>
@@ -247,7 +247,7 @@ function Drugs(props) {
 
                 <DrugButtonsContainer>
                     <Title>Aspirin</Title>
-                    <Button text={"Dosages"}/>
+                    <Button text={"Dosages"} path={"/"}/>
                 </DrugButtonsContainer>
 
                 <DrugButtonsContainer>
@@ -262,12 +262,12 @@ function Drugs(props) {
 
                 <DrugButtonsContainer>
                     <Title>Calcium Gluconate Gel</Title>
-                    <Button text={"Toxic Exposure-Hydrofluoric Acid"} />
+                    <Button text={"Toxic Exposure-Hydrofluoric Acid"} path={"/"} />
                 </DrugButtonsContainer>
 
                 <DrugButtonsContainer>
                     <Title>Dextrose (Oral)</Title>
-                    <Button text={"Dosages"} />
+                    <Button text={"Dosages"} path={"/"} />
                 </DrugButtonsContainer>
 
                 <DrugButtonsContainer>
@@ -277,12 +277,12 @@ function Drugs(props) {
 
                 <DrugButtonsContainer>
                     <Title>Dextrose 25%</Title>
-                    <Button text={"Hypoglycemia"} />
+                    <Button text={"Hypoglycemia"} path={"/"} />
                 </DrugButtonsContainer>
 
                 <DrugButtonsContainer>
                     <Title>Dextrose 50%</Title>
-                    <Button text={"Hypoglycemia/Altered Mental Status/Violent Patient"} />
+                    <Button text={"Hypoglycemia/Altered Mental Status/Violent Patient"} path={"/"} />
                 </DrugButtonsContainer>
 
                 <DrugButtonsContainer>
@@ -292,7 +292,7 @@ function Drugs(props) {
 
                 <DrugButtonsContainer>
                     <Title>Diphenhydramine (Benadryl)</Title>
-                    <Button text={"Moderate To Severe Allergic Reaction"} />
+                    <Button text={"Moderate To Severe Allergic Reaction"} path={"/"} />
                 </DrugButtonsContainer>
 
                 <DrugButtonsContainer>
@@ -307,7 +307,108 @@ function Drugs(props) {
 
                 <DrugButtonsContainer>
                     <Title>Fentanyl</Title>
-                    <Button text={"Pain and Anxiety Management"} />
+                    <Button text={"Pain and Anxiety Management"} path={"/"} />
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Glucagon</Title>
+                    <Button text={"Hypoglycemia"} path={"/"} />
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Haloperidol (Haldol)</Title>
+                    <Button text={"Violent Patient"} path={"/"} />
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Ibuprofen (Motrin)</Title>
+                    <Button text={"Dosages"} path={"/"} />
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Ketamine (Ketalar)</Title>
+                    {ketamineButtons}
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Lidocaine</Title>
+                    {lidocaineButtons}
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Lorazepam (Ativan)</Title>
+                    {lorazepamButtons}
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Magnesium Sulfate</Title>
+                    {magnesiumButtons}
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Midazolam (Versed)</Title>
+                    {midazolamButtons}
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Morphine Sulfate</Title>
+                    {morphineButtons}
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Naloxone (Narcan)</Title>
+                    <Button 
+                        text={"Overdose/Altered Mental Status/Violent Patient"}
+                        path={"/"}
+                    />
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Nitroglycerin</Title>
+                    <Button text={"Chest Pain"} path={"/"} />
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Normal Saline</Title>
+                    {salineButtons}
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Ondansetron (Zofran)</Title>
+                    <Button text={"Nausea/Vomiting"} path={"/"} />
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Oxytocin (Pitocin)</Title>
+                    <Button text={"Dosages"} path={"/"} />
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Procainamide</Title>
+                    <Button 
+                        text={"Stable Wide Complex Tachycardia"}
+                        path={"/"}
+                    />
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Promethazine (Phenergan)</Title>
+                    <Button text={"Nausea/Vomiting"} path={"/"} />
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Sodium Bicarbonate</Title>
+                    <Button text={"Overdose"} path={"/"} />
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Synchronized Cardioversion</Title>
+                    <Button text={"Energy Dose"} path={"/"} />
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Transcutaneous Pacing</Title>
+                    <Button text={"Rate/BPM"} path={"/"} />
                 </DrugButtonsContainer>
 
             </ButtonsContainer>
