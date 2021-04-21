@@ -1,31 +1,44 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from '../components/Button';
+import Button from '../components/ButtonDrug';
 import SearchBar from '../components/SearchBar';
 
 
 const DrugsWapper = styled.div``;
-const SearchBarDrugs = styled(SearchBar);
+const SearchBarDrugs = styled(SearchBar)``;
 const ButtonsContainer = styled.div`
-    display: grid;
-    grid-template-columns: 154px 154px;
-    grid-auto-rows: auto;
-    grid-gap: 20px;
+    display: flex;
+    flex-direction: column;
     width: 100vw;
+    grid-gap: 20px;
+    align-items: center;
     margin: 16px auto 0px auto;
     justify-content: center;
 `;
 
 const DrugButtonsContainer = styled.div`
-    display: grid;
-    grid template-columns: 154px 154px;
-    grid-auto rows: auto;
+    display: flex;
+    flex-direction: column;
     grid-gap: 20px;
+    align-items: center;
     width: 100vw;
     margin: 16px auto 0px auto;
     justify-content: center;
     background-color:  #D8D8D8;
+    padding-bottom: 20px;
 `;
+
+const Title = styled.div`
+    height: auto;
+    width: auto;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 32px;
+    margin: auto;
+    text-align: center;
+    color: #3233FF;
+    padding: 20px 0 0 0;
+`
 
 
 function Drugs(props) {
@@ -37,7 +50,7 @@ function Drugs(props) {
     const amiodaroneButtons = amiodaroneInfo.map((amiodaroneInfo, index) => (
         <Button 
             key={amiodaroneInfo + index}
-            text={amiodaronInfo.name}
+            text={amiodaroneInfo.name}
             path={amiodaroneInfo.path}
         />
     ));
@@ -91,6 +104,13 @@ function Drugs(props) {
         { name: "Anaphylaxis/Stridor", path: "/", icon: null},
         { name: "Bradycardia/Hypoperfusion/Snake Bite", path: "/", icon: null}
     ];
+    const epinephrineButtons = epinephrineInfo.map((epinephrineInfo, index) => (
+        <Button
+            key={epinephrineInfo + index}
+            text={epinephrineInfo.name}
+            path={epinephrineInfo.path}
+        />
+    ));
     const epineInfo = [
         { name: "Anaphylactic Shock/Hypotension", path: "/", icon: null},
         { name: "Beta Blocker Toxicity - Bradycardia", path: "/", icon: null},
@@ -147,7 +167,7 @@ function Drugs(props) {
         { name: "Respiratory Distress", path: "/", icon: null },
         { name: "Seizures", path: "/", icon: null }
     ];
-    const magnesiumButtons = magnesium.map((magnesiumInfo, index) => (
+    const magnesiumButtons = magnesiumInfo.map((magnesiumInfo, index) => (
         <Button 
             key={magnesiumInfo + index}
             text={magnesiumInfo.name}
@@ -160,7 +180,7 @@ function Drugs(props) {
         { name: "Seizures", path: "/", icon: null },
         { name: "Violent Patient", path: "/", icon: null }
     ];
-    const midazolamButtons = midazolam.map((midazolamInfo, index) => (
+    const midazolamButtons = midazolamInfo.map((midazolamInfo, index) => (
         <Button 
             key={midazolamInfo + index}
             text={midazolamInfo.name}
@@ -204,6 +224,91 @@ function Drugs(props) {
         <DrugsWapper>
             <SearchBarDrugs />
             <ButtonsContainer>
+                <DrugButtonsContainer>
+                    <Title>Acetaminophen/Tylenol</Title>
+                    <Button text={"Dosages"} />
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Adenosine</Title>
+                    <Button text={"Narrow or Wide Complex Tachycardia"}/>
+                    <Button text={"Synchronized Cardioversion"}/>
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Albuterol</Title>
+                    <Button text={"Wheezing/Asthma/Anaphylaxis"}/>
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Amiodarone</Title>
+                    {amiodaroneButtons}
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Aspirin</Title>
+                    <Button text={"Dosages"}/>
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Atropine</Title>
+                    {atropineButtons}
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>BIPAP/CPAP</Title>
+                    {bipapButtons}
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Calcium Gluconate Gel</Title>
+                    <Button text={"Toxic Exposure-Hydrofluoric Acid"} />
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Dextrose (Oral)</Title>
+                    <Button text={"Dosages"} />
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Dextrose 10%</Title>
+                    {dextroseButtons}
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Dextrose 25%</Title>
+                    <Button text={"Hypoglycemia"} />
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Dextrose 50%</Title>
+                    <Button text={"Hypoglycemia/Altered Mental Status/Violent Patient"} />
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Diazepam (Valium)</Title>
+                    {diazepamButtons}
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Diphenhydramine (Benadryl)</Title>
+                    <Button text={"Moderate To Severe Allergic Reaction"} />
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Epinephrine 1:1,000</Title>
+                    {epinephrineButtons}
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Epinephrine 1:10,000</Title>
+                    {epineButtons}
+                </DrugButtonsContainer>
+
+                <DrugButtonsContainer>
+                    <Title>Fentanyl</Title>
+                    <Button text={"Pain and Anxiety Management"} />
+                </DrugButtonsContainer>
 
             </ButtonsContainer>
         </DrugsWapper>

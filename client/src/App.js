@@ -15,6 +15,7 @@ import General from './pages/General'
 import Cardiac from './pages/Cardiac'
 import Medical from './pages/proMed'
 import Trauma from './pages/Trauma'
+import Drugs from './pages/Drugs'
 
 const AppWrapper = styled.div``;
 
@@ -53,7 +54,8 @@ function App(props) {
           />
           <Route path="/medical/:condition" render={(rProps)=> user ? <WeightsList {...rProps}/> : <Redirect to="/"/> }
           />
-          
+          <Route exact path="/drugs" render={()=> user ? <Drugs/> : <Redirect to="/"/> }
+          />
           
           
 
