@@ -11,6 +11,7 @@ import ProtocolsPage from "./pages/Protocols";
 import MedList from "./pages/MedList";
 import DocumentList from "./pages/DocumentList";
 import WeightsList from "./pages/WeightsList";
+import FirePage from './pages/Fire';
 import General from './pages/General'
 import Cardiac from './pages/Cardiac'
 import Medical from './pages/proMed'
@@ -53,11 +54,13 @@ function App(props) {
           />
           <Route path="/medical/:condition" render={(rProps)=> user ? <WeightsList {...rProps}/> : <Redirect to="/"/> }
           />
+          <Route exact path='/fire' render={()=> user ? <FirePage/> : <Redirect to="/"/> } 
+          />
           
           
           
 
-          <Route path="*" component={page404} />
+          <Route path="*" component={page404
 
         </Switch>
       </AppWrapper>
