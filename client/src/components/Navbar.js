@@ -13,20 +13,30 @@ const NavbarWrapper = styled.div`
   background-color: rgb(176, 176, 176);
   display: flex;
   align-content: center;
-  justify-content: center;
+  justify-content: space-between;
+  background-color: blue;
 `;
 const Title = styled.h1`
   text-align: center;
-  color: #ffffff;
+  color: #EFFF19;
+  font-size: 34px;
+
+  :hover{
+    cursor: pointer;
+  }
 `;
 
 const Button = styled.div`
   font-size: 1em;
   margin: 1em;
-  color: #ffffff;
-  padding: 0.25em 1em;
+  color: #EFFF19;
+  padding: 0.5em 1em 1em 1em;
   border-radius: 5px;
-  border: 2px solid white;
+  border: 2px solid yellow;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 function Navbar(props) {
@@ -34,7 +44,7 @@ function Navbar(props) {
 
   return (
     <NavbarWrapper>
-    <Button
+    <Button onClick={()=> props.history.go(0)}
       /* onClick={()=> props.history.push("/")} */
       >Back
       </Button>

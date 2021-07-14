@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import SearchBar from "../components/SearchBar";
-import Button from "../components/Button";
+import Button from "../components/Button2";
 
 const ProtocolsWrapper = styled.div``;
 const SearchBarProtocols = styled(SearchBar)``;
 const ButtonsContainer = styled.div`
-  display: grid;
-  grid-template-columns: 154px 154px;
-  grid-auto-rows: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   grid-gap: 20px;
   width: 100vw;
   margin: 16px auto 0px auto;
