@@ -1,0 +1,11 @@
+const Drugs = [
+    {
+        name: "Acetominophen/Tylenol", 
+        symptoms: ["dosages"] 
+    },
+    {
+        name: "",
+        symptoms: []
+    }
+    
+]

@@ -29,7 +29,7 @@ const SearchInput = styled.input`
 export default function SearchBar(props) {
   return (
     <SearchBarContainer>
-      <SearchInput type="search" placeholder="Search" name="search" />
+      <SearchInput type="search" placeholder="Search" name="search" onChange={props.handleChange} />
     </SearchBarContainer>
   );
 }

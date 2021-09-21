@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { UserContext } from "./context/UserProvider";
 import styled, { ThemeProvider } from "styled-components";
@@ -16,6 +16,8 @@ import Cardiac from './pages/Cardiac'
 import Medical from './pages/proMed'
 import Trauma from './pages/Trauma'
 import Drugs from './pages/Drugs'
+import drugsArray from './drugs'
+import seedData from "./seed";
 
 const AppWrapper = styled.div``;
 
@@ -28,6 +30,9 @@ const page404 = () => {
 function App(props) {
   const { user } = useContext(UserContext)
   console.log(user)
+
+  useEffect(()=>{seedData(drugsArray)}, [])
+
 
   return (
     <ThemeProvider theme={theme}>

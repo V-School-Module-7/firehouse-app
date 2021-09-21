@@ -26,18 +26,26 @@ const ButtonsContainer = styled.div`
   justify-content: center;
   `;
 
-function General(props) {
+class General extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+        searchField: ''
+    }
+  }
+  render(){
+
   const buttonInfo = [
     { label: '1. General Patient Care Guidelines', href: generalPatientGuidelinesPDF, icon: null },
     { label: '2. Airway and Tracheostomy Management', href: airwayTracheostomyManagementPDF, icon: null },
     { label: '3. Altered Mental Status', href: alteredMentalStatusPDF, icon: null },
     { label: '4. Death Determination and Pronouncement Process', href: deathDeterminationPDF, icon: null },
     { label: '5. Family Centered Care', href: familyCenteredCarePDF, icon: null },
-    { name: '6. IV/IO Access', path: '/protocols/general', icon: null },
+    { label: '6. IV/IO Access', path: '/protocols/general', icon: null },
     { label: '7. Nausea/Vomiting', href: nauseaVomitingPDF, icon: null },
     { label: '8. Pain & Anxiety Management', href: painAnxietyManagementPDF, icon: null },
     { label: '9. Pediatric Assessment', href: pediatricAssessmentPDF, icon: null },
-    { name: '10. Selective Spinal Immobilization', path: '/protocols/general', icon: null },
+    { label: '10. Selective Spinal Immobilization', path: '/protocols/general', icon: null },
     { label: '11. Shock and Fluid Therapy', href: PDF9, icon: null }
   ];
 
@@ -50,12 +58,16 @@ function General(props) {
 
     <Anchor href={buttonInfo.href} target="__blank">{buttonInfo.label}</Anchor>
   ));
+
+  
+  
   return (
     <div className='General'>
-      <SearchBarGeneral />
+      <SearchBarGeneral handleChange={(e) => this.setState({searchField:e.target.value})}/>
       <ButtonsContainer>{displayButtons}</ButtonsContainer>
     </div>
   );
+  }
 }
 
 export default General;
