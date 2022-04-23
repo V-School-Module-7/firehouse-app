@@ -1,4 +1,4 @@
-module.exports = {
+    module.exports = {
     type: "Amiodarone",
     conditions: [
         {
@@ -15,7 +15,7 @@ module.exports = {
                     amount: "Pediatric",
                     dosage: "5mg/kg IV/IO",
                     notes: [
-                        "May repeat up to 2X. DO NOT EXCEED 300mg"
+                        "May repeat up to 2X every 5 min as needed. DO NOT EXCEED 450mg"
                     ]
                 },
                 {

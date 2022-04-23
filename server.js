@@ -4,7 +4,7 @@ require("dotenv").config();
 const path = require("path");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
-const PORT = process.env.PORT || 7000;
+const PORT = process.env.PORT || 9000;
 const expressJwt = require("express-jwt");
 
 app.use(morgan("dev"));
