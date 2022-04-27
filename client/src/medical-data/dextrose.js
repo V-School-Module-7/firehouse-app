@@ -2,7 +2,7 @@ module.exports = {
     type: "Dextrose",
     conditions: [
         {
-            type: "newborn resuscitation (dextrose 10%)",
+            type: "(dextrose 10%) newborn resuscitation",
             weights: [
                 {
                     amount:"pediatric",
@@ -14,7 +14,7 @@ module.exports = {
             ]
         },
         {
-            type: "hypoglycemia/altered mental status/violent patient (dextrose 10%)",
+            type: "(dextrose 10%) hypoglycemia/altered mental status/violent patient",
             weights: [
                 {
                     amount: "adult",
@@ -25,15 +25,22 @@ module.exports = {
                 },
                 {
                     amount:"pediatric",
+                    dosage: "Dextrose 10% (D10NS) 5mL/kg IV/IO (0.5 grams/kg) IV/IO",
+                    notes: [
+                        "May repeat as necessary up to a max of 125 mL (12.5grams)"
+                    ]
+                },
+                {
+                    amount:"infant",
                     dosage: "Dextrose 10% (D10NS) 5mL/kg IV/IO (D10=10 mL D50 in 40 mL NS)",
                     notes: [
-                        "Infant: Dextrose 10% (D10NS) 5 ml/kg IV/IO if blood glucose is less than 60 mg/dL"
+                        ""
                     ]
                 }
             ]
         },
         {
-            type: "hypoglycemia (dextrose 25%)",
+            type: "(dextrose 25%) hypoglycemia",
             weights: [
                 {
                     amount:"pediatric",
@@ -45,7 +52,7 @@ module.exports = {
             ]
         },
         {
-            type: "hypoglycemia/altered mental status/violent patient (dextrose 50%)",
+            type: "(dextrose 50%) hypoglycemia/altered mental status/violent patient",
             weights: [
                 {
                     amount: "adult",

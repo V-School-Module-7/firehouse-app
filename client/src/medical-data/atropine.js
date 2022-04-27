@@ -5,21 +5,21 @@ module.exports = {
             type: "bradycardia",
             weights: [
                 {
-                    amount: "Adult",
+                    amount: "adult",
                     dosage: "0.5 IV/IO",
                     notes: [
                         "Repeat as needed every 3 min until pulse or BP improved",
-                        "MAX DOSE: 3mg",
-                        "Adult Dosing 5mL every min up to 30mL"
+                        "MAX DOSE total: 3mg",
+                        "Vascular access and fluid therapy."
                     ]
                 },
                 {
-                    amount: "Pediatric",
+                    amount: "pediatric",
                     dosage: "0.02 mg/kg IV/IO",
                     notes: [
                         "Minimum single dose: 0.1 mg",
                         "Maximum single dose: 0.5 mg",
-                        "Repeat Atropine every 3-5 min until pulse or BP improved",
+                        "Repeat Atropine every 3-5 min",
                         "MAX DOSE: 1mg for Child, 2 mg for Adolescent"
                     ]
                 },
@@ -174,7 +174,7 @@ module.exports = {
             type: "toxic exposure - organophosphate/nerve agent",
             weights:[
                 {
-                    amount: "Adult",
+                    amount: "adult",
                     dosage: "Mild to Moderate initial symptoms IV/IO preferred or IM | 2 mg rapid IV/IO (preferred) or IM. SEVERE symptoms | 4mg rapid IM",
                     notes: [
                         "Repeat every 15 minutes until symptoms improve"
