@@ -69,6 +69,18 @@ module.exports = {
                     ]
                 }
             ]
+        },
+        {
+            type: "(dextrose 50%) hypoglycemia",
+            weights: [
+                {
+                    amount: "adult",
+                    dosage: "12 grams (25mL) IV/IO",
+                    notes: [
+                        "May repeat as necessary"
+                    ]
+                }
+            ]
         }
     ]
 }
