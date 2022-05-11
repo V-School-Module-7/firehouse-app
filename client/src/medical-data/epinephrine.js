@@ -25,16 +25,17 @@ module.exports = {
             weights: [
                 {
                     amounts: "Adult",
-                    dosage: "0.3 cc IM",
+                    dosage: "0.5 mg IM",
                     notes: [
                         "If symptoms persist, may repeat every 10 min until symptoms improve"
                     ]
                 },
                 {
                     amounts: "Pediatric",
-                    dosage: "0.15 cc IM",
+                    dosage: "0.15 mL IM",
                     notes: [
-                        "if symptoms persist, may repeat every 10 min until symptoms improve"
+                        "if symptoms persist, may repeat every 10 min until symptoms improve",
+                        "if > 25kg, then give 0.3 mg mL IM"
                     ]
                 }
             ]
