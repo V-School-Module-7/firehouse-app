@@ -11,14 +11,14 @@ export default function FireProvider(props) {
         .get(`/fire/category/${category}`)
         .then(res =>{
             console.log(res)
-            setFiresToDisplay([...res.data]);
+            setFireDataToDisplay([...res.data]);
         })
         .catch(err => console.error(err));
     }
 
 
     return (
-        <FireContext.Provider 
+        <FireContext.Provider
             value={{
                 fireDataToDisplay,
                 getFiresByCategory,
