@@ -16,6 +16,7 @@ import General from './pages/General'
 import Cardiac from './pages/Cardiac'
 import Medical from './pages/proMed'
 import Trauma from './pages/Trauma'
+import Drugs from "./pages/Drugs";
 
 const AppWrapper = styled.div``;
 
@@ -57,11 +58,9 @@ function App(props) {
           />
           <Route exact path='/fire' render={()=> user ? <FirePage/> : <Redirect to="/"/> }
           />
+          <Route exact path='/drugs' render={()=> user ? <FirePage/> : <Redirect to="/"/> }
+          />
 
-
-
-
-          {/* <Route path="*" component={page404}/> */}
 
         </Switch>
       </AppWrapper>
