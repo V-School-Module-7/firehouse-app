@@ -27,7 +27,8 @@ const page404 = () => {
 
 function App(props) {
   const { user } = useContext(UserContext)
-  console.log(user)
+  // console.log(user)
+
 
   return (
     <ThemeProvider theme={theme}>
@@ -60,7 +61,7 @@ function App(props) {
 
 
 
-          <Route path="*" component={page404}/>
+          {/* <Route path="*" component={page404}/> */}
 
         </Switch>
       </AppWrapper>
