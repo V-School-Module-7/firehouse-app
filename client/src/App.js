@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Route, Redirect, Switch } from "react-router-dom";
 import { UserContext } from "./context/UserProvider";
 import styled, { ThemeProvider } from "styled-components";
 import theme from "./theme/theme";
@@ -19,11 +19,11 @@ import Trauma from './pages/Trauma'
 
 const AppWrapper = styled.div``;
 
-const page404 = () => {
-  return (
-    <h3>404 - Not found</h3>
-  );
-};
+// const page404 = () => {
+//   return (
+//     <h3>404 - Not found</h3>
+//   );
+// };
 
 function App(props) {
   const { user } = useContext(UserContext)
@@ -60,7 +60,7 @@ function App(props) {
           
           
 
-          <Route path="*" component={page404
+          {/* <Route path="*" component={page404 */}
 
         </Switch>
       </AppWrapper>

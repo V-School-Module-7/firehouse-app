@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import SearchBar from '../components/SearchBar';
-import Button from '../components/buttonGeneral';
+//import Button from '../components/buttonGeneral';
 import Anchor from '../components/Anchor'
 
 import medicalGuidelinesPDF from '../assets/pdf/Medical-Patient-Care-Guidelines.pdf'

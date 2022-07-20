@@ -14,7 +14,7 @@ import nauseaVomitingPDF from '../assets/pdf/Nausea-Vomiting.pdf'
 import painAnxietyManagementPDF from '../assets/pdf/Pain-and-Anxiety-Management.pdf'
 import pediatricAssessmentPDF from '../assets/pdf/Pediatric-Assessment.pdf'
 
-const GeneralWrapper = styled.div ``;
+//const GeneralWrapper = styled.div ``;
 const SearchBarGeneral = styled(SearchBar)``;
 const ButtonsContainer = styled.div`
   display: flex;
