@@ -1,7 +1,7 @@
 {
   "name": "firehouse-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "<h1 align=\"center\">Welcome to the HotZone-App 👋</h1> <div style=\"text-align:center\"><img width=200px src=\"https://i.pinimg.com/originals/aa/81/24/aa81244da33236344119f5fc8dae6701.png\"></div>",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,13 +19,15 @@
   },
   "homepage": "https://github.com/a-sanderson/firehouse-app#readme",
   "dependencies": {
-    "bcrypt": "^5.0.0",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-jwt": "^6.0.0",
+    "bcrypt": "^5.0.1",
+    "client-certificate-auth": "^0.3.0",
+    "dotenv": "^8.6.0",
+    "express": "^4.18.1",
+    "express-jwt": "^5.3.1",
+    "firebase": "^9.9.0",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.5.9",
-    "mongoose": "^5.8.9",
+    "mongoose": "^5.13.14",
     "morgan": "^1.9.1"
   }
 }

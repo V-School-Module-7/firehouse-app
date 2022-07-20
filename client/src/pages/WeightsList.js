@@ -22,10 +22,12 @@ export const Details = styled.div`
 `;
 
 function WeightsList(props){
-  const weightInfo = [
-    {name: "Weights", path: "/medical", icon: null}
-  ]
-  console.log(props)
+  
+  // const weightInfo = [
+  //   {name: "Weights", path: "/medical", icon: null}
+  // ]
+  // console.log(props)
+
   //header of page
   const condition = props.location.state
 
