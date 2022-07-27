@@ -6,9 +6,10 @@ module.exports = {
             weights: [
                 {
                     amount: "adult",
-                    dosage: "IV/IO: 2-5mg | IM: 5-10mg",
+                    dosage: "IV/IO: 2-5mg | IM: 5-10mg (once)",
                     notes:[
-                        "Contact OLMC for repeat dosing"
+                        "Contact OLMC for repeat dosing",
+                        "Repeat every 10 min to desired effect (Max dose 10mg)"
                     ]
                 },
                 {

@@ -6,14 +6,14 @@ module.exports = {
             weights: [
                 {
                     amount: "adult",
-                    dosage: "1000mg by mouth",
+                    dosage: "650-1000mg by mouth once",
                     notes: [
                         ""
                     ]
                 },
                 {
                     amount:"pediatric",
-                    dosage: "15mg/kg by mouth or rectum",
+                    dosage: "15mg/kg (Max Dose 650 mg) by mouth or rectum once",
                     notes: [
                         ""
                     ]

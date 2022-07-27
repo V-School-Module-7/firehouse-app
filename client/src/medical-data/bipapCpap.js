@@ -16,7 +16,9 @@ module.exports = {
                     amount:"pediatric",
                     dosage: "",
                     notes: [
-                        "ONLY use when patient is on machine at home. Maintain home settings and bring machine with the patient. If unable to adequately ventilate return to BVM or advance to intubation"
+                        "ONLY use when patient is on machine at home.",
+                        "Maintain home settings and bring machine with the patient.",
+                        "If unable to adequately ventilate return to BVM or advance to intubation"
                     ]
                 }
             ]
@@ -26,9 +28,13 @@ module.exports = {
             weights: [
                 {
                     amount: "adult",
-                    dosage: "CPAP: Provide 10L/min O2 and PAP of 5cm H2O to begin | BIPAP: Provide 10L/min O2 and IPAP at 15cm H2O with EPAP about 5cm H2O",
+                    dosage: "",
                     notes: [
-                        "Consider when patient is awake, cooperative and needs assistance with oxygenation and ventilation"
+                        "Explain the procedure to the patient",
+                        "Initially apply the mask and begin the CPAP or BiPAP according to manufacturer instructions",
+                        "If unable to adequately ventilate return to BVM and consider insertion of supraglottic airway and bag ventilation",
+                        "Contact OLMC to discuss further settings and treatment above the initial setup",
+                        "Consider when patient is awake, cooperative and needs assistance with oxygenation and ventilation such as in a CHF/pulmonary edema patient or COPD patient."
                 ],
 
                 },
@@ -36,7 +42,7 @@ module.exports = {
                     amount:"pediatric",
                     dosage: "",
                     notes: [
-                        "ONLY use when patient is on machine at home. Maintain home settings and bring machine with the patient. If unable to adequately ventilate return to BVM or advance to intubation"
+                        "ONLY use when patient is on machine at home. Maintain home settings and bring machine with the patient. If unable to adequately ventilate return to BVM and consider insertion of supraglottic airway"
                     ]
                 }
             ]

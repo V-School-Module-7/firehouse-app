@@ -13,9 +13,9 @@ module.exports = {
                 },
                 {
                     amount:"pediatric",
-                    dosage: "see notes",
+                    dosage: "Mix 25mL of 10% Calcium Gluconate in 75mL of sterile water-soluble lubricant",
                     notes: [
-                        "Contact OLMC or Poison Control for instructions"
+                        "Apply topically or if hand exposure, in a glove"
                     ]
                 }
             ]

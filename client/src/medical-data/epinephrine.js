@@ -25,33 +25,40 @@ module.exports = {
             weights: [
                 {
                     amounts: "Adult",
-                    dosage: "0.3 cc IM",
+                    dosage: "0.5 mg IM",
                     notes: [
                         "If symptoms persist, may repeat every 10 min until symptoms improve"
                     ]
                 },
                 {
                     amounts: "Pediatric",
-                    dosage: "0.15 cc IM",
+                    dosage: "0.15 mL IM",
                     notes: [
-                        "if symptoms persist, may repeat every 10 min until symptoms improve"
+                        "if symptoms persist, may repeat every 10 min until symptoms improve",
+                        "if > 25kg, then give 0.3 mg mL IM"
                     ]
                 }
             ]
         },
         {
-            type: "1:1000 anaphalaxis/stridor Drug Concentration 1mg in 1 mL",
+            type: "1:1000 Nebulized (anaphalaxis/stridor) Drug Concentration 1mg in 1 mL",
             weights: [
                 {
                     amounts: "Adult",
                     dosage: [
-                        "2 mL mixed with 3 mL of Normal Saline via nebulizer every 10 min until symptoms improve"
+                        "2 mL mixed with 2 mL of Normal Saline nebulized"
+                    ],
+                    notes: [
+                        ""
                     ]
                 },
                 {
                     amounts: "Pediatric",
                     dosage: [
-                        "2 mL mixed with 3 mL of Normal Saline via nebulizer every 10 min until symptoms improve"
+                        "2 mL mixed with 2 mL of Normal Saline via nebulizer"
+                    ],
+                    notes: [
+                        ""
                     ]
                 }
             ]

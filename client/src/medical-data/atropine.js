@@ -5,21 +5,21 @@ module.exports = {
             type: "bradycardia",
             weights: [
                 {
-                    amount: "Adult",
+                    amount: "adult",
                     dosage: "0.5 IV/IO",
                     notes: [
                         "Repeat as needed every 3 min until pulse or BP improved",
-                        "MAX DOSE: 3mg",
-                        "Adult Dosing 5mL every min up to 30mL"
+                        "MAX DOSE total: 3mg",
+                        "Vascular access and fluid therapy."
                     ]
                 },
                 {
-                    amount: "Pediatric",
+                    amount: "pediatric",
                     dosage: "0.02 mg/kg IV/IO",
                     notes: [
                         "Minimum single dose: 0.1 mg",
                         "Maximum single dose: 0.5 mg",
-                        "Repeat Atropine every 3-5 min until pulse or BP improved",
+                        "Repeat Atropine every 3-5 min",
                         "MAX DOSE: 1mg for Child, 2 mg for Adolescent"
                     ]
                 },
@@ -174,31 +174,22 @@ module.exports = {
             type: "toxic exposure - organophosphate/nerve agent",
             weights:[
                 {
-                    amount: "Adult",
-                    dosage: "Mild to Moderate initial symptoms IV/IO preferred or IM | 2 mg rapid IV/IO (preferred) or IM. SEVERE symptoms | 4mg rapid IM",
+                    amount: "adult",
+                    dosage: "2 mg rapid IV (preferred) or IM repeated every 10 min until you have: (see notes)",
                     notes: [
-                        "Repeat every 15 minutes until symptoms improve"
+                        "Control of bronchorrhea (excessive watery sputum)",
+                        "Control of bronchoconstriction, (as reflected by level of oxygenation and ease of ventilation)",
+                        "Reversed dangerous bradyarrhythmias or AV-blocks",
+                        "Mild Exposure: with no symptoms may require no treatment",
+                        "Moderate Exposure: with evidence of SLUDGEM give 1-2 kits",
+                        "Sever Exposure: with respiratory distress and SLUDGEM give 3 kits"
                     ]
                 },
                 {
-                    amount: "Under 2 years of age",
-                    dosage: "IV/IO 0.02 mg/kg repeated every 15 min | IM: 0.05 mg/kg repeated every 15 min for mild to moderate initial symptoms | IM: 0.01 mg/kg",
-                    notes: [
-                        "repeated every 15 min for severe symptoms until improvement"
-                    ]
-                },
-                {
-                    amount: "Age 2-10",
-                    dosage: "IV/IO/IM: 1mg repeated every 15 min until symptoms improve | Severe symptoms: 2mg repeated every 15 min until symptoms improve",
+                    amount: "pediatric",
+                    dosage: "contact OLMC or Poison Control for instructions",
                     notes: [
                         ""
-                    ]
-                },
-                {
-                    amount: "Age > 10",
-                    dosage: "IV/IO preferred or IM: 2mg rapid push repeated every 15 min for mild to moderate until improve | IM For Sever symptoms: 4mg rapid IM",
-                    notes: [
-                        "repeated every 15 min until symptoms improve"
                     ]
                 }
             ]
