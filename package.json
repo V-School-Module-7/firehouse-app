@@ -27,7 +27,7 @@
     "firebase": "^9.9.0",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.5.9",
-    "mongoose": "^5.13.14",
+    "mongoose": "^6.5.0",
     "morgan": "^1.9.1"
   }
 }

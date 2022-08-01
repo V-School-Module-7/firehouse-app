@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
 // export const config = {
-=======
-// const config = {
->>>>>>> 17d695b799d77fca06c23f5109fa3f8c9b5c8daa
 //   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
 //   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
 //   databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
@@ -12,11 +8,8 @@
 //   messagingSenderId: process.env.REACT_APP_FIREBASE_SENDER_ID
 // };
 
-<<<<<<< HEAD
 //testing
 
-=======
->>>>>>> 17d695b799d77fca06c23f5109fa3f8c9b5c8daa
 const config = {
   apiKey: "AIzaSyCtBtMmoanhpY9Cjy0zdCOTwHVA_JYBTgE",
   authDomain: "firehouse-app.firebaseapp.com",

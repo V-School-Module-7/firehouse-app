@@ -28,12 +28,7 @@ app.use((err, req, res, next) => {
 
 // db connect
 mongoose
-  .connect(process.env.MONGODB_URI || "mongodb://localhost:27017/firehousedb", {
-    useNewUrlParser: true,
-    useFindAndModify: false,
-    useCreateIndex: true,
-    useUnifiedTopology: true
-  })
+  .connect(process.env.MONGODB_URI || "mongodb://localhost:27017/firehousedb")
   .then(() => console.log("connected to the DB"))
   .catch(err => console.log(err));
 

@@ -60,11 +60,7 @@ function App(props) {
           
           
 
-<<<<<<< HEAD
           {/* <Route path="*" component={page404 */}
-=======
-          <Route path="*" component={page404} />
->>>>>>> 17d695b799d77fca06c23f5109fa3f8c9b5c8daa
 
         </Switch>
       </AppWrapper>
