@@ -16,18 +16,20 @@ const ButtonsContainer = styled.div`
 `;
 
 function Fire(props) {
-    const buttonInfo = [
+    const sizeUpData = [
         {name: "Size Up", path: 'fire/size-up', icon: null},
         {name: "Building Types", path: 'fire/building-types', icon: null},
         {name: "VEIS", path: 'fire/veis', icon: null},
         {name: "Ventilation", path: 'fire/ventilation', icon: null},
         {name: "CO Levels", path: 'fire/co-levels', icon: null},
     ];
-    const displayButtons = buttonInfo.map((buttonInfo, index) => (
+    console.log(sizeUpData, "button info")
+    
+    const displayButtons = sizeUpData.map((sizeUpData, index) => (
         <Button
-        key={buttonInfo + index}
-        text={buttonInfo.name}
-        path={buttonInfo.path}
+        key={sizeUpData + index}
+        text={sizeUpData.name}
+        path={sizeUpData.path}
         />
     ));
     return (

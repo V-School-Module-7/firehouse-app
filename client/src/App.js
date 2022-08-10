@@ -17,6 +17,10 @@ import Cardiac from './pages/Cardiac'
 import Medical from './pages/proMed'
 import Trauma from './pages/Trauma'
 
+import SizeUp from "./pages/SizeUp"
+import BuildingTypes from "./pages/BuildingTypes"
+import Type1 from "./pages/Type1";
+
 const AppWrapper = styled.div``;
 
 // const page404 = () => {
@@ -27,7 +31,7 @@ const AppWrapper = styled.div``;
 
 function App(props) {
   const { user } = useContext(UserContext)
-  console.log(user)
+  console.log(user, "user")
 
   return (
     <ThemeProvider theme={theme}>
@@ -56,15 +60,13 @@ function App(props) {
           />
           <Route exact path='/fire' render={()=> user ? <FirePage/> : <Redirect to="/"/> } 
           />
-          
-          
-          
-
-<<<<<<< HEAD
-          {/* <Route path="*" component={page404 */}
-=======
-          <Route path="*" component={page404} />
->>>>>>> 17d695b799d77fca06c23f5109fa3f8c9b5c8daa
+          <Route path='/fire/size-up' render={()=> user ? <SizeUp /> : <Redirect to="/"/> } 
+          />
+          <Route exact path="/fire/building-types" render={()=> user ? <BuildingTypes /> : <Redirect to="/" /> }       
+          />
+          <Route path="/fire/building-types/type-1" render={()=> user ? <Type1 /> : <Redirect to="/" /> }
+          />
+          {/* <Route path="*" component={page404} /> */}
 
         </Switch>
       </AppWrapper>

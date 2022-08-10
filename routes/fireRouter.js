@@ -56,7 +56,6 @@ fireRouter
     });
 
 
-
 fireRouter
 .route('/:_id')
 .get((req, res, next) => {
