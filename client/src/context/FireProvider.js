@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import sizeUpData from "../fire-data/sizeUpData"
 import buildingData from '../fire-data/buildingData';
+import DOMPurify from 'dompurify';
 
 export const FireContext = React.createContext();
 
@@ -27,12 +28,16 @@ export default function FireProvider(props) {
 
     function toggle(index) {
         let arrayCopy = [...fireData.sizeUpData.info]
-        console.log(arrayCopy, "arrCopy")
+        // console.log(arrayCopy, "arrCopy")
         arrayCopy[index].toggled ? arrayCopy[index].toggled = false : arrayCopy[index].toggled = true
   
         setFireData({...fireData, info: arrayCopy})
   
-      } 
+      }
+      
+      function sanitizeData(dirty) {
+        return {__html: DOMPurify.sanitize(dirty)}
+      }
  
     return (
         <FireContext.Provider 
@@ -40,7 +45,8 @@ export default function FireProvider(props) {
                 fireDataToDisplay,
                 getFiresByCategory,
                 toggle,
-                fireData
+                fireData,
+                sanitizeData
             }}
             >
                 {props.children}

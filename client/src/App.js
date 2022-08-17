@@ -19,7 +19,11 @@ import Trauma from './pages/Trauma'
 
 import SizeUp from "./pages/SizeUp"
 import BuildingTypes from "./pages/BuildingTypes"
-import Type1 from "./pages/Type1";
+import Type1 from "./pages/Type1"
+import Type2 from "./pages/Type2"
+import Type3 from "./pages/Type3"
+import Type4 from "./pages/Type4"
+import Type5 from "./pages/Type5"
 
 const AppWrapper = styled.div``;
 
@@ -65,6 +69,14 @@ function App(props) {
           <Route exact path="/fire/building-types" render={()=> user ? <BuildingTypes /> : <Redirect to="/" /> }       
           />
           <Route path="/fire/building-types/type-1" render={()=> user ? <Type1 /> : <Redirect to="/" /> }
+          />
+          <Route path="/fire/building-types/type-2" render={()=> user ? <Type2 /> : <Redirect to="/" /> }
+          />
+          <Route path="/fire/building-types/type-3" render={()=> user ? <Type3 /> : <Redirect to="/" /> }
+          />
+          <Route path="/fire/building-types/type-4" render={()=> user ? <Type4 /> : <Redirect to="/" /> }
+          />
+           <Route path="/fire/building-types/type-5" render={()=> user ? <Type5 /> : <Redirect to="/" /> }
           />
           {/* <Route path="*" component={page404} /> */}
 

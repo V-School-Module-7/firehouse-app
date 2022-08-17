@@ -18,10 +18,15 @@ const DropDownInfoWrapper = styled.div`
     }
 `;
 
-export default function SizeUp() {
-  const { fireData } = useContext(FireContext)
+const TextWrapper = styled.div`
+font-size: 20px;
+color: #474646;
 
-console.log(fireData, "fddd")
+`
+
+export default function SizeUp() {
+  const {fireData, sanitizeData} = useContext(FireContext)
+
     return(
       <div >
         {/* <SearchBarSizeUp /> */}
@@ -37,7 +42,9 @@ console.log(fireData, "fddd")
               {fireData.sizeUpData.info[index].toggled ?
                   <DropDownInfoWrapper>
                     {fireData.sizeUpData.info[index].data.map(data => 
-                      <div dangerouslySetInnerHTML={data}></div>
+                      <TextWrapper>
+                        <div dangerouslySetInnerHTML={sanitizeData(data)}></div>
+                      </TextWrapper>
                     )}
                   </DropDownInfoWrapper>
                 :

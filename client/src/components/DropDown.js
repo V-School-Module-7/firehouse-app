@@ -43,9 +43,9 @@ export default function DropDown(props) {
           {name}
         </DropDownTitle>
         {fireData.sizeUpData.info[index].toggled ?
-          <Icon><i class="fa-solid fa-caret-up"></i></Icon>
+          <Icon><i className="fa-solid fa-caret-up"></i></Icon>
           :
-          <Icon><i class="fa-solid fa-caret-down"></i></Icon>
+          <Icon><i className="fa-solid fa-caret-down"></i></Icon>
         }
       </DropDownWrapper>
     </div>

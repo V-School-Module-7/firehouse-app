@@ -2,8 +2,8 @@ import React, {useContext} from 'react'
 import SearchBar from '../components/SearchBar';
 import styled from 'styled-components';
 import { FireContext } from '../context/FireProvider';
-import Type1Pic1 from '../assets/buildingTypes/Type 1 pic 1.jpg'
-import Type1Pic2 from '../assets/buildingTypes/Type 1 pic 2.jpg'
+import Type2Pic from '../assets/buildingTypes/Type 2.jpg'
+import Type2Pic2 from '../assets/buildingTypes/Type 2 pic 2.jpg'
 
 const Type1Wrapper = styled.div``
 const SectionWrapper = styled.div`
@@ -40,59 +40,54 @@ display: flex;
 flex-direction: column;
 padding: 8px;
 `
-export default function Type1() {
+export default function Type2() {
 
     const {fireData, sanitizeData} = useContext(FireContext)
-
-    const type1 = fireData.buildingData.info[0].data[0]
+    
+    const type2 = fireData.buildingData.info[1].data[0]
 
     return (
         <Type1Wrapper>
-            {console.log(fireData)}
+            {console.log(fireData,'data')}
             <SearchBar /> 
             <SectionWrapper>
                 <TitleWrapper>
-                    Type I Fire Resistive Construction
+                    Type II Noncombustible or Limited Combustible
                 </TitleWrapper>
-            </SectionWrapper>
+            </SectionWrapper>  
             <ImageWrapper1>
-                <img src={Type1Pic1} alt='' />
-            </ImageWrapper1>  
+                <img src={Type2Pic} alt='' />
+            </ImageWrapper1>
             <SectionWrapper>
-                {type1.characteristics.map(characteristic => 
+                {type2.characteristics.map(characteristic => 
                     <div dangerouslySetInnerHTML={sanitizeData(characteristic)}></div>
                 )}
             </SectionWrapper>
             <SectionWrapper>
-                {type1.materials.map(material => 
+                {type2.materials.map(material => 
                     <div dangerouslySetInnerHTML={sanitizeData(material)}></div> 
                 )}
             </SectionWrapper>
             <SectionWrapper>
-                {type1.hazards.map(hazard => 
+                {type2.hazards.map(hazard => 
                     <div dangerouslySetInnerHTML={sanitizeData(hazard)}></div> 
                 )}
             </SectionWrapper>
             <SectionWrapper>
-                {type1.stackEffect.map(stack =>
-                    <div dangerouslySetInnerHTML={sanitizeData(stack)}></div>
+                {type2.collapse.map(col =>
+                    <div dangerouslySetInnerHTML={sanitizeData(col)}></div>
                 )}
-                <ImageWrapper2>
-                    <img src={Type1Pic2} alt='' />
-                </ImageWrapper2>
+            <ImageWrapper2>
+                <img src={Type2Pic2} alt='' />
+            </ImageWrapper2>
             </SectionWrapper>
             <SectionWrapper>
-                {type1.ventilation.map(vent =>
-                    <div dangerouslySetInnerHTML={sanitizeData(vent)}></div>
-                )}
-            </SectionWrapper>
-            <SectionWrapper>
-                {type1.burnTime.map(time =>
+                {type2.burnTime.map(time =>
                     <div dangerouslySetInnerHTML={sanitizeData(time)}></div>
                 )}
             </SectionWrapper>
             <SectionWrapper>
-                {type1.sizeUp.map(size =>
+                {type2.sizeUp.map(size =>
                     <div dangerouslySetInnerHTML={sanitizeData(size)}></div>
                 )}
             </SectionWrapper>

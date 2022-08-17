@@ -23,7 +23,7 @@ function Fire(props) {
         {name: "Ventilation", path: 'fire/ventilation', icon: null},
         {name: "CO Levels", path: 'fire/co-levels', icon: null},
     ];
-    console.log(sizeUpData, "button info")
+    // console.log(sizeUpData, "button info")
     
     const displayButtons = sizeUpData.map((sizeUpData, index) => (
         <Button
