@@ -24,6 +24,7 @@ import Type2 from "./pages/Type2"
 import Type3 from "./pages/Type3"
 import Type4 from "./pages/Type4"
 import Type5 from "./pages/Type5"
+import VEIS from "./pages/VEIS"
 
 const AppWrapper = styled.div``;
 
@@ -77,6 +78,8 @@ function App(props) {
           <Route path="/fire/building-types/type-4" render={()=> user ? <Type4 /> : <Redirect to="/" /> }
           />
            <Route path="/fire/building-types/type-5" render={()=> user ? <Type5 /> : <Redirect to="/" /> }
+          />
+          <Route exact path="/fire/veis" render={()=> user ? <VEIS /> : <Redirect to="/" /> }
           />
           {/* <Route path="*" component={page404} /> */}
 

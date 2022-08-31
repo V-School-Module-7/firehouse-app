@@ -78,7 +78,7 @@ module.exports = {
                 '<b> <center> C</b>ool from a safe location </center>',
                 '<b> <center> E</b>xtinguish </center>',
                 '<b> <center> R</b>escue </center>',
-                '<b> <center> S<b/>alvage </center>'
+                '<b> <center> S</b>alvage </center>'
             ], 
             toggled: false, 
             icon: null 
@@ -86,7 +86,29 @@ module.exports = {
         { 
             _id: 5, 
             name: 'Benchmarks', 
-            data: [ 'Benchmarks data'], 
+            data: [''],
+            // data: [
+            //     {
+            //         id: 1,
+            //         title: "Primary All Clear",
+            //         isClicked: false
+            //     },
+            //     {
+            //         id: 2,
+            //         title: "Secondary All Clear",
+            //         isClicked: false
+            //     },
+            //     {
+            //         id: 3,
+            //         title: "Under Control",
+            //         isClicked: false
+            //     },
+            //     {
+            //         id: 4,
+            //         title: "Loss Stop",
+            //         isClicked: false
+            //     }
+            // ],
             toggled: false, 
             icon: null 
         }

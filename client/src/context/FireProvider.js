@@ -3,6 +3,7 @@ import axios from 'axios';
 import sizeUpData from "../fire-data/sizeUpData"
 import buildingData from '../fire-data/buildingData';
 import DOMPurify from 'dompurify';
+import veisData from '../fire-data/veisData';
 
 export const FireContext = React.createContext();
 
@@ -21,7 +22,8 @@ export default function FireProvider(props) {
 
     const dataObj = {
         sizeUpData, 
-        buildingData
+        buildingData,
+        veisData
     }
     
     const [fireData, setFireData] = useState(dataObj)

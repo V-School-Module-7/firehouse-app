@@ -2,8 +2,8 @@ import React, {useContext} from 'react'
 import SearchBar from '../components/SearchBar';
 import styled from 'styled-components';
 import { FireContext } from '../context/FireProvider';
-import Type1Pic1 from '../assets/buildingTypes/Type 1 pic 1.jpg'
-import Type1Pic2 from '../assets/buildingTypes/Type 1 pic 2.jpg'
+import Type1Pic1 from '../assets/buildingTypes/Type-1-pic-1.jpg'
+import Type1Pic2 from '../assets/buildingTypes/Type-1-pic-2.jpg'
 
 const Type1Wrapper = styled.div``
 const SectionWrapper = styled.div`
