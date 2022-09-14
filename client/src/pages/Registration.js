@@ -6,7 +6,6 @@ import { UserContext } from "../context/UserProvider";
 
 import LogoSrc from "../assets/HotZoneLogo.png";
 
-
 const LoginContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -46,7 +45,15 @@ const ButtonLink = styled(Link)`
 `;
 
 function Registration(props) {
- const { user, signOut, signInWithGoogle } = useContext(UserContext)
+ const { user, signOut, signInWithGoogle, createUserDocument} = useContext(UserContext)
+
+//  console.log(firebaseUser.uid, "fb user")
+
+ function handleSubmit(e) {
+  e.preventDefault()
+  signInWithGoogle()
+  createUserDocument()
+ }
 
   return (
     <LoginContainer>
@@ -61,7 +68,8 @@ function Registration(props) {
           </ButtonLink>
         </ButtonContainer>
         :<ButtonContainer>
-          <ButtonLink onClick={signInWithGoogle}>
+          {/* <ButtonLink onClick={signInWithGoogle}> */}
+          <ButtonLink onClick={handleSubmit}>
           <SignInBtn>Sign in with Google</SignInBtn>
         </ButtonLink>
         </ButtonContainer>

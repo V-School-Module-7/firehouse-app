@@ -1,63 +1,101 @@
 import React, { useContext, useState } from "react"
+import firebase from 'firebase';
 // import SearchBar from '../components/SearchBar';
 import styled from 'styled-components';
-// import { FireContext } from "../context/FireProvider";
 import CheckBox from "../components/Checkbox";
+import { UserContext } from "../context/UserProvider";
 
 // const SearchBarSizeUp = styled(SearchBar);
 const BenchmarkWrapper = styled.div``;
 
 export default function Benchmarks() {
-  // const {fireData, sanitizeData} = useContext(FireContext)
-// fix dates, getting incorrect time
+  const {db} = useContext(UserContext)
+// fix dates, getting incorrect time again 12:40am is 0:40am
 //shows 10:2 instead of 10:20
 
     const time = new Date()
     const year = time.getFullYear()
     const month = time.getMonth() + 1
     const date = time.getDate()
-    const hours = time.getHours()
-    const amOrPm = hours >= 12 ? 'PM' : 'AM';
+    let hours = time.getHours()
+    hours = hours % 12 || 12
+    const amOrPm = hours >= 12 ? 'AM' : 'PM';
     let minutes = time.getMinutes()
     minutes = minutes <= 9 ? '0' + minutes : minutes
+
+    const timestamp = `${year}/${month}/${date} ${hours}:${minutes} ${amOrPm}`
 
     const items = [
         {
             id: 1,
             title: "Primary All Clear",
-            isClicked: false
+            isChecked: false
         },
         {
             id: 2,
             title: "Secondary All Clear",
-            isClicked: false
+            isChecked: false
         },
         {
             id: 3,
             title: "Under Control",
-            isClicked: false
+            isChecked: false
         },
         {
             id: 4,
             title: "Loss Stop",
-            isClicked: false
-        },
+            isChecked: false
+          },
+          
+        ]
         
-    ]
-
+    const [displayMsg, setDisplayMsg]= useState("")
     const [benchmarkMakeUp, setBenchmarkMakeUp] = useState(items)
 
     function updateCheckStatus(index) {
       setBenchmarkMakeUp(prev => 
-        prev.map((item, currentIndex) => currentIndex === index ? {...item, isClicked: !item.isClicked} : item)
+        prev.map((item, currentIndex) => currentIndex === index ? {
+          ...item, 
+          isChecked: !item.isChecked, 
+          timestamp: !item.isChecked ? timestamp : "Checkbox is unchecked. No timestamp."
+        } 
+          : item
+        )
       )
+     
     }
 
-    // console.log(benchmarkMakeUp, "bench")
+    console.log(benchmarkMakeUp, "bm")
+
+
     
-    // const mappedArr = arr.map(info => info.charAt(0).bold() + info.slice(1))
+
+    // console.log(benchmarkMakeUp, "bench")
 
 // if checkbox is clicked, get timeStamp
+
+//bring the properties: title, isChecked, and timestamp to firebase's firestore
+
+
+function submitBenchmarkData() {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        // User logged in already or has just logged in.
+        //reference document
+          db.collection("users").doc(user.uid).collection("benchmarks").add({
+            // email: user.email,
+            // displayName: user.displayName,
+            benchmarks: benchmarkMakeUp
+          })
+          setDisplayMsg("Benchmark data is submitted")
+          
+        } else {
+          // User not logged in or has just logged out.
+          if(!user) return;
+        }
+    });
+
+}
 
 return(
   <BenchmarkWrapper>
@@ -68,14 +106,16 @@ return(
         <h3>{item.title}</h3>
         <CheckBox
           key={item.id}
-            isClicked={item.isClicked}
+            isChecked={item.isChecked}
             checkHandler={() => updateCheckStatus(index)}
             label={'Yes'}
             index={index}
         />
-        {item.isClicked === true ? <div>Time: {`${year}/${month}/${date} ${hours % 12}:${minutes} ${amOrPm}`}</div> : null }
+        {item.isChecked === true ? <div>Time: {item.timestamp}</div> : null }
       </>
     ))}
+    <button onClick={submitBenchmarkData}>Submit</button>
+    <p>{displayMsg}</p>
   </BenchmarkWrapper>
   )
 }

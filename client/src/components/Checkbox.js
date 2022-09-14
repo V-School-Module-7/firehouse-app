@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function Checkbox({index, isClicked, checkHandler, label}) {
+export default function Checkbox({index, isChecked, checkHandler, label}) {
 
     // console.log({ isChecked })
     
@@ -9,7 +9,7 @@ export default function Checkbox({index, isClicked, checkHandler, label}) {
         <input
           type="checkbox"
           id={`checkbox-${index}`}
-          checked={isClicked}
+          checked={isChecked}
           onChange={checkHandler}
         />
         <label htmlFor={`checkbox-${index}`}>{label}</label>

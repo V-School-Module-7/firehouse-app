@@ -14,6 +14,7 @@ app.use(express.json());
 app.use("/protocol", require("./routes/protocolRouter"));
 app.use("/medical", require("./routes/medDataRouter"));
 app.use('/fire', require('./routes/fireRouter'));
+// app.use('/timestamp', require('./routes/timestampRouter'));
 
 app.use(express.static(path.join(__dirname, "client", "build")));
 

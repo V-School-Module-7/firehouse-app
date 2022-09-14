@@ -36,7 +36,9 @@ const AppWrapper = styled.div``;
 
 function App(props) {
   const { user } = useContext(UserContext)
+  
   console.log(user, "user")
+
 
   return (
     <ThemeProvider theme={theme}>

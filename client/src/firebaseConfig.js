@@ -17,6 +17,7 @@ const config = {
   messagingSenderId: "779132777887"
 };
 
+
 export default config
 
 // REACT_APP_FIREBASE_API_KEY="AIzaSyCtBtMmoanhpY9Cjy0zdCOTwHVA_JYBTgE"
