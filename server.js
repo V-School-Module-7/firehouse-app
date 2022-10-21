@@ -15,6 +15,8 @@ app.use("/protocol", require("./routes/protocolRouter"));
 app.use("/medical", require("./routes/medDataRouter"));
 app.use('/fire', require('./routes/fireRouter'));
 
+app.use('/pediatric', require('./routes/pediatricRouter'))
+
 app.use(express.static(path.join(__dirname, "client", "build")));
 
 // error handling

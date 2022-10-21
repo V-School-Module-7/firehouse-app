@@ -29,23 +29,23 @@ function WeightsList(props){
   // console.log(props)
 
   //header of page
-  const condition = props.location.state
+  // const condition = props.location.state
 
-    const displayWeights = condition.weights.map((weightInfo, index) => (
-        <Details //need actual component to pass info into
-          key={weightInfo.amount + index}
-          text={weightInfo.amount}
-          path={weightInfo.path}
-        />
-      ));
+  //   const displayWeights = condition.weights.map((weightInfo, index) => (
+  //       <Details //need actual component to pass info into
+  //         key={weightInfo.amount + index}
+  //         text={weightInfo.amount}
+  //         path={weightInfo.path}
+  //       />
+  //     ));
 
-    return(
-        <WeightWrapper>
-            <SearchBarWeights />
-            <Details>
-              {displayWeights}
-            </Details>
-        </WeightWrapper>
+    return(<div></div>
+        // <WeightWrapper>
+        //     <SearchBarWeights />
+        //     <Details>
+        //       {displayWeights}
+        //     </Details>
+        // </WeightWrapper>
     )
 }
 

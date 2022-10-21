@@ -1,5 +1,6 @@
 import React, {useContext} from "react";
-import { withRouter } from "react-router-dom";
+// import { withRouter } from "react-router-dom";
+import {useNavigate}  from "react-router-dom";
 import styled from "styled-components";
 import { UserContext } from "../context/UserProvider";
 
@@ -40,15 +41,16 @@ const Button = styled.div`
 `;
 
 function Navbar(props) {
+  const navigate = useNavigate();
   const { signOut } = useContext(UserContext)
 
   return (
     <NavbarWrapper>
-    <Button onClick={()=> props.history.go(0)}
+    <Button onClick={()=> navigate(-1)}
       /* onClick={()=> props.history.push("/")} */
       >Back
       </Button>
-      <Title onClick={()=> props.history.push("/")}>Lehi Fire</Title>
+      <Title onClick={()=> navigate("/home")}>Lehi Fire</Title>
       <Button
       onClick={signOut}
       >Sign Out
@@ -57,4 +59,5 @@ function Navbar(props) {
   );
 }
 
-export default withRouter(Navbar);
+// export default withRouter(Navbar);
+export default Navbar;

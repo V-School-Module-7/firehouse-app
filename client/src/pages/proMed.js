@@ -67,6 +67,7 @@ const ButtonsContainer = styled.div`
          return <Anchor href={buttonInfo.href} target="__blank">{buttonInfo.label}</Anchor>
       });
 
+
       return (
           <MedicalWrapper>
               <SearchBarMedical />

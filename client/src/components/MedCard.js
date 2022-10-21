@@ -24,7 +24,7 @@ export const Details = styled.div`
 
 
 export default function MedCard(props) {
-    console.log(props.conditions)
+    console.log("conditions:", props.conditions)
   return (
       <>
     <MedCardWrapper >

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Route, Redirect, Switch } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import { UserContext } from "./context/UserProvider";
 import styled, { ThemeProvider } from "styled-components";
 import theme from "./theme/theme";
@@ -16,6 +16,11 @@ import General from './pages/General'
 import Cardiac from './pages/Cardiac'
 import Medical from './pages/proMed'
 import Trauma from './pages/Trauma'
+import Pediatric from './pages/pediatric'
+import PediatricCard from './components/PediatricCard'
+import Algorithms from './pages/Algorithms'
+import Lab from './pages/Lab'
+import Infusion from './pages/Infusion'
 
 const AppWrapper = styled.div``;
 
@@ -34,27 +39,37 @@ function App(props) {
       <AppWrapper>
         <GlobalStyle />
         <Navbar />
-        <Switch>
-          <Route exact path="/" render={()=> user ? <Homepage/> : <Redirect to="/registration"/>}
+        <Routes>
+          <Route path="/" element={user ? <Homepage/> : <Navigate to="/registration"/>}
           />
-          <Route exact path="/registration" render={()=> user ? <Redirect to="/"/> : <Registration/>}
+          <Route  path="/registration" element={user ? <Navigate to="/"/> : <Registration/>}
           />
-          <Route exact path="/protocols" render={()=> user ? <ProtocolsPage/> : <Redirect to="/"/> }
+          <Route exact path="/protocols" element={user ? <ProtocolsPage/> : <Navigate to="/"/> }
           />
           <Route path="/protocols/general" component={General} />
-          <Route path="/protocols/cardiac" render={()=> user ? <Cardiac /> : <Redirect to="/"/> }
+          <Route path="/protocols/cardiac" element={user ? <Cardiac /> : <Navigate to="/"/> }
           />
-          <Route exact path="/protocols/medical" render={()=> user ? <Medical /> : <Redirect to="/"/> }
+          <Route exact path="/protocols/medical" element={user ? <Medical /> : <Navigate to="/"/> }
           />
-          <Route path="/protocols/trauma" render={()=> user ? <Trauma /> : <Redirect to="/"/> }
+          <Route path="/protocols/trauma" element={user ? <Trauma /> : <Navigate to="/"/> }
           />
-          <Route path="/protocols/:category" render={(rProps)=> user ? <DocumentList {...rProps}/> : <Redirect to="/"/> }
+          <Route path="/protocols/:category" element={ user ? <DocumentList /> : <Navigate to="/"/> }
           />
-          <Route exact path="/medical" render={()=> user ? <MedList/> : <Redirect to="/"/> }
+          <Route exact path="/medical" element={user ? <MedList/> : <Navigate to="/"/> }
           />
-          <Route path="/medical/:condition" render={(rProps)=> user ? <WeightsList {...rProps}/> : <Redirect to="/"/> }
+          <Route path="/medical/pediatric/" element={user ? <Pediatric /> : <Navigate to="/"/> }
           />
-          <Route exact path='/fire' render={()=> user ? <FirePage/> : <Redirect to="/"/> } 
+          <Route path="/medical/pediatric/:id" element={user ? <PediatricCard /> : <Navigate to="/"/> }
+          />
+          <Route path="/medical/algorithms" element={user ? <Algorithms /> : <Navigate to="/"/> }
+          />
+          <Route path="/medical/lab" element={user ? <Lab /> : <Navigate to="/"/> }
+          />
+          <Route path="/medical/infusion" element={user ? <Infusion /> : <Navigate to="/"/> }
+          />
+          <Route path="/medical/:condition" element={user ? <WeightsList /> : <Navigate to="/"/> }
+          />
+          <Route exact path='/fire' element={user ? <FirePage/> : <Navigate to="/"/> } 
           />
           
           
@@ -62,7 +77,7 @@ function App(props) {
 
           {/* <Route path="*" component={page404 */}
 
-        </Switch>
+        </Routes>
       </AppWrapper>
     </ThemeProvider>
   );

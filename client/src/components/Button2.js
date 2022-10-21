@@ -22,9 +22,11 @@ const ButtonWrapper = styled.div`
   }
 `;
 
+// had to apply white-space and change width from 120px to 540px;
 const ButtonText = styled.div`
+  white-space: nowrap;
   height: 32px;
-  width: 120px;
+  width: 540px;  
   color: #ffffff;
   font-weight: bold;
   font-size: 40px;
@@ -32,6 +34,7 @@ const ButtonText = styled.div`
   text-align: center;
   margin: auto;
   color: #EFFF19;
+ 
 `;
 
 export default function Button2(props) {

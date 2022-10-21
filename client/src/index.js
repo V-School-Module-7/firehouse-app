@@ -6,6 +6,7 @@ import ProtocolProvider from "./context/ProtocolProvider";
 import UserProvider from "./context/UserProvider";
 import MedicalProvider from "./context/MedicalProvider";
 import FireProvider from './context/FireProvider';
+import PediatricProvider from './context/PediatricProvider'
 
 ReactDOM.render(
   <BrowserRouter>
@@ -13,8 +14,10 @@ ReactDOM.render(
     <ProtocolProvider>
       <MedicalProvider>
       <FireProvider>
+      <PediatricProvider>
         <App />
-        </FireProvider>
+      </PediatricProvider>
+      </FireProvider>
       </MedicalProvider>
     </ProtocolProvider>
   </UserProvider>

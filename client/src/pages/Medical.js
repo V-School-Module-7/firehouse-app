@@ -68,6 +68,7 @@ function Medical(props){
        <Anchor href={buttonInfo.href} target="__blank">{buttonInfo.label}</Anchor>
     ));
 
+
     return(
         <MedWrapper>
             <SearchBarMedical />
