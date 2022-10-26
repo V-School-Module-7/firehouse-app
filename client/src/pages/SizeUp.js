@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import DropDown from "../components/DropDown";
 import { FireContext } from "../context/FireProvider";
 // import Benchmarks from "./Benchmarks";
-import Test2Benchmarks from "./Test2Benchmarks"
+import Benchmarks from "./Benchmarks"
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 
@@ -89,7 +89,7 @@ export default function SizeUp() {
               <TextWrapper>
                 {/* <Benchmarks />  */}
                 <DndProvider backend={HTML5Backend}>
-                  <Test2Benchmarks />
+                  <Benchmarks />
                 </DndProvider>
               </TextWrapper>
             </DropDownBenchmarkWrapper>
