@@ -6,6 +6,7 @@ import ProtocolProvider from "./context/ProtocolProvider";
 import UserProvider from "./context/UserProvider";
 import MedicalProvider from "./context/MedicalProvider";
 import FireProvider from './context/FireProvider';
+import "./styles.css"
 
 ReactDOM.render(
   <BrowserRouter>

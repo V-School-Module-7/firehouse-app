@@ -47,13 +47,11 @@ const ButtonLink = styled(Link)`
 function Registration(props) {
  const { user, signOut, signInWithGoogle, createUserDocument} = useContext(UserContext)
 
-//  console.log(firebaseUser.uid, "fb user")
-
- function handleSubmit(e) {
+function handleSubmit(e) {
   e.preventDefault()
   signInWithGoogle()
   createUserDocument()
- }
+}
 
   return (
     <LoginContainer>

@@ -1,0 +1,83 @@
+.container {  display: grid;
+    grid-template-columns: 1fr 0.8fr 1.2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.9fr 0.6fr 1.6fr 0.6fr 1.3fr 0.6fr 2.3fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "units units units assignments assignments assignments assignments assignments assignments assignments assignments assignments"
+      "alarm1 alarm1 alarm1 IC FA SEARCH VENT RIC MED add-column add-column add-column"
+      "alarmBtns1 alarmBtns1 alarmBtns1 add-note add-note2 add-note3 add-note4 add-note5 add-note6 . . ."
+      "alarm2 alarm2 alarm2 add-note add-note2 add-note3 add-note4 add-note5 add-note6 . . ."
+      "alarmBtns2 alarmBtns2 alarmBtns2 add-note add-note2 add-note3 add-note4 add-note5 add-note6 . . ."
+      "user-added user-added user-added add-note add-note2 add-note3 add-note4 add-note5 add-note6 . . ."
+      "userAddedBtns userAddedBtns userAddedBtns add-note add-note2 add-note3 add-note4 add-note5 add-note6 . . .";
+    border-style: solid;    
+}
+  
+  .alarm1 { grid-area: alarm1; border-right-style: solid; border-bottom-style: solid;}
+  
+  .IC { grid-area: IC; border-right-style: solid; border-bottom-style: solid;}
+  
+  .FA { grid-area: FA; border-right-style: solid; border-bottom-style: solid;}
+  
+  .SEARCH { grid-area: SEARCH; border-right-style: solid; border-bottom-style: solid;}
+  
+  .VENT { grid-area: VENT; border-right-style: solid; border-bottom-style: solid;}
+  
+  .RIC { grid-area: RIC; border-right-style: solid; border-bottom-style: solid;}
+  
+  .MED { grid-area: MED; border-right-style: solid; border-bottom-style: solid;}
+  
+  .alarm2 { grid-area: alarm2; border-right-style: solid; border-bottom-style: solid;}
+  
+  .user-added { grid-area: user-added; border-right-style: solid; border-bottom-style: solid;}
+  
+  .alarmBtns1 { grid-area: alarmBtns1; border-right-style: solid;}
+  .userAddedBtns { grid-area: userAddedBtns; border-right-style: solid;}
+  
+  .alarmBtns2 { grid-area: alarmBtns2; border-right-style: solid;}
+  
+  .add-note { grid-area: add-note; border-right-style: solid;}
+  
+  .add-note2 { grid-area: add-note2; border-right-style: solid;}
+  
+  .add-note3 { grid-area: add-note3; border-right-style: solid;}
+  
+  .add-note4 { grid-area: add-note4; border-right-style: solid;}
+  
+  .add-note5 { grid-area: add-note5; border-right-style: solid;}
+  
+  .add-note6 { grid-area: add-note6; border-right-style: solid;}
+  
+  .assignments { grid-area: assignments; border-bottom-style: solid;}
+  
+  .units { grid-area: units; border-right-style: solid; border-bottom-style: solid;}
+  
+  .add-column { grid-area: add-column; border-bottom-style: solid;}
+
+  .taskBox{
+
+    /* width: 300px;
+    height: 500px; */
+    border: 2px solid black;
+  }
+
+  .name {
+    /* color: gray; */
+    color: rgba(0, 0, 0, 0.777);
+  }
+
+  .formatName {
+    /* display: flex;
+    justify-content: space-around; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .deleteBtn {
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  

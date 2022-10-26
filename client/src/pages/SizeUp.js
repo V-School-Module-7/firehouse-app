@@ -3,7 +3,10 @@ import SearchBar from '../components/SearchBar';
 import styled from 'styled-components';
 import DropDown from "../components/DropDown";
 import { FireContext } from "../context/FireProvider";
-import Benchmarks from "./Benchmarks";
+// import Benchmarks from "./Benchmarks";
+import Test2Benchmarks from "./Test2Benchmarks"
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
 
 // const SearchBarSizeUp = styled(SearchBar);
 const DropDownInfoWrapper = styled.div`
@@ -42,7 +45,7 @@ export default function SizeUp() {
 
   
   return(
-    <div >
+    <div>
         {/* <SearchBarSizeUp /> */}
         <SearchBar />
           {fireData.sizeUpData.info.map((items, index) => (
@@ -77,14 +80,17 @@ export default function SizeUp() {
 
             {/* 
               Benchmarks should be the last index inside of the sizeUpData array since this data is
-              not inside of the sizeUpData array. The reason why is because the benchmark data is not 
+              not inside of the sizeUpData array. The reason why the benchmark data is not 
               inside of this array is because the benchmark data consists of objects, while the rest
               of the sizeUpData consists of an array of strings.
             */}
             {fireData.sizeUpData.info[4].toggled ? 
             <DropDownBenchmarkWrapper>
               <TextWrapper>
-                <Benchmarks /> 
+                {/* <Benchmarks />  */}
+                <DndProvider backend={HTML5Backend}>
+                  <Test2Benchmarks />
+                </DndProvider>
               </TextWrapper>
             </DropDownBenchmarkWrapper>
               : null

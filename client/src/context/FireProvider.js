@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import DOMPurify from 'dompurify';
 import sizeUpData from "../fire-data/sizeUpData"
 import buildingData from '../fire-data/buildingData';
-import DOMPurify from 'dompurify';
 import veisData from '../fire-data/veisData';
+import ventilationData from '../fire-data/ventilationData';
+import coLevelsData from '../fire-data/coLevelsData';
 
 export const FireContext = React.createContext();
 
@@ -23,7 +25,9 @@ export default function FireProvider(props) {
     const dataObj = {
         sizeUpData, 
         buildingData,
-        veisData
+        veisData,
+        ventilationData,
+        coLevelsData
     }
     
     const [fireData, setFireData] = useState(dataObj)
