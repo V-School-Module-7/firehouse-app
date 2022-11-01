@@ -16,12 +16,11 @@ const ButtonsContainer = styled.div`
     justify-content: center;
 `;
 
-function BuildingTypes(props) {
+function BuildingTypes() {
     const { fireData } = useContext(FireContext)
 
     return (
         <div>
-            
             <SearchBarFire />
             <ButtonsContainer>
                 {fireData.buildingData.info.map((buildingData, index) => (
@@ -33,10 +32,6 @@ function BuildingTypes(props) {
                 ))}
             </ButtonsContainer>
         </div>
-        // <FireWrapper>
-        //     <SearchBarFire />
-        //     <ButtonsContainer>{displayButtons}</ButtonsContainer>
-        // </FireWrapper>
     );
 }
 

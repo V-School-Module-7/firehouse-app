@@ -46,16 +46,14 @@ padding: 8px;
 `
 export default function VEIS() {
 
-    const {fireData, sanitizeData} = useContext(FireContext)
-
-    const name = fireData.veisData.info[0].name
+    const {fireData} = useContext(FireContext)
 
     return (
         <Type1Wrapper>
             <SearchBar /> 
             <SectionWrapper>
                 <TitleWrapper>
-                    {name}
+                    {fireData.veisData.info[0].name}
                 </TitleWrapper>
             </SectionWrapper>
             <SectionWrapper style={{paddingBottom: '85px'}}>

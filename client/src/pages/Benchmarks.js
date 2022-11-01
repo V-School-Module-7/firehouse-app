@@ -26,6 +26,7 @@ export default function Benchmarks() {
   const initInput = {
     task: ""
   }
+
   //state and context
   const [tasks, setTasks] = useState(buttonList)
   const [createdTask, setCreatedTask] = useState([])
@@ -34,6 +35,7 @@ export default function Benchmarks() {
   const [isToggled, setIsToggled] = useState(false) 
   const {db} = useContext(UserContext)
 
+  //timestamp
   const time = new Date()
   const year = time.getFullYear()
   const month = time.getMonth() + 1
@@ -76,7 +78,7 @@ export default function Benchmarks() {
   //***functions***
   //drag starting
   function onDragStart(e, name) {
-    console.log("dragstart:", name)
+    // console.log("dragstart:", name)
     e.dataTransfer.setData("name", name)
   }
 
@@ -88,10 +90,7 @@ export default function Benchmarks() {
   //dropped what is dragged
   function onDrop(e, cat) {
     let name = e.dataTransfer.getData("name")
-    console.log(cat, "the category it's dropping to")
-    console.log(name, "is name")
     newTasksArr.filter((task) => {
-      console.log(task.name, "tName")
       if (task.name === name) {
         task.category = cat
         dropBenchmarkData(task)
@@ -102,6 +101,7 @@ export default function Benchmarks() {
     console.log(tasks, "tasks state")
   }
 
+  //the sections the tasks can be dropped into
   var sections = {
     taskBox: [],
     alarm1: [],
@@ -116,6 +116,7 @@ export default function Benchmarks() {
     addColumn: []
   }
 
+  //combining the original tasks with the created tasks
   const newTasksArr = tasks.concat(createdTask)
 
   newTasksArr.map((task) => {
@@ -126,8 +127,8 @@ export default function Benchmarks() {
         draggable
         className="draggable"
       >
-        <p style={{border: "solid, gray", borderRadius: "5px", margin: "5px 8px", cursor: "pointer", backgroundColor: "gray"}}>{task.name}</p>
-        {/* show delete button */}
+        <div style={{border: "solid, gray", borderRadius: "5px", margin: "5px 8px", cursor: "pointer", backgroundColor: "gray"}}>{task.name}</div>
+        {/* shows delete button */}
         {
           isToggled && typeof task.id === "string" ?
             <button className="deleteBtn" onClick={() => deleteTasks(task.id)}><i class="fa-solid fa-xmark"></i></button>
@@ -177,7 +178,6 @@ export default function Benchmarks() {
   function submitTasks() {
     console.log("Task submitted!")
     db.collection("createdBenchmarkTasks").add({
-      // task: taskInput.task
       name: taskInput.task,
       category: "taskBox"
     })
@@ -213,7 +213,7 @@ export default function Benchmarks() {
             onDrop(e, "alarm1")
           }}
         >
-          <p className="name">{sections.alarm1}</p>
+          <div className="name">{sections.alarm1}</div>
         </div>
         <div className="IC">IC</div>
         <div className="FA">FA</div>
@@ -229,7 +229,7 @@ export default function Benchmarks() {
             onDrop(e, "alarm2")
           }}
         >
-          <p className="name">{sections.alarm2}</p>
+          <div className="name">{sections.alarm2}</div>
         </div>
         <div className="user-added">User Added</div>
         <div
@@ -239,7 +239,7 @@ export default function Benchmarks() {
             onDrop(e, "userAdded")
           }}
         >
-          <p className="name">{sections.userAdded}</p>
+          <div className="name">{sections.userAdded}</div>
         </div>
         <div className="add-note"
           onDragOver={(e) => onDragOver(e)}
@@ -248,7 +248,7 @@ export default function Benchmarks() {
           }}
         >
           Add Note
-          <p className="name">{sections.IC}</p>
+          <div className="name">{sections.IC}</div>
         </div>
         <div className="add-note2"
           onDragOver={(e) => onDragOver(e)}
@@ -257,7 +257,7 @@ export default function Benchmarks() {
           }}
         >
           Add Note
-          <p className="name">{sections.FA}</p>
+          <div className="name">{sections.FA}</div>
         </div>
         <div className="add-note3"
           onDragOver={(e) => onDragOver(e)}
@@ -266,7 +266,7 @@ export default function Benchmarks() {
           }}
         >
           Add Note
-          <p className="name">{sections.search}</p>
+          <div className="name">{sections.search}</div>
         </div>
         <div className="add-note4"
           onDragOver={(e) => onDragOver(e)}
@@ -275,7 +275,7 @@ export default function Benchmarks() {
           }}
         >
           Add Note
-          <p className="name">{sections.vent}</p>
+          <div className="name">{sections.vent}</div>
         </div>
         <div className="add-note5"
           onDragOver={(e) => onDragOver(e)}
@@ -284,7 +284,7 @@ export default function Benchmarks() {
           }}
         >
           Add Note
-          <p className="name">{sections.RIC}</p>
+          <div className="name">{sections.RIC}</div>
         </div>
         <div 
           className="add-note6"
@@ -294,7 +294,7 @@ export default function Benchmarks() {
           }}
         >
           Add Note
-          <p className="name">{sections.MED}</p>
+          <div className="name">{sections.MED}</div>
         </div>
         <div className="assignments">Assignments</div>
         <div className="units">Units</div>
@@ -305,7 +305,7 @@ export default function Benchmarks() {
             onDrop(e, "addColumn")
           }}
         >
-          <p className="name">{sections.addColumn}</p>
+          <div className="name">{sections.addColumn}</div>
         </div>
       </div>
       <div className="taskBox"
@@ -315,9 +315,9 @@ export default function Benchmarks() {
         }}
       >
         Task Box
-        <p className="name formatName">
+        <div className="name formatName">
           {sections.taskBox}
-        </p>
+        </div>
       </div>
     </div>
   )

@@ -38,7 +38,7 @@ function UserProvider(props) {
   }
 
     return (
-       <UserContext.Provider
+      <UserContext.Provider
       value={{
         user,
         signOut,

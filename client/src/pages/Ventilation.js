@@ -62,7 +62,7 @@ export default function Ventilation() {
     const {fireData} = useContext(FireContext)
 
     const name = fireData.ventilationData.info[0].name
-console.log(fireData.ventilationData, "vd")
+    // console.log(fireData.ventilationData, "vd")
     return (
         <Type1Wrapper>
             <SearchBar /> 
